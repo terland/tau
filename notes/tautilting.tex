@@ -1,0 +1,57 @@
+\documentclass[]{article}
+
+%imports
+\usepackage{amsmath}
+\usepackage{amsthm}
+
+\newtheorem{qst}{Question}[section]
+\newtheorem{obs}{Observation}[section]
+
+%opening
+\title{Combinatorial aspects of $\tau$-tilting theory}
+\author{}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+In these notes, $A = k\Gamma/I$ will denote the quotient of a path algebra over an admissible ideal. In particular, $A$ is finite dimensional. We now recall some important definitions from tau-tilting theory.
+
+
+
+\section{Duality on suppport $\tau$-tilting modules}
+There is a theory of duality for support $\tau$-tilting modules which we now describe.
+
+For a support $\tau$-tilting $A$-module $(M,P)$, let $M_p$ be the projective part of $M$. We then have   
+\[(M,P)^\dagger = (\text{Tr}M \oplus P^*, M^*_{p})\] and $(M,P)^\dagger$ is a support $\tau$-tilting $A^{\text{op}}$-module.
+
+The following observation will be particularly useful when studying the mutation graphs of symmetric algebras.
+\begin{obs}
+	An ordering of $(M,P)$ induces an ordering on $(M,P)^\dagger$. With this induced ordering, \[G_{(M,P)^\dagger} = -G_{(M,P)}  \]
+\end{obs}
+
+\begin{proof}
+	Any indecomposable summand $X$ in $(M,P)$ appears as exactly one indecomposable summand of $(M,P)^\dagger$, either in the tau-rigid part or in the second part.
+	
+	Also note that the canonical bijection between the vertices of $A$ and $A^\text{op}$ induces a canonical isomorphism between the Groethendieck groups $K_0(A)$ and $K_0(A^\text{op})$.
+	
+	Let now $X$ be a nonprojective summand of $M$. Then we have a projective presentation $P_i \rightarrow P_j \rightarrow X \rightarrow 0$, inducing a projetive presentation of the transpose $\text{Tr} X$ \[P_j^* \rightarrow P_i^* \rightarrow \text{Tr} X \rightarrow 0\]
+	
+	Then it directly follows that $g^{\text{Tr} X} = -g^X$.
+	
+	If $X$ is a projective summand of $M$, $(M,P)^\dagger = (N,Q \oplus X^*)$ for some appropriate $N$ and $Q$. Then by the definition of g-matrices for support $\tau$-tilting modules, the column corresponding to the g-vector of $X^*$ is given a negative sign, as it is placed in the second part.
+	
+	Lastly, if $X$ is a summand of $P$, it is moved from the second part to the $\tau$-rigid part. This means that the column of the $G$-matrix $(M,P)^\dagger$ corresponding to this summand will be sign-inverted.
+	
+	As all columns are thus sign-inverted and we have proved the statement.
+
+\end{proof}
+
+\section{Mutation quivers of symmetric algebras}
+For a symmetric algebra $A$, any $A^{op}$-module $M$ may be viewed a an $A$-module. 
+
+In particular, for a support $\tau$-tilting $A$-module $(M,P)$, $(M,P)^\dagger$ may also be viewed as a support $\tau$-tilting module over $A$. This implies that the duality of support $\tau$-tilting modules induces an automorphism on the set of (not necessarily ordered) support $\tau$-tilting modules of symmetric algebras.
+
+
+\end{document}
