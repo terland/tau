@@ -1,0 +1,62 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{anyt/global//global/global}
+    \entry{tau}{misc}{}
+      \name{author}{3}{}{%
+        {{hash=3bd73c6e21229cef8d744ea844711ad6}{%
+           family={Adachi},
+           familyi={A\bibinitperiod},
+           given={Takahide},
+           giveni={T\bibinitperiod}}}%
+        {{hash=6dd8a3b6d6b978f5c2d1b237bfb0593e}{%
+           family={Iyama},
+           familyi={I\bibinitperiod},
+           given={Osamu},
+           giveni={O\bibinitperiod}}}%
+        {{hash=320ed8c2cd36c08056e76659009a657d}{%
+           family={Reiten},
+           familyi={R\bibinitperiod},
+           given={Idun},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{11f74636419ae0f48bfd79ea312c71d3}
+      \strng{fullhash}{11f74636419ae0f48bfd79ea312c71d3}
+      \strng{bibnamehash}{11f74636419ae0f48bfd79ea312c71d3}
+      \strng{authorbibnamehash}{11f74636419ae0f48bfd79ea312c71d3}
+      \strng{authornamehash}{11f74636419ae0f48bfd79ea312c71d3}
+      \strng{authorfullhash}{11f74636419ae0f48bfd79ea312c71d3}
+      \field{labelalpha}{AIR13}
+      \field{sortinit}{A}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{math.RT}
+      \field{eprinttype}{arXiv}
+      \field{title}{$\tau$-tilting theory}
+      \field{year}{2013}
+      \verb{eprint}
+      \verb 1210.1036
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
