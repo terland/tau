@@ -56,6 +56,46 @@
       \verb 1210.1036
       \endverb
     \endentry
+    \entry{assem_skowronski_simson_2006}{book}{}
+      \name{author}{3}{}{%
+        {{hash=f41b388f37389300ba0b3c5218a92f7f}{%
+           family={Assem},
+           familyi={A\bibinitperiod},
+           given={Ibrahim},
+           giveni={I\bibinitperiod}}}%
+        {{hash=6649ecb221d7bdd4aef4dea4e9ef441e}{%
+           family={Skowronski},
+           familyi={S\bibinitperiod},
+           given={Andrzej},
+           giveni={A\bibinitperiod}}}%
+        {{hash=85bd0d6cf1c9e7a925b598006d2dc688}{%
+           family={Simson},
+           familyi={S\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{6fe66e696284cc0bb7ebe0b8530d1e8c}
+      \strng{fullhash}{6fe66e696284cc0bb7ebe0b8530d1e8c}
+      \strng{bibnamehash}{6fe66e696284cc0bb7ebe0b8530d1e8c}
+      \strng{authorbibnamehash}{6fe66e696284cc0bb7ebe0b8530d1e8c}
+      \strng{authornamehash}{6fe66e696284cc0bb7ebe0b8530d1e8c}
+      \strng{authorfullhash}{6fe66e696284cc0bb7ebe0b8530d1e8c}
+      \field{labelalpha}{ASS06}
+      \field{sortinit}{A}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{London Mathematical Society Student Texts}
+      \field{title}{Elements of the Representation Theory of Associative Algebras: Techniques of Representation Theory}
+      \field{volume}{1}
+      \field{year}{2006}
+      \verb{doi}
+      \verb 10.1017/CBO9780511614309
+      \endverb
+    \endentry
     \entry{buantau2020}{misc}{}
       \name{author}{2}{}{%
         {{hash=843d6af7cc1ef5b498a1c0599eb04f74}{%

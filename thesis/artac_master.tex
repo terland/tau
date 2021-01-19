@@ -15,6 +15,7 @@
 
 %commands
 \newcommand{\mo}{\ensuremath{\text{mod }}}
+\newcommand{\Hom}{\ensuremath{\text{Hom }}}
 
 
 
@@ -34,16 +35,24 @@
 
 
 \subsection{Setting}
-An algebra $A$ will always refer to a finite dimensional algebra over a field $k$, which need not be algebraically closed. All algebras encountered in this thesis will be, unless otherwise stated, on the form $k\Gamma/I$ for some finite quiver $\Gamma$ and admissible ideal $I$. The number $n$ is, unless otherwise stated, reserved for the number of indecomposable projective summands of $A$. By $\mo A$.
+We closely follow the notation of \cite{assem_skowronski_simson_2006}. An algebra $A$ will always refer to a finite dimensional algebra over a field $k$, which need not be algebraically closed. All algebras encountered in this thesis will be, unless otherwise stated, on the form $k\Gamma/I$ for some finite quiver $\Gamma$ and admissible ideal $I$. The number $n$ is, unless otherwise stated, reserved for the number of indecomposable projective summands of $A$. By $\mo A$ we denote the category of finite dimensional left $A$-modules (in contrast to \cite{assem_skowronski_simson_2006}, who employ right modules). We denote by $D$ the duality on modules, and by $\text{Tr}$ the transpose. The Auslander-Reiten translate $D\text{Tr}$ is denoted $\tau$.
 
+A module $M$ is called basic if no two nonzero summands are equal, that is $M = A \oplus X \oplus X$ implies $X = 0$. 
 
 \section{Tau-tilting theory}
-$\tau$-tilting theory was introduced in \cite{tau} as a possible generalization of tilting theory, which has had tremendous impact on the field of representation theory of finite dimensional algebras as a whole. Although first introduced in \cite{tau}, some of the main results of $\tau$-tilting theory stem from (cite smalø). We here recall some important definitions and results from $\tau$-tilting theory.
+$\tau$-tilting theory was introduced in \cite{tau} as a possible generalization of tilting theory, which has had tremendous impact on the field of representation theory of finite dimensional algebras as a whole. Although first introduced in \cite{tau}, some of the main results of $\tau$-tilting theory stem from (cite smalø). We here recall some important definitions and results from $\tau$-tilting theory. We start by discussing $\tau$-rigid modules, which are the building blocks of $\tau$-tilting theory.
 
 
 \begin{definition}
-	s
+	A module $M$ in $\mo A$ is called $\tau$-rigid if $\Hom(M,\tau M) = 0$.
 \end{definition}
+
+Note that $X,Y$ being $\tau$-rigid does not imply $X \oplus Y$ being $\tau$-rigid. In fact, studying how indecomposable $\tau$-rigid modules together form larger $\tau$-rigid modules is part of $\tau$-tilting theory.
+
+\begin{definition}
+	A pair $(M,P)$ where $M$ is basic $\tau$-rigid and $P$ basic projective such that $\Hom(P,M) = 0$ is called a partial support $\tau$-tilting module.
+\end{definition}
+
 
 
 \section{Tau-exceptional sequences}
