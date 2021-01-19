@@ -56,6 +56,38 @@
       \verb 1210.1036
       \endverb
     \endentry
+    \entry{buantau2020}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=843d6af7cc1ef5b498a1c0599eb04f74}{%
+           family={Buan},
+           familyi={B\bibinitperiod},
+           given={Aslak\bibnamedelima Bakke},
+           giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=ff06146416b8154a7e6fb252f1be8ee6}{%
+           family={Marsh},
+           familyi={M\bibinitperiod},
+           given={Bethany},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{92fdff32d6b3873da8365751f3f8c4bb}
+      \strng{fullhash}{92fdff32d6b3873da8365751f3f8c4bb}
+      \strng{bibnamehash}{92fdff32d6b3873da8365751f3f8c4bb}
+      \strng{authorbibnamehash}{92fdff32d6b3873da8365751f3f8c4bb}
+      \strng{authornamehash}{92fdff32d6b3873da8365751f3f8c4bb}
+      \strng{authorfullhash}{92fdff32d6b3873da8365751f3f8c4bb}
+      \field{labelalpha}{BM20}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{math.RT}
+      \field{eprinttype}{arXiv}
+      \field{title}{$\tau$-exceptional sequences}
+      \field{year}{2020}
+      \verb{eprint}
+      \verb 1802.01169
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
