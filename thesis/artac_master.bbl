@@ -56,6 +56,48 @@
       \verb 1210.1036
       \endverb
     \endentry
+    \entry{auslandersmalo81}{article}{}
+      \name{author}{2}{}{%
+        {{hash=9f82a18e86d8728cd034164f4d902170}{%
+           family={Auslander},
+           familyi={A\bibinitperiod},
+           given={M},
+           giveni={M\bibinitperiod}}}%
+        {{hash=b9804bf546cf1ab7f1ff945cbd3f729d}{%
+           family={Smalø},
+           familyi={S\bibinitperiod},
+           given={Sverre\bibnamedelima O},
+           giveni={S\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+      }
+      \strng{namehash}{a5f611a5e1cc94d442dabb566f77040f}
+      \strng{fullhash}{a5f611a5e1cc94d442dabb566f77040f}
+      \strng{bibnamehash}{a5f611a5e1cc94d442dabb566f77040f}
+      \strng{authorbibnamehash}{a5f611a5e1cc94d442dabb566f77040f}
+      \strng{authornamehash}{a5f611a5e1cc94d442dabb566f77040f}
+      \strng{authorfullhash}{a5f611a5e1cc94d442dabb566f77040f}
+      \field{labelalpha}{AS81}
+      \field{sortinit}{A}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0021-8693}
+      \field{journaltitle}{Journal of Algebra}
+      \field{number}{2}
+      \field{title}{Almost split sequences in subcategories}
+      \field{volume}{69}
+      \field{year}{1981}
+      \field{pages}{426\bibrangedash 454}
+      \range{pages}{29}
+      \verb{doi}
+      \verb https://doi.org/10.1016/0021-8693(81)90214-3
+      \endverb
+      \verb{urlraw}
+      \verb http://www.sciencedirect.com/science/article/pii/0021869381902143
+      \endverb
+      \verb{url}
+      \verb http://www.sciencedirect.com/science/article/pii/0021869381902143
+      \endverb
+    \endentry
     \entry{assem_skowronski_simson_2006}{book}{}
       \name{author}{3}{}{%
         {{hash=f41b388f37389300ba0b3c5218a92f7f}{%
@@ -126,6 +168,38 @@
       \field{year}{2020}
       \verb{eprint}
       \verb 1802.01169
+      \endverb
+    \endentry
+    \entry{schroll2020tautilting}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=2ccd899b0e4233bdc73baab389368830}{%
+           family={Schroll},
+           familyi={S\bibinitperiod},
+           given={Sibylle},
+           giveni={S\bibinitperiod}}}%
+        {{hash=4171e68c10d9b801cd9ce801783b49df}{%
+           family={Treffinger},
+           familyi={T\bibinitperiod},
+           given={Hipolito},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{e4a7cb2d80e46aa3837e44abf940fc7f}
+      \strng{fullhash}{e4a7cb2d80e46aa3837e44abf940fc7f}
+      \strng{bibnamehash}{e4a7cb2d80e46aa3837e44abf940fc7f}
+      \strng{authorbibnamehash}{e4a7cb2d80e46aa3837e44abf940fc7f}
+      \strng{authornamehash}{e4a7cb2d80e46aa3837e44abf940fc7f}
+      \strng{authorfullhash}{e4a7cb2d80e46aa3837e44abf940fc7f}
+      \field{labelalpha}{ST20}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{math.RT}
+      \field{eprinttype}{arXiv}
+      \field{title}{A $\tau$-tilting approach to the first Brauer-Thrall conjecture}
+      \field{year}{2020}
+      \verb{eprint}
+      \verb 2004.14221
       \endverb
     \endentry
   \enddatalist
