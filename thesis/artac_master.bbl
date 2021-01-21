@@ -1,0 +1,208 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{anyt/global//global/global}
+    \entry{tau}{misc}{}
+      \name{author}{3}{}{%
+        {{hash=3bd73c6e21229cef8d744ea844711ad6}{%
+           family={Adachi},
+           familyi={A\bibinitperiod},
+           given={Takahide},
+           giveni={T\bibinitperiod}}}%
+        {{hash=6dd8a3b6d6b978f5c2d1b237bfb0593e}{%
+           family={Iyama},
+           familyi={I\bibinitperiod},
+           given={Osamu},
+           giveni={O\bibinitperiod}}}%
+        {{hash=320ed8c2cd36c08056e76659009a657d}{%
+           family={Reiten},
+           familyi={R\bibinitperiod},
+           given={Idun},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{11f74636419ae0f48bfd79ea312c71d3}
+      \strng{fullhash}{11f74636419ae0f48bfd79ea312c71d3}
+      \strng{bibnamehash}{11f74636419ae0f48bfd79ea312c71d3}
+      \strng{authorbibnamehash}{11f74636419ae0f48bfd79ea312c71d3}
+      \strng{authornamehash}{11f74636419ae0f48bfd79ea312c71d3}
+      \strng{authorfullhash}{11f74636419ae0f48bfd79ea312c71d3}
+      \field{labelalpha}{AIR13}
+      \field{sortinit}{A}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{math.RT}
+      \field{eprinttype}{arXiv}
+      \field{title}{$\tau$-tilting theory}
+      \field{year}{2013}
+      \verb{eprint}
+      \verb 1210.1036
+      \endverb
+    \endentry
+    \entry{auslandersmalo81}{article}{}
+      \name{author}{2}{}{%
+        {{hash=9f82a18e86d8728cd034164f4d902170}{%
+           family={Auslander},
+           familyi={A\bibinitperiod},
+           given={M},
+           giveni={M\bibinitperiod}}}%
+        {{hash=b9804bf546cf1ab7f1ff945cbd3f729d}{%
+           family={Smalø},
+           familyi={S\bibinitperiod},
+           given={Sverre\bibnamedelima O},
+           giveni={S\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+      }
+      \strng{namehash}{a5f611a5e1cc94d442dabb566f77040f}
+      \strng{fullhash}{a5f611a5e1cc94d442dabb566f77040f}
+      \strng{bibnamehash}{a5f611a5e1cc94d442dabb566f77040f}
+      \strng{authorbibnamehash}{a5f611a5e1cc94d442dabb566f77040f}
+      \strng{authornamehash}{a5f611a5e1cc94d442dabb566f77040f}
+      \strng{authorfullhash}{a5f611a5e1cc94d442dabb566f77040f}
+      \field{labelalpha}{AS81}
+      \field{sortinit}{A}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0021-8693}
+      \field{journaltitle}{Journal of Algebra}
+      \field{number}{2}
+      \field{title}{Almost split sequences in subcategories}
+      \field{volume}{69}
+      \field{year}{1981}
+      \field{pages}{426\bibrangedash 454}
+      \range{pages}{29}
+      \verb{doi}
+      \verb https://doi.org/10.1016/0021-8693(81)90214-3
+      \endverb
+      \verb{urlraw}
+      \verb http://www.sciencedirect.com/science/article/pii/0021869381902143
+      \endverb
+      \verb{url}
+      \verb http://www.sciencedirect.com/science/article/pii/0021869381902143
+      \endverb
+    \endentry
+    \entry{assem_skowronski_simson_2006}{book}{}
+      \name{author}{3}{}{%
+        {{hash=f41b388f37389300ba0b3c5218a92f7f}{%
+           family={Assem},
+           familyi={A\bibinitperiod},
+           given={Ibrahim},
+           giveni={I\bibinitperiod}}}%
+        {{hash=6649ecb221d7bdd4aef4dea4e9ef441e}{%
+           family={Skowronski},
+           familyi={S\bibinitperiod},
+           given={Andrzej},
+           giveni={A\bibinitperiod}}}%
+        {{hash=85bd0d6cf1c9e7a925b598006d2dc688}{%
+           family={Simson},
+           familyi={S\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{6fe66e696284cc0bb7ebe0b8530d1e8c}
+      \strng{fullhash}{6fe66e696284cc0bb7ebe0b8530d1e8c}
+      \strng{bibnamehash}{6fe66e696284cc0bb7ebe0b8530d1e8c}
+      \strng{authorbibnamehash}{6fe66e696284cc0bb7ebe0b8530d1e8c}
+      \strng{authornamehash}{6fe66e696284cc0bb7ebe0b8530d1e8c}
+      \strng{authorfullhash}{6fe66e696284cc0bb7ebe0b8530d1e8c}
+      \field{labelalpha}{ASS06}
+      \field{sortinit}{A}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{London Mathematical Society Student Texts}
+      \field{title}{Elements of the Representation Theory of Associative Algebras: Techniques of Representation Theory}
+      \field{volume}{1}
+      \field{year}{2006}
+      \verb{doi}
+      \verb 10.1017/CBO9780511614309
+      \endverb
+    \endentry
+    \entry{buantau2020}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=843d6af7cc1ef5b498a1c0599eb04f74}{%
+           family={Buan},
+           familyi={B\bibinitperiod},
+           given={Aslak\bibnamedelima Bakke},
+           giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=ff06146416b8154a7e6fb252f1be8ee6}{%
+           family={Marsh},
+           familyi={M\bibinitperiod},
+           given={Bethany},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{92fdff32d6b3873da8365751f3f8c4bb}
+      \strng{fullhash}{92fdff32d6b3873da8365751f3f8c4bb}
+      \strng{bibnamehash}{92fdff32d6b3873da8365751f3f8c4bb}
+      \strng{authorbibnamehash}{92fdff32d6b3873da8365751f3f8c4bb}
+      \strng{authornamehash}{92fdff32d6b3873da8365751f3f8c4bb}
+      \strng{authorfullhash}{92fdff32d6b3873da8365751f3f8c4bb}
+      \field{labelalpha}{BM20}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{math.RT}
+      \field{eprinttype}{arXiv}
+      \field{title}{$\tau$-exceptional sequences}
+      \field{year}{2020}
+      \verb{eprint}
+      \verb 1802.01169
+      \endverb
+    \endentry
+    \entry{schroll2020tautilting}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=2ccd899b0e4233bdc73baab389368830}{%
+           family={Schroll},
+           familyi={S\bibinitperiod},
+           given={Sibylle},
+           giveni={S\bibinitperiod}}}%
+        {{hash=4171e68c10d9b801cd9ce801783b49df}{%
+           family={Treffinger},
+           familyi={T\bibinitperiod},
+           given={Hipolito},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{e4a7cb2d80e46aa3837e44abf940fc7f}
+      \strng{fullhash}{e4a7cb2d80e46aa3837e44abf940fc7f}
+      \strng{bibnamehash}{e4a7cb2d80e46aa3837e44abf940fc7f}
+      \strng{authorbibnamehash}{e4a7cb2d80e46aa3837e44abf940fc7f}
+      \strng{authornamehash}{e4a7cb2d80e46aa3837e44abf940fc7f}
+      \strng{authorfullhash}{e4a7cb2d80e46aa3837e44abf940fc7f}
+      \field{labelalpha}{ST20}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{math.RT}
+      \field{eprinttype}{arXiv}
+      \field{title}{A $\tau$-tilting approach to the first Brauer-Thrall conjecture}
+      \field{year}{2020}
+      \verb{eprint}
+      \verb 2004.14221
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
