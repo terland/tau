@@ -56,6 +56,45 @@
       \verb 1210.1036
       \endverb
     \endentry
+    \entry{auslander_reiten_smalo_1995}{book}{}
+      \name{author}{3}{}{%
+        {{hash=dc6c2832cdcb6e271e8e11e0d1a514c0}{%
+           family={Auslander},
+           familyi={A\bibinitperiod},
+           given={Maurice},
+           giveni={M\bibinitperiod}}}%
+        {{hash=320ed8c2cd36c08056e76659009a657d}{%
+           family={Reiten},
+           familyi={R\bibinitperiod},
+           given={Idun},
+           giveni={I\bibinitperiod}}}%
+        {{hash=7d18198546d69ba22e2eece03af14160}{%
+           family={Smalo},
+           familyi={S\bibinitperiod},
+           given={Sverre\bibnamedelima O.},
+           giveni={S\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{230de49f127af29820faf43abb2dd8eb}
+      \strng{fullhash}{230de49f127af29820faf43abb2dd8eb}
+      \strng{bibnamehash}{230de49f127af29820faf43abb2dd8eb}
+      \strng{authorbibnamehash}{230de49f127af29820faf43abb2dd8eb}
+      \strng{authornamehash}{230de49f127af29820faf43abb2dd8eb}
+      \strng{authorfullhash}{230de49f127af29820faf43abb2dd8eb}
+      \field{labelalpha}{ARS95}
+      \field{sortinit}{A}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{Cambridge Studies in Advanced Mathematics}
+      \field{title}{Representation Theory of Artin Algebras}
+      \field{year}{1995}
+      \verb{doi}
+      \verb 10.1017/CBO9780511623608
+      \endverb
+    \endentry
     \entry{auslandersmalo81}{article}{}
       \name{author}{2}{}{%
         {{hash=9f82a18e86d8728cd034164f4d902170}{%
@@ -168,6 +207,107 @@
       \field{year}{2020}
       \verb{eprint}
       \verb 1802.01169
+      \endverb
+    \endentry
+    \entry{Br_stle_2019}{article}{}
+      \name{author}{3}{}{%
+        {{hash=0b3b8b8a88b28164f6718ce8f9a9823b}{%
+           family={Brüstle},
+           familyi={B\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=5dae92275f3afda5b0b3da88efb93844}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=4171e68c10d9b801cd9ce801783b49df}{%
+           family={Treffinger},
+           familyi={T\bibinitperiod},
+           given={Hipolito},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier BV}%
+      }
+      \strng{namehash}{82727f5af237b2d16c519397415b29c8}
+      \strng{fullhash}{82727f5af237b2d16c519397415b29c8}
+      \strng{bibnamehash}{82727f5af237b2d16c519397415b29c8}
+      \strng{authorbibnamehash}{82727f5af237b2d16c519397415b29c8}
+      \strng{authornamehash}{82727f5af237b2d16c519397415b29c8}
+      \strng{authorfullhash}{82727f5af237b2d16c519397415b29c8}
+      \field{labelalpha}{BST19}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0001-8708}
+      \field{journaltitle}{Advances in Mathematics}
+      \field{month}{10}
+      \field{title}{Wall and chamber structure for finite-dimensional algebras}
+      \field{volume}{354}
+      \field{year}{2019}
+      \field{pages}{106746}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.aim.2019.106746
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1016/j.aim.2019.106746
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1016/j.aim.2019.106746
+      \endverb
+    \endentry
+    \entry{dij17}{article}{}
+      \name{author}{3}{}{%
+        {{hash=cbf3860fe7154e0df2f50f5370ed47d3}{%
+           family={Demonet},
+           familyi={D\bibinitperiod},
+           given={Laurent},
+           giveni={L\bibinitperiod}}}%
+        {{hash=6dd8a3b6d6b978f5c2d1b237bfb0593e}{%
+           family={Iyama},
+           familyi={I\bibinitperiod},
+           given={Osamu},
+           giveni={O\bibinitperiod}}}%
+        {{hash=b3b03e8702e2db21cea6f13221ae7b29}{%
+           family={Jasso},
+           familyi={J\bibinitperiod},
+           given={Gustavo},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{a1d8b621061590c8bc10f42dfe823164}
+      \strng{fullhash}{a1d8b621061590c8bc10f42dfe823164}
+      \strng{bibnamehash}{a1d8b621061590c8bc10f42dfe823164}
+      \strng{authorbibnamehash}{a1d8b621061590c8bc10f42dfe823164}
+      \strng{authornamehash}{a1d8b621061590c8bc10f42dfe823164}
+      \strng{authorfullhash}{a1d8b621061590c8bc10f42dfe823164}
+      \field{labelalpha}{DIJ17}
+      \field{sortinit}{D}
+      \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1073-7928}
+      \field{journaltitle}{International Mathematics Research Notices}
+      \field{month}{07}
+      \field{number}{3}
+      \field{title}{$\tau$-Tilting Finite Algebras, Bricks, and $g$-Vectors}
+      \field{volume}{2019}
+      \field{year}{2017}
+      \field{pages}{852\bibrangedash 892}
+      \range{pages}{41}
+      \verb{doi}
+      \verb 10.1093/imrn/rnx135
+      \endverb
+      \verb{eprint}
+      \verb https://academic.oup.com/imrn/article-pdf/2019/3/852/27721634/rnx135.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1093/imrn/rnx135
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1093/imrn/rnx135
       \endverb
     \endentry
     \entry{schroll2020tautilting}{misc}{}
