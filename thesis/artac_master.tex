@@ -3,6 +3,12 @@
 %imports
 \usepackage{amsmath}
 \usepackage{amsthm}
+\usepackage{amssymb}
+
+\usepackage{hyperref}
+\usepackage{cleveref}
+
+
 \usepackage[style=alphabetic]{biblatex}
 
 %references
@@ -40,13 +46,26 @@
 \section{Introduction}
 
 
-\subsection{Setting}
-We closely follow the notation of \cite{assem_skowronski_simson_2006}. An algebra $A$ will always refer to a finite dimensional algebra over a field $k$, which need not be algebraically closed. All algebras encountered in this thesis will be, unless otherwise stated, on the form $k\Gamma/I$ for some finite quiver $\Gamma$ and admissible ideal $I$. The number $n$ is, unless otherwise stated, reserved for the number of indecomposable projective summands of $A$. By $\mo A$ we denote the category of finite dimensional left $A$-modules (in contrast to \cite{assem_skowronski_simson_2006}, who employ right modules). We denote by $D$ the duality on modules, and by $\text{Tr}$ the transpose. The Auslander-Reiten translate $D\text{Tr}$ is denoted $\tau$.
+\section{Preliminaries}
+Here we collect some of the necessary prerequisites for this thesis, in all majority results and facts not found in \cite{auslander_reiten_smalo_1995} and \cite{assem_skowronski_simson_2006} which we refer two as general references on the representation of finite dimensional algebras.
+
+\subsection{Notation and setting}
+We closely follow the notation of \cite{assem_skowronski_simson_2006}. An algebra $A$ will always refer to a finite dimensional algebra over a field $k$, which need not be algebraically closed. All algebras encountered in this thesis will be, unless otherwise stated, on the form $k\Gamma/I$ for some finite quiver $\Gamma$ and admissible ideal $I$. The number $n$ is, unless otherwise stated, reserved for the number of indecomposable projective summands of $A$. By $\mo A$ we denote the category of finite dimensional left $A$-modules (in contrast to \cite{assem_skowronski_simson_2006}, who employ right modules). We implicitly identify $A$-modules to representations of its quiver with relations. We denote by $D$ the duality on modules, and by $\text{Tr}$ the transpose. The Auslander-Reiten translate $D\text{Tr}$ is denoted $\tau$.
 
 A module $M$ is called basic if no two nonzero summands are equal, that is $M \cong A \oplus X \oplus X$ implies $X = 0$. We denote by $|M|$ the number of indecomposable summands of $M$. 
 
+We denote by $hom_A(M,N)$ the dimension of the $k$-vector space $\text{Hom}_A(M,N)$.
+
 \subsection{Approximations}
-TODO: add note on approximations
+We first define right- and left-approximations for full subcategories, before noting some properties of these maps.
+
+\begin{definition}
+	Let $\mathcal{C}$ be a subcategory of $\text{mod} A$.  Let $M$ be an $A$-module, and $\mathcal{C} \in B$. A map $f:X \to M$ is called a \textit{right $\mathcal{C}$-approximation} of $M$ if it is the case that for any $Y \in \mathcal{C}$ and map $g:Y \to M$, there is a map $h:Y \to X$ such that $g = f \circ h$. 
+	
+	Let $M$ be an $A$-module, and $\mathcal{C} \in B$. A map $f:M \to X$ is called a \textit{left $\mathcal{C}$-approximation} of $M$ if it is the case that for any $Y \in \mathcal{C}$ and map $g:Y \to M$, there is a map $h:X \to Y$ such that $g = h \circ f$. 
+\end{definition}
+
+We say that such a subcategory $\mathcal{C}$ is \textit{contravariantly finite} (resp. \textit{covariantly finite}) if every $A$-module $M$ has a right (resp. left) $\mathcal{C}$-approximation. If $\mathcal{C}$ is both contravariantly and covariantly finite, we call it \textit{functorially finite}.
 
 
 \section{Tau-tilting theory}
@@ -126,7 +145,7 @@ We may then define a quiver containing the information of mutation.
 One may also consider the graph-theoretical properties of $Q(\text{s\tu-tilt} A)$ by forgetting the orientation of the edges. From the properties of mutation, it follows at once that the mutation graph is $(n-1)$-regular. It may be finite or infinite. In the finite case the graph is connected\cite[Corollary 3.10]{tau}.
 
 \subsection{g-vectors}
-For an indecomposable module $M$, let $P_1 \to P_2 \to M \to 0$ be a minimal projective presentation of $M$, where $P_1 \cong \bigoplus_{i = 1}^n P(i)^{v_i}$ and $P_2 \cong \bigoplus_{i = 1}^n P(i)^{u_i}$. We may consider $(v_1,v_2,\dots,v_n)$ and $(u_1,u_2,\dots,u_n)$ to be vectors describing the building blocks of $P_1$ and $P_2$ respectively. Then we define $g^M$ to be $v - u$. 
+For an indecomposable module $M$, let $P_1 \to P_2 \to M \to 0$ be a minimal projective presentation of $M$, where $P_1 \cong \bigoplus_{i = 1}^n P(i)^{v_i}$ and $P_2 \cong \bigoplus_{i = 1}^n P(i)^{u_i}$. We may consider $(v_1,v_2,\dots,v_n)$ and $(u_1,u_2,\dots,u_n)$ to be vectors describing the building blocks of $P_1$ and $P_2$ respectively. Then we define $g^M$ to be $u - v$. 
 
 \begin{definition}
 	For a $\tau$-rigid pair $(M,P)$, its $g$-vector is defined as $g^M - g^P$. 
@@ -142,6 +161,125 @@ Further, we follow \cite{schroll2020tautilting} and define $G$-matrices as follo
 An important property of $g$-vectors is that they uniquely identify $\tau$-rigid pairs\cite[Theorem 5.5]{tau}. This immediately gives a combinatorial proof that the set of indecomposable \tu-rigid objects must be countable (a fact known more generally for the set of exceptional objects up to isomorphism), as there are only countably many integer vectors of dimension $n$. 
 
 Further, $G$-matrices of support \tu-tilting pairs are invertible. This follows immediately from \cite[Theorem 5.1]{tau}.
+
+Another often-used fact is the following result.
+
+\begin{theorem}
+	Let $M,N$ be modules. We have \[\langle g^M,[N]\rangle = hom_A(M,N) - hom_A(N,\tau M) - hom_A(P,N)\]
+	
+	
+\end{theorem}
+
+\section{The wall and chamber structure of finite dimensional algebras}
+
+todo: introduce main idea
+
+\subsection{Stability conditions}
+
+\begin{definition}
+	For $v \in \mathbb{R}^n$, a module $M \in \text{mod} A$ is called \textit{$v$-stable} if $\langle v,[M]\rangle = 0$ and $\langle v,[N]\rangle < 0$ for all proper submodules $N$. $M$ is called \textit{$v$-semistable} if $\langle v, [M]\rangle = 0$ and $\langle v, [N]\rangle \leq 0$ for every submodule $N$.
+\end{definition}
+
+We denote by $\mathcal{D}(M)$ the set of vectors $v \in \mathbb{R}^n$ such that $M$ is $v$-semistable. We call $\mathcal{D}(M)$ the stability space of $M$.
+
+\begin{example}
+	Let $A = A_2$, and consider $(x,y) = v \in \mathcal{D}(P(1))$. We then require $\langle v,(1,1)\rangle = 0$ and $\langle v,(0,1)\rangle \leq 0$. The second condition implies that $y \leq 0$. The first condition implies that $x = -y$, and these two conditions are sufficient for $v$ to be in the stability space of $P(1)$. Thus the stability space of $P(2)$ is the ray $\{\alpha(1,-1) :  \alpha \in \mathbb{R}, \alpha \geq 0\}$. 
+\end{example}
+
+The above example shows that stability spaces need not be linear spaces. However, they are always closed under positive scaling and thus naturally induce linear spaces as their span. Stability spaces which induce linear spaces of codimension 1 are exactly the \textit{walls} of the wall and chamber structure of A. We now begin to describe the chambers.
+
+Let $X^c$ denote the compliment of a set $X$ in a topological space, and $\overline{X}$ its closure. We let $\mathcal{R} = (\overline{(\cup_{M \in \text{mod} A} \mathcal{D}(M))})^c$, and define a \textit{chamber} in the wall and chamber structure of $A$ to be a connected component of $\mathcal{R}$.
+
+\subsection{Cones and chambers induced by \tu-tilting pairs}
+We now aim to recover information about the \tu-tilting theory of an algebra from its wall and chamber structure.
+
+\begin{definition}
+	Let $T = (M,P)$ be a \tu-rigid pair. We define the \textit{cone} spanned by $T$, as \[C(T) = \{\sum_{i = 1}^{j} \alpha_ig^{M_i} - \sum_{i = 1}^{k}\beta_ig^{P_i} : \alpha_i,\beta_i \geq 0 \text{ for all } i\}\]
+	
+	The interior $C^\circ(T) \subset C(T)$ is defined by requiring all coefficients $\alpha_i,\beta_i$ to be strictly positive.
+\end{definition} 
+
+\begin{theorem}\cite[Theorem 6.5, a)]{dij17}
+	For two (not necessarily basic) $\tau$-rigid modules, $M,N$, $g^M = g^N$ implies $M \cong N$.
+\end{theorem}
+
+This following result shows that cones of $\tau$-rigid objects intersect in a very controlled fashion.
+
+\begin{proposition}\cite[Corollary 6.7, b)]{dij17}
+	Let $T_1,T_2$ be support \tu-tilting objects. Then $C(T_1) \cap C(T_2) = C(X)$ with $X$ being the maximal \tu-rigid pair such that $X$ is a summand of $T_1$ and of $T_2$.
+\end{proposition}
+
+\begin{proof}
+	Clearly, $C(X) \subseteq C(T_1) \cap C(T_2)$. We now prove the other inclusion. Let $v \in C(T_1) \cap C(T_2)$ be a vector with integer coefficients. 
+	
+	Then \[\sum \alpha_ig^{M_i} - \sum \beta_ig^{P_i} = \sum \alpha_2 ig^{M_i} - \sum \beta_2 ig^{P_i}\]
+	
+\end{proof}
+
+The cones $C(T)$ for support \tu-tilting modules and almost complete support \tu-tilting modules play an important role in the wall and chamber structure of an algebra.
+
+\begin{proposition}\cite[Proposition 3.15, Corollary 3.16, Corollary 3.21]{Br_stle_2019}\label{tau-wall-chamber-result}
+	\begin{enumerate}
+		\item For a support \tu-tilting object $T_1 = (M,P)$, $C^\circ(T_1)$ defines a chamber in the wall and chamber structure of $A$.
+		\item For an almost complete support \tu-tilting object $T_2 = (M,P)$, $C^\circ(T_2)$ defines a wall in the wall and chamber structure of $A$.
+		\item For \tu-tilting finite algebras, all chambers (walls) are on the form $C(T)$ for a (almost complete) support \tu-tilting object $T$.
+		
+	\end{enumerate}
+\end{proposition}
+
+
+
+\subsection{Consequences for the structure of $Q(s\tu\text{-tilt})$}
+
+The above cited fact that cones of different support \tu-tilting modules only intersect in their boundary gives a novel tool for classifying all support \tu-tilting objects. We collect this technique as a theorem.
+
+\begin{theorem}
+	Let $A$ be an algebra.
+	
+	\begin{itemize}
+		\item If $A$ is \tu-tilting finite, its mutation graph is connected, thus the set of support \tu-tilting modules over $A$ are exactly the ones in this component.
+		\item If it is \tu-tilting infinite the mutation graph may be disconnected. Let $X$ be a set of support \tu-tilting modules such that $\cup_{T \in X} C(T)$ is dense in $\mathbb{R}^n$. Then $X$ contains all support \tu-tilting modules over $A$.
+		
+	\end{itemize}
+\end{theorem}
+
+\begin{proof}
+	The \tu-tilting finite case is well-known. We note that the second point also holds in this case, but is not needed as connectivity of the mutation graph is sufficient to to compute all support \tu-tilting modules.
+	
+	Let $T = (M,P)$ be a support \tu-tilting object. Consider a point $x \in C(T)$ in the interior of $C(T)$. Since $\cup_{T \in X} C(T)$ is dense in $\mathbb{R}^n$, there is a $T_2$ in $X$ such that $C(T_2) \cap C(T)$ contains $x$. But $C(T_2)\cap C(T) = C(Y)$ for some partial suport \tu-tilting object $Y$. Since $T \neq T_2$, there is a summand $Z$ in $T = (M,P)$ not in $Y$. Writing $x$ as an element of $C(T)$, we get
+	
+	\[x = \sum_{i = 1}^{j} \alpha_ig^{M_i} - \sum_{i = 1}^{k}\beta_ig^{P_i}\]
+
+	The above expression also gives a way of writing $x$ as an element of  $C(T)$, where in particular the $g^{Z}$ coordinates are $0$. Thus $x$ lies on the border of $C(T)$, giving us a contradiction.
+	
+\end{proof}
+
+Using the third point of \cref{tau-wall-chamber-result}, we may conclude that an algebra with infinitely many walls in its wall and chamber structure will be \tu-tilting infinite. It is well known that algebras whose quivers have a double arrow are representation infinite. Here we show that they are \tu-tilting infinite as well.
+\begin{proposition}
+	Any algebra $A = k\Gamma/I$ where $\Gamma$ has a double arrow is \tu-tilting infinite.
+\end{proposition}
+
+\begin{proof}
+	We note that the proof is very much inspired by the proof of \cite[Theorem 4.14]{Br_stle_2019}. Label the vertices of $\Gamma$ such that the double arrows are from $1 \to 2$. Then any module over $K_2$ may be canonically embedded as a module of $A$, and in particular we have for any $n \geq 2$ a module $M_n$ with dimension vector $x = (n,n+1,0,\dots,0)$, such that its proper submodules have dimension vectors $(n-k,n+1-k,0,\dots,0)$ for $1 \leq k \leq n$. We investigate $D(M_n)$.
+	
+	Let $v = (v_1,v_2,\dots,v_n) \in D(M_n)$. We have $\langle v,x \rangle = 0$ and $\langle v,x - (k,k,0,0,\dots,0)\rangle \leq 0$ for all integers $1 \leq k \leq n$. Thus for $i > 2$, $v_i$ may be chosen freely. Also, letting $k = n$ in the second condition, we see that $v_2 \leq 0$. The first condition implies $v_1 = \frac{-(n+1)}{n}v_2$.
+	
+	Assume now that $y = (y_1,y_2,\dots,y_n)$ such that the two above properties hold, namely $y_2 \leq 0$ and $y_1 = \frac{-(n+1)}{n}y_2$. We then clearly have $\langle y,[M]\rangle = 0$. We now check that for all $N \subseteq M$, we have $\langle y,[N]\rangle \leq 0$. 
+	
+	\begin{align}
+	&\langle (\frac{-(n+1)}{n}y_2,y_2), (n-k,n+1-k)\rangle \\
+	=&\langle (\frac{-(n+1)}{n}y_2,y_2), (j,j+1)\rangle \\
+	=& y_2((-nj-j)/n + (j+1)) \\
+	 =& y_2((-nj - j + nj + n)/n) \\
+	 =& y_2((n-j)/n)) \\
+	 \leq& 0\text{, since } j \leq n
+	\end{align}
+	
+	Thus $y$ is in $D(M_n)$. Since we may chose $y_i$ for $i > 2$ freely, and any non-positive $y_2$, $D(M_n)$ generates a linear space of codimension $1$, and is thus a wall in the wall and chamber structure of $A$.
+	
+	Further, letting $m,n \geq 1$, it is easy to see that $D(M_n) = D(M_m)$ implies $m = n$. Thus we have identified an infinite number of walls in the wall and chamber structure of $A$, meaning that $A$ is \tu-tilting infinite.
+ 
+\end{proof}
 
 
 
