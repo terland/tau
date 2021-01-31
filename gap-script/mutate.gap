@@ -5,7 +5,7 @@ Q := Quiver(2, [ [1,2,"a"],[2,1,"c"] ] );
 
 Display(Q);
 
-KQ := PathAlgebra(GF(4),Q);
+KQ := PathAlgebra(Rationals,Q);
 
 AssignGeneratorVariables(KQ);
 
@@ -13,7 +13,7 @@ AssignGeneratorVariables(KQ);
 stop := 1;
 
 rels := [];
-AddNthPowerToRelations(KQ,rels,3);
+AddNthPowerToRelations(KQ,rels,6);
 
 KQ := KQ/rels;
 
@@ -124,7 +124,7 @@ GetMutations := function(mf, depth)
     
     Display(depth);
     
-    if depth > 99 then
+    if depth > 10 then
         return [];
     fi;
     

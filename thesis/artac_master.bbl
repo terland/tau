@@ -310,6 +310,79 @@
       \verb https://doi.org/10.1093/imrn/rnx135
       \endverb
     \endentry
+    \entry{jassoreduction}{article}{}
+      \name{author}{1}{}{%
+        {{hash=b3b03e8702e2db21cea6f13221ae7b29}{%
+           family={Jasso},
+           familyi={J\bibinitperiod},
+           given={Gustavo},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{b3b03e8702e2db21cea6f13221ae7b29}
+      \strng{fullhash}{b3b03e8702e2db21cea6f13221ae7b29}
+      \strng{bibnamehash}{b3b03e8702e2db21cea6f13221ae7b29}
+      \strng{authorbibnamehash}{b3b03e8702e2db21cea6f13221ae7b29}
+      \strng{authornamehash}{b3b03e8702e2db21cea6f13221ae7b29}
+      \strng{authorfullhash}{b3b03e8702e2db21cea6f13221ae7b29}
+      \field{labelalpha}{Jas14}
+      \field{sortinit}{J}
+      \field{sortinithash}{c45040a764d616897e7f5b30174d7b92}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1073-7928}
+      \field{journaltitle}{International Mathematics Research Notices}
+      \field{month}{09}
+      \field{number}{16}
+      \field{title}{{Reduction of $\tau$-Tilting Modules and Torsion Pairs}}
+      \field{volume}{2015}
+      \field{year}{2014}
+      \field{pages}{7190\bibrangedash 7237}
+      \range{pages}{48}
+      \verb{doi}
+      \verb 10.1093/imrn/rnu163
+      \endverb
+      \verb{eprint}
+      \verb https://academic.oup.com/imrn/article-pdf/2015/16/7190/18792808/rnu163.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1093/imrn/rnu163
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1093/imrn/rnu163
+      \endverb
+    \endentry
+    \entry{mendoza2020stratifying}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=d2f3743a04cad724040785cbe49624cb}{%
+           family={Mendoza},
+           familyi={M\bibinitperiod},
+           given={Octavio},
+           giveni={O\bibinitperiod}}}%
+        {{hash=4171e68c10d9b801cd9ce801783b49df}{%
+           family={Treffinger},
+           familyi={T\bibinitperiod},
+           given={Hipolito},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{9add8f24d2de8d8dc3bfd82dfa778549}
+      \strng{fullhash}{9add8f24d2de8d8dc3bfd82dfa778549}
+      \strng{bibnamehash}{9add8f24d2de8d8dc3bfd82dfa778549}
+      \strng{authorbibnamehash}{9add8f24d2de8d8dc3bfd82dfa778549}
+      \strng{authornamehash}{9add8f24d2de8d8dc3bfd82dfa778549}
+      \strng{authorfullhash}{9add8f24d2de8d8dc3bfd82dfa778549}
+      \field{labelalpha}{MT20}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{math.RT}
+      \field{eprinttype}{arXiv}
+      \field{title}{Stratifying systems through $\tau$-tilting theory}
+      \field{year}{2020}
+      \verb{eprint}
+      \verb 1904.11903
+      \endverb
+    \endentry
     \entry{schroll2020tautilting}{misc}{}
       \name{author}{2}{}{%
         {{hash=2ccd899b0e4233bdc73baab389368830}{%
