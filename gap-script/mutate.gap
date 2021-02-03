@@ -1,11 +1,11 @@
 LoadPackage("qpa");
 LoadPackage("yags");
-Q := Quiver(2, [ [1,2,"a"],[2,1,"c"] ] );
+Q := Quiver(2, [ [1,2,"x1"],[2,1,"x2"],[1,2,"y1"],[2,1,"y2"] ] );
 
 
 Display(Q);
 
-KQ := PathAlgebra(Rationals,Q);
+KQ := PathAlgebra(GF(2),Q);
 
 AssignGeneratorVariables(KQ);
 
@@ -13,9 +13,10 @@ AssignGeneratorVariables(KQ);
 stop := 1;
 
 rels := [];
-AddNthPowerToRelations(KQ,rels,6);
+AddNthPowerToRelations(KQ,rels,2);
 
 KQ := KQ/rels;
+#KQ := KQ/[x1*x2,x2*x1,y1*y2,y2*y1,x1*y2-y2*x1,x2*y1-y1*x2];
 
 #/[a*b];
 
@@ -124,7 +125,7 @@ GetMutations := function(mf, depth)
     
     Display(depth);
     
-    if depth > 10 then
+    if depth > 12 then
         return [];
     fi;
     
@@ -508,10 +509,6 @@ compute_new_layer := function()
 end;
 
 compute_new_layer();
-compute_new_layer();
-compute_new_layer();
-compute_new_layer();
-compute_new_layer();
 
 d := GraphByEdges(e);
 #Draw(d);
@@ -549,6 +546,64 @@ right_mutate := function(atseq)
     
     #Display("done");
     return nums;
+end;
+
+gvector := function(m)
+    local pr,p1,p2,d_p1,d_p2,g_1,g_2;
+    
+    pr := ProjectiveResolution(m);
+    p1 := Source(pr^1);
+    p2 := Range(pr^1);
+    
+    l := [];
+    for p in proj do
+        Add(l,0);
+    od;
+    
+    #require base field to be finite
+    d_p1 := DecomposeModule(p1);
+    
+    if IsProjectiveModule(m) then
+        while i <= Length(proj) do
+            if IsomorphicModules(proj[i],m) then
+                l[i] = 1;
+                return l;
+            fi;
+            
+            i := i +1;
+        od;
+    fi;
+    
+    d_p2 := DecomposeModule(p2);
+    
+    
+    
+    g_1 := ShallowCopy(l);
+    g_2 := ShallowCopy(l);
+    
+    for p in d_p1 do
+        i := 1;
+        while i <= Length(proj) do
+            if IsomorphicModules(proj[i],p) then
+                g_1[i] := g_1[i] + 1;
+            fi;
+            
+            i := i +1;
+        od;
+    od;
+        
+    for p in d_p2 do
+        i := 1;
+        while i <= Length(proj) do
+            if IsomorphicModules(proj[i],p) then
+                g_2[i] := g_2[i] + 1;
+            fi;
+            
+            i := i + 1;
+        od;
+    od;
+    
+    return g_1 - g_2;
 end;
 
 left_mutate := function(atseq)
