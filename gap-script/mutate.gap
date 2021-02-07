@@ -1,6 +1,6 @@
 LoadPackage("qpa");
 LoadPackage("yags");
-Q := Quiver(2, [ [1,2,"x1"],[2,1,"x2"],[1,2,"y1"],[2,1,"y2"] ] );
+Q := Quiver(3, [[1,2,"a"],[2,3,"b"] ] );
 
 
 Display(Q);
@@ -15,7 +15,9 @@ stop := 1;
 rels := [];
 AddNthPowerToRelations(KQ,rels,2);
 
-KQ := KQ/rels;
+KQ := KQ;
+
+#/rels;
 #KQ := KQ/[x1*x2,x2*x1,y1*y2,y2*y1,x1*y2-y2*x1,x2*y1-y1*x2];
 
 #/[a*b];
@@ -125,7 +127,7 @@ GetMutations := function(mf, depth)
     
     Display(depth);
     
-    if depth > 12 then
+    if depth > 10 then
         return [];
     fi;
     
@@ -560,20 +562,23 @@ gvector := function(m)
         Add(l,0);
     od;
     
+    ll := ShallowCopy(l);
+    
     #require base field to be finite
-    d_p1 := DecomposeModule(p1);
+    
     
     if IsProjectiveModule(m) then
         while i <= Length(proj) do
             if IsomorphicModules(proj[i],m) then
-                l[i] = 1;
-                return l;
+                ll[i] := 1;
+                return ll;
             fi;
             
             i := i +1;
         od;
     fi;
     
+    d_p1 := DecomposeModule(p1);
     d_p2 := DecomposeModule(p2);
     
     

@@ -24,8 +24,10 @@
 \newtheorem{definition}{Definition}[section]
 
 \newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
 \newtheorem{proposition}{Proposition}[section]
 \newtheorem{example}{Example}[section]
+\newtheorem{question}{Question}
 
 %commands
 \newcommand{\mo}{\ensuremath{\text{mod }}}
@@ -51,7 +53,7 @@
 
 
 \section{Preliminaries}
-Here we collect some of the necessary prerequisites for this thesis, in all majority results and facts not found in \cite{auslander_reiten_smalo_1995} and \cite{assem_skowronski_simson_2006} which we refer two as general references on the representation of finite dimensional algebras.
+Here we collect some of the necessary prerequisites for reading this thesis, in all majority results and facts not found in \cite{auslander_reiten_smalo_1995} and \cite{assem_skowronski_simson_2006} which we refer two as general references on the representation of finite dimensional algebras.
 
 \subsection{Notation and setting}
 We closely follow the notation of \cite{assem_skowronski_simson_2006}. An algebra $A$ will always refer to a finite dimensional algebra over a field $k$, which need not be algebraically closed. All algebras encountered in this thesis will be, unless otherwise stated, on the form $k\Gamma/I$ for some finite quiver $\Gamma$ and admissible ideal $I$. The number $n$ is, unless otherwise stated, reserved for the number of indecomposable projective summands of $A$. By $\mo A$ we denote the category of finite dimensional left $A$-modules (in contrast to \cite{assem_skowronski_simson_2006}, who employ right modules). We implicitly identify $A$-modules to representations of its quiver with relations. We denote by $D$ the duality on modules, and by $\text{Tr}$ the transpose. The Auslander-Reiten translate $D\text{Tr}$ is denoted $\tau$.
@@ -167,15 +169,12 @@ Further, $G$-matrices of support \tu-tilting pairs are invertible. This follows 
 
 Another often-used fact is the following result.
 
-\begin{theorem}
-	Let $M,N$ be modules. We have \[\langle g^M,[N]\rangle = hom_A(M,N) - hom_A(N,\tau M) - hom_A(P,N)\]
-	
-	
+\begin{theorem}\cite{auslander1985modules}[Theorem 1.4(a)]
+	Let $M,N$ be modules. We have \[\langle g^M,[N]\rangle = hom_A(M,N) - hom_A(N,\tau M))\]
 \end{theorem}
 
 \section{The wall and chamber structure of finite dimensional algebras}
-
-todo: introduce main idea
+We here introduce the wall and chamber structure of a finite dimensional algebra $A$, and recall how it may be used to study the \tu-tilting theory of $A$.
 
 \subsection{Stability conditions}
 
@@ -185,26 +184,107 @@ todo: introduce main idea
 
 We denote by $\mathcal{D}(M)$ the set of vectors $v \in \mathbb{R}^n$ such that $M$ is $v$-semistable. We call $\mathcal{D}(M)$ the stability space of $M$.
 
+
+Stability spaces need not be linear spaces. However, they are always closed under positive scaling and induce linear spaces as their span. The \textit{walls} of the wall and chamber structure of A are defined as the stability spaces which induce linear spaces of codimension 1. We now describe the chambers.
+
+Let $X^c$ denote the compliment of a set $X$ in a topological space, and $\overline{X}$ its closure. We let $\mathcal{R} = (\overline{(\cup_{M \in \text{mod} A} \mathcal{D}(M))})^c$. A \textit{chamber} in the wall and chamber structure of $A$ is defined to be a connected component of $\mathcal{R}$.
+
+We now show that all walls are given by stability spaces of indecomposable modules, before demonstrating some examples.
+
+\begin{proposition}
+	$\mathcal{D}(M)$ be a wall. Then there is an indecomposable module $X$ such that $\mathcal{D}(M) = \mathcal{D}(X)$.
+\end{proposition}
+
+\begin{proof}
+	If $M$ is indecomposable, we let $X = M$. If not, let $M = X\oplus N$, where $N,X \neq 0$. Let $v \in \mathcal{D}(M)$. Then $\langle v,[X]\rangle \leq 0$ and $\langle v,[M]\rangle \leq 0$. Since $\langle v,[M]\rangle = \langle v,[X]\rangle + \langle v,[N]\rangle = 0$, we see that $v \in \mathcal{D}(X)$. Since $[X] \neq 0$, $\mathcal{D}(X)$ must have co-dimension 1. This completes the proof.
+\end{proof}
+
 \begin{example}
-	Let $A = A_2$, and consider $(x,y) = v \in \mathcal{D}(P(1))$. We then require $\langle v,(1,1)\rangle = 0$ and $\langle v,(0,1)\rangle \leq 0$. The second condition implies that $y \leq 0$. The first condition implies that $x = -y$, and these two conditions are sufficient for $v$ to be in the stability space of $P(1)$. Thus the stability space of $P(2)$ is the ray $\{\alpha(1,-1) :  \alpha \in \mathbb{R}, \alpha \geq 0\}$. 
+	Let $A = A_2$. We compute its wall and chamber structure. We have three indecomposable $A$-modules, $S(1),S(2)$ and $P(1)$. Clearly $\mathcal{D}(S(1)) = \{(0,y): y \in \mathbb{R}\}$ and $\mathcal{D}(S(2)) = \{(x,0): x \in \mathbb{R}\}$. We now compute $\mathcal{D}(P(1))$. Let $(x,y) = v \in \mathcal{D}(P(1))$. We then require $\langle v,(1,1)\rangle = 0$ and $\langle v,(0,1)\rangle \leq 0$. The second condition implies that $y \leq 0$. The first condition implies that $x = -y$, and these two conditions are sufficient for $v$ to be in the stability space of $P(1)$. Thus the stability space of $P(2)$ is the ray $\{\alpha(1,-1) :  \alpha \in \mathbb{R}, \alpha \geq 0\}$. 
 \end{example}
 
-The above example shows that stability spaces need not be linear spaces. However, they are always closed under positive scaling and thus naturally induce linear spaces as their span. Stability spaces which induce linear spaces of codimension 1 are exactly the \textit{walls} of the wall and chamber structure of A. We now begin to describe the chambers.
 
-Let $X^c$ denote the compliment of a set $X$ in a topological space, and $\overline{X}$ its closure. We let $\mathcal{R} = (\overline{(\cup_{M \in \text{mod} A} \mathcal{D}(M))})^c$, and define a \textit{chamber} in the wall and chamber structure of $A$ to be a connected component of $\mathcal{R}$.
-
-\subsection{Cones and chambers induced by \tu-tilting pairs}
+\subsection{Cones, walls and chambers induced by \tu-tilting pairs}
 We now aim to recover information about the \tu-tilting theory of an algebra from its wall and chamber structure.
 
+An important ingredient in this section is the following formula.
+\begin{proposition}
+	Let $(M,P)$ be a \tu-rigid pair. Then
+ \[\langle g^{(M,P)},[N]\rangle = hom_A(M,N) - hom_A(N,\tau M) - hom_A(P,N)\]
+\end{proposition}
+
+\begin{proof}
+	The proposition follows from applying \cite{auslander1985modules}[Theorem 1.4(a)] twice.
+\end{proof}
+
+Note that the above formula implies that a diension vector $[X]$ with $X$ in $J(M,P) = J(M_1\oplus\dots\oplus M_i,P_1\oplus\dots\oplus P_j)$ will be orthogonal to $g^{(M,P)}$. Also, by additivity, $[X]$ will be orthogonal to any linear combination of the vectors $\{g^{M_1},\dots,g^{M_i},-g^{P_1},\dots,-g^{P_j}\}$. We now aim to prove a partial converse to this statement.
 \begin{definition}
 	Let $T = (M,P)$ be a \tu-rigid pair. We define the \textit{cone} spanned by $T$, as \[C(T) = \{\sum_{i = 1}^{j} \alpha_ig^{M_i} - \sum_{i = 1}^{k}\beta_ig^{P_i} : \alpha_i,\beta_i \geq 0 \text{ for all } i\}\]
 	
 	The interior $C^\circ(T) \subset C(T)$ is defined by requiring all coefficients $\alpha_i,\beta_i$ to be strictly positive.
 \end{definition} 
 
-\begin{theorem}\cite[Theorem 6.5, a)]{dij17}
-	For two (not necessarily basic) $\tau$-rigid modules, $M,N$, $g^M = g^N$ implies $M \cong N$.
-\end{theorem}
+Given a vector $\alpha = (\alpha_1,\alpha_2,\dots,\alpha_n)$ with $\alpha_i \geq 0$ for all $i$, we let $\alpha(M,P)$ denote the vector $G^{(M,P)} \times \alpha$.
+
+\begin{proposition}\cite{Br_stle_2019}[Proposition 3.13]
+	For $\alpha(M,P) \in C^\circ(M,P)$, a module $N$ is $\alpha(M,P)$-semistable if and only if $N \in J(M,P)$.
+\end{proposition}
+
+Note that the simple objects in $J(M,P)$ are, by the proposition above, exactly the $\alpha(M,P)$-stable modules.
+
+\begin{question}
+	Can we find the $\alpha(M,P)$-stable modules? Doing this would allow us to say something about the correspondence between dimensions vectors of $J(M,P)$-objects as embedded in $\text{mod} A$ versus their embedding in $\text{mod} C = J(M,P)$ for the appropriate algebra $C$.
+\end{question}
+
+
+
+The cones $C(T)$ for support \tu-tilting modules and almost complete support \tu-tilting modules play an important role in the wall and chamber structure of an algebra.
+
+\begin{proposition}\cite[Proposition 3.15, Corollary 3.16, Corollary 3.21]{Br_stle_2019}\label{tau-wall-chamber-result}
+	\begin{enumerate}
+		\item For a support \tu-tilting object $T_1 = (M,P)$, $C^\circ(T_1)$ defines a chamber in the wall and chamber structure of $A$.
+		\item For an almost complete support \tu-tilting object $T_2 = (M,P)$, $C(T_2)$ is included in a wall $\mathcal{D}(N)$ in the wall and chamber structure of $A$. The module $N$ may be computed given the two support \tu-tilting modules containing $(M,P)$.
+		\item For \tu-tilting finite algebras, all chambers are on the form $C^\circ(T)$ for a support \tu-tilting object $T$.
+		
+	\end{enumerate}
+\end{proposition}
+
+
+\begin{example}
+	Consider the Kronecker algebra $K_2$. Let $M$ be an indecomposable module with dimension vector $(1,1)$. Then $\mathcal{D}(M) = \{(-1,1)\}$. However, there is no \tu-rigid module with $g$-vector $(-1,1)$, as $\text{Hom}_A(P(1),P(2)) = 0$.
+\end{example}
+
+
+Using the third point of \cref{tau-wall-chamber-result}, we may conclude that an algebra with infinitely many walls in its wall and chamber structure will be \tu-tilting infinite. It is well known that algebras whose quivers have a double arrow are representation infinite. Here we show that they are \tu-tilting infinite as well.
+\begin{proposition}
+	Any algebra $A = k\Gamma/I$ where $\Gamma$ has a double arrow is \tu-tilting infinite.
+\end{proposition}
+
+\begin{proof}
+	We note that the proof is very much inspired by the proof of \cite[Theorem 4.14]{Br_stle_2019}. Label the vertices of $\Gamma$ such that the double arrows are from $1 \to 2$. Then any module over $K_2$ may be canonically embedded as a module of $A$, and in particular we have for any $n \geq 2$ a module $M_n$ with dimension vector $x = (n,n+1,0,\dots,0)$, such that its proper submodules have dimension vectors $(n-k,n+1-k,0,\dots,0)$ for $1 \leq k \leq n$. We investigate $D(M_n)$.
+	
+	Let $v = (v_1,v_2,\dots,v_n) \in D(M_n)$. We have $\langle v,x \rangle = 0$ and $\langle v,x - (k,k,0,0,\dots,0)\rangle \leq 0$ for all integers $1 \leq k \leq n$. Thus for $i > 2$, $v_i$ may be chosen freely. Also, letting $k = n$ in the second condition, we see that $v_2 \leq 0$. The first condition implies $v_1 = \frac{-(n+1)}{n}v_2$.
+	
+	Assume now that $y = (y_1,y_2,\dots,y_n)$ such that the two above properties hold, namely $y_2 \leq 0$ and $y_1 = \frac{-(n+1)}{n}y_2$. We then clearly have $\langle y,[M]\rangle = 0$. We now check that for all $N \subseteq M$, we have $\langle y,[N]\rangle \leq 0$. 
+	
+	\begin{align}
+	&\langle (\frac{-(n+1)}{n}y_2,y_2), (n-k,n+1-k)\rangle \\
+	=&\langle (\frac{-(n+1)}{n}y_2,y_2), (j,j+1)\rangle \\
+	=& y_2((-nj-j)/n + (j+1)) \\
+	=& y_2((-nj - j + nj + n)/n) \\
+	=& y_2((n-j)/n)) \\
+	\leq& 0\text{, since } j \leq n
+	\end{align}
+	
+	Thus $y$ is in $D(M_n)$. Since we may chose $y_i$ for $i > 2$ freely, and any non-positive $y_2$, $D(M_n)$ generates a linear space of codimension $1$, and is thus a wall in the wall and chamber structure of $A$.
+	
+	Further, letting $m,n \geq 1$, it is easy to see that $D(M_n) = D(M_m)$ implies $m = n$. Thus we have identified an infinite number of walls in the wall and chamber structure of $A$, meaning that $A$ is \tu-tilting infinite.
+	
+\end{proof}
+
+
+\subsection{Consequences for the structure of $Q(s\tu\text{-tilt})$}
+
 
 This following result shows that cones of $\tau$-rigid objects intersect in a very controlled fashion.
 
@@ -213,35 +293,12 @@ This following result shows that cones of $\tau$-rigid objects intersect in a ve
 \end{proposition}
 
 \begin{proof}
-	Clearly, $C(X) \subseteq C(T_1) \cap C(T_2)$. We now prove the other inclusion. Let $v \in C(T_1) \cap C(T_2)$ be a vector with integer coefficients. 
-	
-	Then \[\sum \alpha_ig^{M_i} - \sum \beta_ig^{P_i} = \sum \alpha_2 ig^{M_i} - \sum \beta_2 ig^{P_i}\]
-	
 \end{proof}
 
-The cones $C(T)$ for support \tu-tilting modules and almost complete support \tu-tilting modules play an important role in the wall and chamber structure of an algebra.
 
-\begin{proposition}\cite[Proposition 3.15, Corollary 3.16, Corollary 3.21]{Br_stle_2019}\label{tau-wall-chamber-result}
-	\begin{enumerate}
-		\item For a support \tu-tilting object $T_1 = (M,P)$, $C^\circ(T_1)$ defines a chamber in the wall and chamber structure of $A$.
-		\item For an almost complete support \tu-tilting object $T_2 = (M,P)$, $C(T_2)$ defines a wall in the wall and chamber structure of $A$.
-		\item For \tu-tilting finite algebras, all chambers (walls) are on the form $C^\circ(T)$ ($C(T)$) for a (almost complete) support \tu-tilting object $T$.
-		
-	\end{enumerate}
-\end{proposition}
+This result gives a tool for classifying all support \tu-tilting objects. We collect this technique as a theorem.
 
-We illustrate that the third point of the proposition above need not hold for \tu-tilting infinite algebras.
-
-\begin{example}
-	Consider the Kronecker algebra $K_2$. Let $M$ be an indecomposable module with dimension vector $(1,1)$. 
-\end{example}
-
-
-\subsection{Consequences for the structure of $Q(s\tu\text{-tilt})$}
-
-The above cited fact that cones of different support \tu-tilting modules only intersect in their boundary gives a novel tool for classifying all support \tu-tilting objects. We collect this technique as a theorem.
-
-\begin{theorem}
+\begin{theorem}\cite{dij17}
 	Let $A$ be an algebra.
 	
 	\begin{itemize}
@@ -262,54 +319,79 @@ The above cited fact that cones of different support \tu-tilting modules only in
 	
 \end{proof}
 
-Using the third point of \cref{tau-wall-chamber-result}, we may conclude that an algebra with infinitely many walls in its wall and chamber structure will be \tu-tilting infinite. It is well known that algebras whose quivers have a double arrow are representation infinite. Here we show that they are \tu-tilting infinite as well.
-\begin{proposition}
-	Any algebra $A = k\Gamma/I$ where $\Gamma$ has a double arrow is \tu-tilting infinite.
-\end{proposition}
+It is interesting to note that the converse to the above theorem holds for tame algebras, though not in general\cite{keller2020tame}.
 
-\begin{proof}
-	We note that the proof is very much inspired by the proof of \cite[Theorem 4.14]{Br_stle_2019}. Label the vertices of $\Gamma$ such that the double arrows are from $1 \to 2$. Then any module over $K_2$ may be canonically embedded as a module of $A$, and in particular we have for any $n \geq 2$ a module $M_n$ with dimension vector $x = (n,n+1,0,\dots,0)$, such that its proper submodules have dimension vectors $(n-k,n+1-k,0,\dots,0)$ for $1 \leq k \leq n$. We investigate $D(M_n)$.
-	
-	Let $v = (v_1,v_2,\dots,v_n) \in D(M_n)$. We have $\langle v,x \rangle = 0$ and $\langle v,x - (k,k,0,0,\dots,0)\rangle \leq 0$ for all integers $1 \leq k \leq n$. Thus for $i > 2$, $v_i$ may be chosen freely. Also, letting $k = n$ in the second condition, we see that $v_2 \leq 0$. The first condition implies $v_1 = \frac{-(n+1)}{n}v_2$.
-	
-	Assume now that $y = (y_1,y_2,\dots,y_n)$ such that the two above properties hold, namely $y_2 \leq 0$ and $y_1 = \frac{-(n+1)}{n}y_2$. We then clearly have $\langle y,[M]\rangle = 0$. We now check that for all $N \subseteq M$, we have $\langle y,[N]\rangle \leq 0$. 
-	
-	\begin{align}
-	&\langle (\frac{-(n+1)}{n}y_2,y_2), (n-k,n+1-k)\rangle \\
-	=&\langle (\frac{-(n+1)}{n}y_2,y_2), (j,j+1)\rangle \\
-	=& y_2((-nj-j)/n + (j+1)) \\
-	 =& y_2((-nj - j + nj + n)/n) \\
-	 =& y_2((n-j)/n)) \\
-	 \leq& 0\text{, since } j \leq n
-	\end{align}
-	
-	Thus $y$ is in $D(M_n)$. Since we may chose $y_i$ for $i > 2$ freely, and any non-positive $y_2$, $D(M_n)$ generates a linear space of codimension $1$, and is thus a wall in the wall and chamber structure of $A$.
-	
-	Further, letting $m,n \geq 1$, it is easy to see that $D(M_n) = D(M_m)$ implies $m = n$. Thus we have identified an infinite number of walls in the wall and chamber structure of $A$, meaning that $A$ is \tu-tilting infinite.
- 
-\end{proof}
+in \cite{dij17}, the authors use the above demonstrated criteria to classify the support \tu-tilting objects of two specific symmetric algebras. 
+
+\begin{question}
+	Can we practically exploit the technique described above to classify \tu-tilting modules for some (infinite) families of algebras?
+	\end{question}
+
+We may also use the wall and chamber structure to detect the non-existence of maximal green sequences. A maximal green sequence in $Q(s\tu\text{-tilt})$ is a path from $(A,0)$ to $(0,A)$. If there is no such path, the mutation quiver has at least two connected components.
+
+\begin{question}
+	Does the converse of the above hold? Does the existence of a maximal green sequence say anything about the components of $Q(s\tu\text{-tilt} A)$?
+\end{question}
+
+By \cref{tau-wall-chamber-result}, a path in the mutation quiver gives rise to a sequence of chambers where neighboring chambers share a wall. In \cite{Br_stle_2019}, the authors define $\mathcal{D}$-generic paths as certain paths $\gamma:[0,1] \to \mathbb{R}^n$ starting and ending in chambers, essentially passing only one wall at a time and doing so transversely. They then demonstrate that a maximal green sequence gives rise to such a $\mathcal{D}$-generic sequence from the chamber induced by $(A,0)$ to the chamber induced by $(0,A)$.
+
+
 
 \section{Jasso reduction}
-Using techniques from classical tilting theory, Gustavo Jasso\cite{jassoreduction} introduced in an influential paper the notion of reduction techniques, now often called Jasso reduction, for partial support \tu-tilting modules, and showed that one can relate the \tu-tilting theory of $A$ to the \tu-tilting theory of these reduced algebras.
+Using techniques from classical tilting theory, Gustavo Jasso\cite{jassoreduction} introduced reduction techniques, now often called Jasso reduction, for partial support \tu-tilting modules, and showed that one can relate the \tu-tilting theory of $A$ to the \tu-tilting theory of these reduced algebras.
 
 This theory is now fundamental to \tu-tilting theory. Here we recall some important aspects of Jasso reduction, and refer to the original paper for a more detailed account.
 
+Let $M$ be a basic \tu-rigid module with $k$ summands. The \textit{Jasso perpendicular} subcategory $J(M)$ is defined as \[J(M) = M^\perp \cap \, ^{\perp}\tau M\]
+
+Jasso has shown that $J(M)$ is equivalent to a module category $\text{mod} \Lambda$ where $\Lambda$. We may obtain $\Lambda$ the following way. Let $B = M \oplus N$ be the Bongartz completion of $M$. Then let $\Lambda = \text{End}_A(B,B)/e_M$, where $e_M$ is the idempotent associated to the projective $\text{End}_A(B,B)$-module $\text{Hom}_A(B,M)$.
 
 
+\begin{theorem}\cite[Theorem 3.15]{jassoreduction}
+	Let $M$ be a basic \tu-rigid module. There is a bijection between the support \tu-tilting modules of $A$ having $M$ as a summand and the support \tu-tilting modules of the algebra with module category $C(M)$. Further, this bijection is order-preserving and respects mutation.
+\end{theorem}
+
+We may extend Jasso reduction to partial support \tu-tilting objects, not only \tu-rigid modules by the fact that that a partial support \tu-tilting object $(M,P)$ over $A$ is a \tu-rigid $A/e$-module where $e$ is the idempotent associated to $P$t\cite{tau}.
+
+The above theorem shows that we can understand the \tu-tilting theory of module categories on the form $J(T)$ via the \tu-tilting theory of the whole module category. 
+
+\begin{corollary}
+	Let $A$ be a \tu-tilting finite algebra, and $T$ a partial support \tu-tilting module. Let $B$ be the algebra with module category $J(T)$. Then $B$ is \tu-tilting finite.
+\end{corollary}
+
+\begin{proof}
+	Since we may embed the mutation quiver $Q = Q(s\tu\text{-tilt} B)$ in the finite quiver $Q(s\tu\text{-tilt} A)$, $Q$ itself must be finite.
+\end{proof}
+
+\subsection{Brick labeling through Jasso reduction}
+If there is an edge $e$ between two support \tu-tilting modules $T_1 = (M_1,P_1)$ and $T_2 = (M_2,P_2)$ in $Q(s\tu\text{-tilt} A)$, there is an almost complete support \tu-tilting object $T = (M,P)$ which is a summand of both $T_1$ and $T_2$. Then $J(T)$ is the module category of a local algebra. The unique simple module $S$ in this category is then a brick in $J(T)$. Since we embed $J(T)$ fully in $\text{mod} A$, $\text{Hom}_{J(T)}(S,S) = \text{Hom}_A(S,S)$, so $S$ is a brick also in $A$. We associate to the edge $e$ this module $S$. This association is called the \textit{brick-labeling} of edges of the mutation quiver.
 
 \section{\tu-exceptional sequences}
-Tau-exceptional sequences were introduced by Buan and Marsh in \cite{buantau2020} as a generalization of exceptional sequences to any finite dimensional algebra. Exceptional sequences are defined for hereditary algebras, and in the hereditary case they coincide with \tu-exceptional sequences. In this section, we introduce \tu-exceptional sequences and note some of their properties for hereditary algebras. 
+In representation theory, exceptional sequences were originally introduced for hereditary algebras\cite{cbw92}\cite{ringel_exceptional} as certain sequences of modules. Later, Buan and Marsh introduced \tu-exceptional sequences\cite{buantau2020} for all finite dimensional algebras. For an hereditary algebra, its (unsigned) \tu-exceptional sequences corresponds to its exceptional sequences. In this section, we briefly introduce \tu-exceptional sequences. 
 
-\subsection{Defining \tu-exceptional sequences}
+We follow the notation of \cite{buantau2020}. Let $\mathcal{C}(A) = \{M \oplus N[1] : M,N \in \text{mod} A\} \subseteq \mathcal{D}^b(\text{mod} A)$. For a full subcategory $D \subseteq \text{mod} A$, let $\mathcal{C} = {M \oplus N[i] : M,N \in D} \subseteq \mathcal{C}(A)$.
+
+Much helped by Jasso reduction and basic properties of 2-term silting objects, we may define signed \tu-exceptional sequences as below.
+
+\begin{definition}
+A list $(U_1,U_2,\dots,U_{t-1},U_t)$ of indecomposable objects in $\mathcal{C}(A)$ of length $t$ is a called a signed \tu-exceptional sequence if $U_t$ is $\tu$-rigid in $\mathcal{C}(A)$ and $(U_1,U_2,\dots,U_{t-1})$ is a signed \tu-exceptional sequence of length $t-1$ in $J(U_t)$. Note that exceptional sequences of length $1$ in $\text{mod } B$ are simply lists $(U)$ where $U$ is an indecomposable \tu-rigid object in $\text{mod } B$.
+\end{definition} 
+
+A \tu-exceptional sequence $(U_1,U_2,\dots,U_t)$ is called \textit{unsigned} if none of the $U_i$ are shifted projectives in their appropriate ambient category. We remark that by \tu-exceptional sequences we refer to the whole set of both signed and unsigned \tu-exceptional sequences.
+
+Further, Buan and Marsh show that there is a bijection between the set of \tu-exceptional sequences of lenght $t$ and the set of ordered \tu-rigid objects with $t$ summands. In particular, the set of complete (that is, length $n$) \tu-exceptional sequences corresponds to ordered \tu-tilting modules.
+
 
 \subsection{Unsigned \tu-exceptional sequences}
-The bijection between ordered support \tu-tilting objects and the set of signed \tu-exceptional sequences gives a combinatorial tool to study these objects. Mendoza and Treffinger\cite{mendoza2020stratifying} has shown that restricting this bijection to so-called \textit{TF-ordered } partial \tu-tilting modules, the image becomes exactly the unsigned \tu-exceptional sequences. 
+Given the bijection between ordered \tu-rigid objects of $A$ and \tu-exceptional sequences of $A$, one may ask which \tu-rigid objects correspond to unsigned \tu-exceptional sequences. Not only is this a natural question to ask given the definition of \tu-exceptional sequences, but since unsigned complete exceptional sequences for hereditary algebras enjoy particularly nice properties (see for example \cite{ringel_exceptional}), one may ask to which extent we may recover these properties in the general case.
 
-We exploit this fact to algorithimcally study the set of complete unsigned \tu-exceptional sequences for \tu-tilting finite algebras.
+Mendoza and Treffinger\cite{mendoza2020stratifying} solved this by showing that under the mentioned bijection, so-called \textit{TF-admissibly ordered)} or simply \textit{TF-ordered} \tu-rigid modules correspond exactly to unsigned \tu-exceptional sequences. We now recall this and related results, and discuss how we employ these results to algorithimcally study the set of unsigned \tu-exceptional sequences.
 
 \begin{definition}\cite{mendoza2020stratifying}
 	An ordered \tu-rigid module $M_1 \oplus M_2 \oplus \dots \oplus M_i$ is called TF-ordered if no $M_i$ is generated by the direct sum of the $M_j$ where $j > i$. More precisely, we demand that $M_j \notin \text{Fac}(\bigoplus_{k = j+1}^i M_k)$ for all $1 \leq j \leq i$.
 \end{definition}
+
+We now state the main result of \cite{mendoza2020stratifying}.
 
 \begin{theorem}\cite{mendoza2020stratifying}\label{tf-to-tau}
 	Let $M_1 \oplus M_2 \oplus \dots \oplus M_i$ be TF-ordered. Denote by $f_j$ the torsion-free functor associated to the torsion pair induced by $\text{Fac}(\bigoplus_{k = j+1}^i M_k)$.
@@ -317,14 +399,39 @@ We exploit this fact to algorithimcally study the set of complete unsigned \tu-e
 	Then, $(f_1(M_1),f_2(M_2),\dots,f_i(M_i))$ is an unsigned \tu-exceptional sequences, and all unsigned \tu-exceptional sequences arise in this way.
 \end{theorem}
 
+We now discuss some combinatorial properties of TF-ordered modules.
+
+Mendoza and Treffinger demonstrate that in fact all \tu-rigid modules admit a TF ordering. They also proved that for a TF-ordered \tu-rigid object $X = \oplus_{j = 1}^i X_i$, if $B \oplus X$ is its Bongartz-completion then any ordering on the form \[(X_1,\dots,X_i,B_{\sigma(1)},\dots,B_{\sigma(n-i)})\]
+Is also TF. This implies, since the Bongartz completion of the $0$ module is $A$, that there are $n!$ TF-orderings of $A$. 
+
+\begin{example}
+	It is not the case that every \tu-exceptional module has $k!$ TF-admissible orderings for an integer $k$. It is also not the case that left mutation must not increase the number of TF-admissible orderings.
+ \end{example}
+\begin{proposition}
+	Given a TF-ordered partial \tu-tilting module, $X = X_1 \oplus X_2 \oplus \dots \oplus X_i$, it may be extended to a TF-ordering of a \tu-tilting module $Y_1 \oplus \dots \oplus Y_{n-i} \oplus X_1 \oplus \dots X_i$.
+\end{proposition}
+
+\begin{proof}
+	By the Buan-Marsh correspondence, $X$ corresponds to an unsigned \tu-exceptional sequence of length $i$, say $U = (U_1,U_2,\dots,U_i)$. $J(U_1)$ may be considered a module category for an algebra with $n - i$ simple modules. Since every algebra has unsigned, complete \tu-exceptional sequences, we may extend $U$ to a complete $\tu$-exceptional sequence, say \[W = (W_1, \dots,  W_{n-i},  U_1, \dots, U_i)\] 
+	
+	This \tu-exceptional sequence again corresponds to a TF-ordered \tu-tilting module $T = T_1 \dots \oplus T_n$.
+	
+	Since $T_{n-i+1} \oplus \dots \oplus T_{n}$ induces the same \tu-exceptional sequence as $X$, they must be the same orderings of the same modules. This concludes our proof.
+	
+\end{proof}
+
+
+
 For a $\tau$-tilting finite algebra, we may compute all its \tu-rigid modules using mutation of \tu-tilting modules. We may then directly compute all unsigned \tu-exceptional sequences by considering all TF-orderings of \tu-tilting modules and exploiting \cref{tf-to-tau}.
 
 \subsubsection{Mutation of \tu-exceptional sequences}
-Buan and Marsh consider in an unpublished note an operation on the set of \tu-exception sequences. We here consider the same operation on the set of complete unsiged \tu-exceptional sequences.
+Buan and Marsh consider in an unpublished note an operation on the set of \tu-exception sequences. We here consider the same operation on the set of complete unsigned \tu-exceptional sequences.
 
 \begin{definition}
 	Let $ T = (T_1,T_2,\dots,T_n)$ be an unsigned complete \tu-exceptional sequence. Any unsigned complete \tu-exceptional sequence on the form $T_x = (T_1,T_2,\dots,T_{j-1},T_{j+1},X,T_{j+2},\dots,T_n)$ is called a \textit{right mutation} of $T$ at coordinate $j$. In this case, $T$ is called a  \textit{left mutation} of $T_x$ at coordinate $j$.
 \end{definition}
+
+On hereditary algebras, this operation is induced by a transitive Braid group action. We demonstrate below that in the non-hereditary case this operation does not enjoy the same properties.
 
 \begin{definition}
 	We define the quiver of complete \tu-exceptional sequences $Q(c\tu \text{-sequence } A)$ as the quiver having a vertex for each complete \tu-exceptional sequence over $A$ and an edge $T_1 \to T_2$ if $T_2$ is a right mutation of $T_1$ at some coordinate.
@@ -368,7 +475,7 @@ Buan and Marsh consider in an unpublished note an operation on the set of \tu-ex
 	Clearly, the only right-mutations of $\tau$-exceptional sequences here are $(rP(1),S(2)) \to (S(2),P(1))$ and $(rP(2),S(1)) \to (S(1),P(2))$. 
 \end{example}
 
-We are interested in classifying algebras where the right-mutation of \tu-exceptional is particularly well-behaved. Two conditions to consider are when we have \tu-exceptional transitivity as defined above and when right-mutation is always possible.
+We are interested in classifying algebras where the right-mutation of \tu-exceptional is particularly well-behaved. Two conditions to consider are \tu-exceptional transitivity as defined above and when right-mutation is always possible.
 
 \begin{proposition}
 	Let $A$ be the algebra defined by the quiver

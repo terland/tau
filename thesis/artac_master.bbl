@@ -56,6 +56,43 @@
       \verb 1210.1036
       \endverb
     \endentry
+    \entry{auslander1985modules}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{2}{}{%
+        {{hash=dc6c2832cdcb6e271e8e11e0d1a514c0}{%
+           family={Auslander},
+           familyi={A\bibinitperiod},
+           given={Maurice},
+           giveni={M\bibinitperiod}}}%
+        {{hash=320ed8c2cd36c08056e76659009a657d}{%
+           family={Reiten},
+           familyi={R\bibinitperiod},
+           given={Idun},
+           giveni={I\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {University of Illinois at Urbana-Champaign}%
+      }
+      \strng{namehash}{c0ec7cbd205ea6f1c17195f49c1f9d90}
+      \strng{fullhash}{c0ec7cbd205ea6f1c17195f49c1f9d90}
+      \strng{bibnamehash}{c0ec7cbd205ea6f1c17195f49c1f9d90}
+      \strng{authorbibnamehash}{c0ec7cbd205ea6f1c17195f49c1f9d90}
+      \strng{authornamehash}{c0ec7cbd205ea6f1c17195f49c1f9d90}
+      \strng{authorfullhash}{c0ec7cbd205ea6f1c17195f49c1f9d90}
+      \field{labelalpha}{AR+85}
+      \field{sortinit}{A}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Illinois Journal of Mathematics}
+      \field{number}{2}
+      \field{title}{Modules determined by their composition factors}
+      \field{volume}{29}
+      \field{year}{1985}
+      \field{pages}{280\bibrangedash 301}
+      \range{pages}{22}
+    \endentry
     \entry{auslander_reiten_smalo_1995}{book}{}
       \name{author}{3}{}{%
         {{hash=dc6c2832cdcb6e271e8e11e0d1a514c0}{%
@@ -259,6 +296,32 @@
       \verb http://dx.doi.org/10.1016/j.aim.2019.106746
       \endverb
     \endentry
+    \entry{cbw92}{article}{}
+      \name{author}{1}{}{%
+        {{hash=ee3c0ecdee75a34a1be977e9970a8e0c}{%
+           family={Crawley-Boevey},
+           familyi={C\bibinithyphendelim B\bibinitperiod},
+           given={William},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Carleton-Ottowa Math. LNS}%
+      }
+      \strng{namehash}{ee3c0ecdee75a34a1be977e9970a8e0c}
+      \strng{fullhash}{ee3c0ecdee75a34a1be977e9970a8e0c}
+      \strng{bibnamehash}{ee3c0ecdee75a34a1be977e9970a8e0c}
+      \strng{authorbibnamehash}{ee3c0ecdee75a34a1be977e9970a8e0c}
+      \strng{authornamehash}{ee3c0ecdee75a34a1be977e9970a8e0c}
+      \strng{authorfullhash}{ee3c0ecdee75a34a1be977e9970a8e0c}
+      \field{labelalpha}{Cra}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of ICRA IV}
+      \field{title}{Exceptional Sequences of Representations of Quivers}
+      \field{volume}{14}
+    \endentry
     \entry{dij17}{article}{}
       \name{author}{3}{}{%
         {{hash=cbf3860fe7154e0df2f50f5370ed47d3}{%
@@ -351,6 +414,43 @@
       \verb https://doi.org/10.1093/imrn/rnu163
       \endverb
     \endentry
+    \entry{keller2020tame}{misc}{}
+      \name{author}{3}{}{%
+        {{hash=2b847b7c461a7a54334e6476f1125387}{%
+           family={Keller},
+           familyi={K\bibinitperiod},
+           given={Bernhard},
+           giveni={B\bibinitperiod}}}%
+        {{hash=e2f088d801e288b353e1d9e8c70b75cb}{%
+           family={Plamondon},
+           familyi={P\bibinitperiod},
+           given={Pierre-Guy},
+           giveni={P\bibinithyphendelim G\bibinitperiod}}}%
+        {{hash=b805b059d873ddc19beed812777f4a9e}{%
+           family={Yurikusa},
+           familyi={Y\bibinitperiod},
+           given={Toshiya},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{06ba4d2421550cc8c8135e244b974efb}
+      \strng{fullhash}{06ba4d2421550cc8c8135e244b974efb}
+      \strng{bibnamehash}{06ba4d2421550cc8c8135e244b974efb}
+      \strng{authorbibnamehash}{06ba4d2421550cc8c8135e244b974efb}
+      \strng{authornamehash}{06ba4d2421550cc8c8135e244b974efb}
+      \strng{authorfullhash}{06ba4d2421550cc8c8135e244b974efb}
+      \field{labelalpha}{KPY20}
+      \field{sortinit}{K}
+      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{math.RT}
+      \field{eprinttype}{arXiv}
+      \field{title}{Tame algebras have dense $\mathbf{g}$-vector fans}
+      \field{year}{2020}
+      \verb{eprint}
+      \verb 2007.04215
+      \endverb
+    \endentry
     \entry{mendoza2020stratifying}{misc}{}
       \name{author}{2}{}{%
         {{hash=d2f3743a04cad724040785cbe49624cb}{%
@@ -382,6 +482,32 @@
       \verb{eprint}
       \verb 1904.11903
       \endverb
+    \endentry
+    \entry{ringel_exceptional}{article}{}
+      \name{author}{1}{}{%
+        {{hash=c5eb50a860e49ed8e3a19fa66a6f7ce1}{%
+           family={Ringel},
+           familyi={R\bibinitperiod},
+           given={Claus\bibnamedelima MIchael},
+           giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{c5eb50a860e49ed8e3a19fa66a6f7ce1}
+      \strng{fullhash}{c5eb50a860e49ed8e3a19fa66a6f7ce1}
+      \strng{bibnamehash}{c5eb50a860e49ed8e3a19fa66a6f7ce1}
+      \strng{authorbibnamehash}{c5eb50a860e49ed8e3a19fa66a6f7ce1}
+      \strng{authornamehash}{c5eb50a860e49ed8e3a19fa66a6f7ce1}
+      \strng{authorfullhash}{c5eb50a860e49ed8e3a19fa66a6f7ce1}
+      \field{labelalpha}{Rin93}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Abelian group theory and related topics: Conference on Abelian Groups}
+      \field{month}{8}
+      \field{title}{The braid group action on the set of exceptional sequences of a hereditary artin algebra}
+      \field{year}{1993}
+      \field{pages}{339\bibrangedash 352}
+      \range{pages}{14}
     \endentry
     \entry{schroll2020tautilting}{misc}{}
       \name{author}{2}{}{%
