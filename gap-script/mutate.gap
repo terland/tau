@@ -1,6 +1,6 @@
 LoadPackage("qpa");
 LoadPackage("yags");
-Q := Quiver(3, [[1,2,"a"],[2,3,"b"] ] );
+Q := Quiver(2, [[1,1,"loop"],[1,2,"a"],[2,1,"c"],[2,2,"d"] ] );
 
 
 Display(Q);
@@ -13,9 +13,9 @@ AssignGeneratorVariables(KQ);
 stop := 1;
 
 rels := [];
-AddNthPowerToRelations(KQ,rels,2);
+AddNthPowerToRelations(KQ,rels,3);
 
-KQ := KQ;
+KQ := KQ/rels;
 
 #/rels;
 #KQ := KQ/[x1*x2,x2*x1,y1*y2,y2*y1,x1*y2-y2*x1,x2*y1-y1*x2];
@@ -29,7 +29,7 @@ proj := IndecProjectiveModules(KQ);
 LeftMutation := function(x,u)
     local g,y;
     g := MinimalLeftApproximation(x,u);
-    
+    Display("approx OK");
     y := CoKernel(g);
     
     return y;
@@ -52,7 +52,8 @@ LeftMutateOnList := function(m,i)
     od;
         
     x := m[i];
-        
+    
+    Display("doing-mutation");
     y := LeftMutation(x,DirectSumOfQPAModules(u));
     return y;
 end;
@@ -142,7 +143,10 @@ GetMutations := function(mf, depth)
     fi;
     
     while i <= Length(m) do
+    
+        Display("computing..");
         y := LeftMutateOnList(m,i);
+        Display("ok");
         
         if y = [] then
             i := i + 1;
@@ -385,6 +389,7 @@ end;
 
 
 tautilting := GetMutations(proj,1);
+
 #tautilting := [[proj[1],proj[2]]];
 uniquetau := [];
 
@@ -556,6 +561,9 @@ gvector := function(m)
     pr := ProjectiveResolution(m);
     p1 := Source(pr^1);
     p2 := Range(pr^1);
+    
+    # GET TOP OF MODULE HERE.
+    Display(TopOfModule(p1));
     
     l := [];
     for p in proj do

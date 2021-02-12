@@ -2208,18 +2208,19 @@
     <bcf:citekey order="24">dij17</bcf:citekey>
     <bcf:citekey order="25">keller2020tame</bcf:citekey>
     <bcf:citekey order="26">dij17</bcf:citekey>
-    <bcf:citekey order="27">jassoreduction</bcf:citekey>
+    <bcf:citekey order="27">Br_stle_2019</bcf:citekey>
     <bcf:citekey order="28">jassoreduction</bcf:citekey>
-    <bcf:citekey order="29">tau</bcf:citekey>
-    <bcf:citekey order="30">cbw92</bcf:citekey>
-    <bcf:citekey order="31">ringel_exceptional</bcf:citekey>
-    <bcf:citekey order="32">buantau2020</bcf:citekey>
+    <bcf:citekey order="29">jassoreduction</bcf:citekey>
+    <bcf:citekey order="30">tau</bcf:citekey>
+    <bcf:citekey order="31">cbw92</bcf:citekey>
+    <bcf:citekey order="32">ringel_exceptional</bcf:citekey>
     <bcf:citekey order="33">buantau2020</bcf:citekey>
-    <bcf:citekey order="34">ringel_exceptional</bcf:citekey>
-    <bcf:citekey order="35">mendoza2020stratifying</bcf:citekey>
+    <bcf:citekey order="34">buantau2020</bcf:citekey>
+    <bcf:citekey order="35">ringel_exceptional</bcf:citekey>
     <bcf:citekey order="36">mendoza2020stratifying</bcf:citekey>
     <bcf:citekey order="37">mendoza2020stratifying</bcf:citekey>
     <bcf:citekey order="38">mendoza2020stratifying</bcf:citekey>
+    <bcf:citekey order="39">mendoza2020stratifying</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="anyt">
