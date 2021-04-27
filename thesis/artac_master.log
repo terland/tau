@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  7 FEB 2021 17:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  27 APR 2021 17:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -447,23 +447,167 @@ File: pgflibraryarrows.meta.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \pgfarrowlength=\dimen197
 \pgfarrowwidth=\dimen198
 \pgfarrowlinewidth=\dimen199
-))) (/usr/local/texlive/2020/texmf-dist/tex/latex/tools/array.sty
+))) (./quiver.sty
+Package: quiver 2021/01/11 quiver
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarydecorations.pathmorphing.code.tex
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarydecorations.code.tex
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/modules/pgfmoduledecoration
+s.code.tex
+\pgfdecoratedcompleteddistance=\dimen256
+\pgfdecoratedremainingdistance=\dimen257
+\pgfdecoratedinputsegmentcompleteddistance=\dimen258
+\pgfdecoratedinputsegmentremainingdistance=\dimen259
+\pgf@decorate@distancetomove=\dimen260
+\pgf@decorate@repeatstate=\count274
+\pgfdecorationsegmentamplitude=\dimen261
+\pgfdecorationsegmentlength=\dimen262
+)
+\tikz@lib@dec@box=\box58
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
+brarydecorations.pathmorphing.code.tex)))
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tools/array.sty
 Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
-\col@sep=\dimen256
-\ar@mcellbox=\box58
-\extrarowheight=\dimen257
+\col@sep=\dimen263
+\ar@mcellbox=\box59
+\extrarowheight=\dimen264
 \NC@list=\toks39
 \extratabsurround=\skip55
 \backup@length=\skip56
-\ar@cellbox=\box59
-) (/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/hyperref.sty
+\ar@cellbox=\box60
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/xypic/xy.sty
+(/usr/local/texlive/2020/texmf-dist/tex/generic/xypic/xy.tex Bootstrap'ing:
+catcodes, docmode,
+(/usr/local/texlive/2020/texmf-dist/tex/generic/xypic/xyrecat.tex)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/xypic/xyidioms.tex)
+
+ Xy-pic version 3.8.9 <2013/10/06>
+ Copyright (c) 1991-2013 by Kristoffer H. Rose <krisrose@tug.org> and others
+ Xy-pic is free software: see the User's Guide for details.
+
+Loading kernel: messages; fonts; allocations: state,
+\X@c=\dimen265
+\Y@c=\dimen266
+\U@c=\dimen267
+\D@c=\dimen268
+\L@c=\dimen269
+\R@c=\dimen270
+\Edge@c=\toks40
+\X@p=\dimen271
+\Y@p=\dimen272
+\U@p=\dimen273
+\D@p=\dimen274
+\L@p=\dimen275
+\R@p=\dimen276
+\Edge@p=\toks41
+\X@origin=\dimen277
+\Y@origin=\dimen278
+\X@xbase=\dimen279
+\Y@xbase=\dimen280
+\X@ybase=\dimen281
+\Y@ybase=\dimen282
+\X@min=\dimen283
+\Y@min=\dimen284
+\X@max=\dimen285
+\Y@max=\dimen286
+\lastobjectbox@=\box61
+\zerodotbox@=\box62
+\almostz@=\dimen287
+ direction,
+\d@X=\dimen288
+\d@Y=\dimen289
+\K@=\count275
+\KK@=\count276
+\Direction=\count277
+\K@dXdY=\dimen290
+\K@dYdX=\dimen291
+\xyread@=\read3
+\xywrite@=\write4
+\csp@=\count278
+\quotPTK@=\dimen292
+
+utility macros; pictures: \xy, positions,
+\swaptoks@@=\toks42
+\connectobjectbox@@=\box63
+ objects,
+\styletoks@=\toks43
+ decorations;
+kernel objects: directionals, circles, text; options; algorithms: directions,
+edges, connections;  Xy-pic loaded)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/iftex/ifpdf.sty
+Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+))
+Package: xy 2013/10/06 Xy-pic version 3.8.9
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/xypic/xycmtip.tex
+ Xy-pic option: Computer Modern tip extension v.3.7
+(/usr/local/texlive/2020/texmf-dist/tex/generic/xypic/xytips.tex
+ Xy-pic option: More Tips extension v.3.11 loaded) loaded)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/xypic/xyall.tex
+ Xy-pic option: All features v.3.8
+(/usr/local/texlive/2020/texmf-dist/tex/generic/xypic/xycurve.tex
+ Xy-pic option: Curve and Spline extension v.3.12 curve,
+\crv@cnt@=\count279
+\crvpts@=\toks44
+\splinebox@=\box64
+\splineval@=\dimen293
+\splinedepth@=\dimen294
+\splinetol@=\dimen295
+\splinelength@=\dimen296
+ circles,
+\L@=\dimen297
+ loaded)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/xypic/xyframe.tex
+ Xy-pic option: Frame and Bracket extension v.3.14 loaded)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/xypic/xyline.tex
+ Xy-pic option: Line styles extension v.3.10
+\xylinethick@=\dimen298
+ loaded)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/xypic/xyrotate.tex
+ Xy-pic option: Rotate and Scale extension v.3.8 loaded)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/xypic/xycolor.tex
+ Xy-pic option: Colour extension v.3.11 loaded)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/xypic/xymatrix.tex
+ Xy-pic option: Matrix feature v.3.14
+\Row=\count280
+\Col=\count281
+\queue@=\toks45
+\queue@@=\toks46
+\qcount@=\count282
+\qcount@@=\count283
+\matrixsize@=\count284
+ loaded)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/xypic/xyarrow.tex
+ Xy-pic option: Arrow and Path feature v.3.9 path, \ar, loaded)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/xypic/xygraph.tex
+ Xy-pic option: Graph feature v.3.11 loaded) loaded)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/xypic/xypdf.tex
+ Xy-pic option: PDF driver v.1.7 Xy-pic pdf driver: `color' extension support
+(/usr/local/texlive/2020/texmf-dist/tex/generic/xypic/xypdf-co.tex loaded)
+Xy-pic pdf driver: `curve' extension support
+(/usr/local/texlive/2020/texmf-dist/tex/generic/xypic/xypdf-cu.tex loaded)
+Xy-pic pdf driver: `frame' extension support
+(/usr/local/texlive/2020/texmf-dist/tex/generic/xypic/xypdf-fr.tex loaded)
+Xy-pic pdf driver: `line' extension support
+(/usr/local/texlive/2020/texmf-dist/tex/generic/xypic/xypdf-li.tex loaded)
+Xy-pic pdf driver: `rotate' extension support
+(/usr/local/texlive/2020/texmf-dist/tex/generic/xypic/xypdf-ro.tex loaded)
+loaded)) (/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2020/01/14 v7.00d Hypertext links for LaTeX
 
 (/usr/local/texlive/2020/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
-)
-(/usr/local/texlive/2020/texmf-dist/tex/generic/iftex/iftex.sty
-Package: iftex 2020/03/06 v1.0d TeX engine tests
 )
 (/usr/local/texlive/2020/texmf-dist/tex/latex/pdftexcmds/pdftexcmds.sty
 Package: pdftexcmds 2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX (HO
@@ -497,9 +641,9 @@ Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 (/usr/local/texlive/2020/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
 )
-\@linkdim=\dimen258
-\Hy@linkcounter=\count274
-\Hy@pagecounter=\count275
+\@linkdim=\dimen299
+\Hy@linkcounter=\count285
+\Hy@pagecounter=\count286
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2020/01/14 v7.00d Hyperref: PDFDocEncoding definition (HO)
@@ -512,7 +656,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 (/usr/local/texlive/2020/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count276
+\Hy@SavedSpaceFactor=\count287
 Package hyperref Info: Hyper figures OFF on input line 4547.
 Package hyperref Info: Link nesting OFF on input line 4552.
 Package hyperref Info: Hyper index ON on input line 4555.
@@ -520,14 +664,14 @@ Package hyperref Info: Plain pages OFF on input line 4562.
 Package hyperref Info: Backreferencing OFF on input line 4567.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4800.
-\c@Hy@tempcnt=\count277
+\c@Hy@tempcnt=\count288
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5159.
-\XeTeXLinkMargin=\dimen259
+\XeTeXLinkMargin=\dimen300
 
 (/usr/local/texlive/2020/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
@@ -536,9 +680,9 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count278
-\Field@Width=\dimen260
-\Fld@charsize=\dimen261
+\Fld@menulength=\count289
+\Field@Width=\dimen301
+\Fld@charsize=\dimen302
 Package hyperref Info: Hyper figures OFF on input line 6430.
 Package hyperref Info: Link nesting OFF on input line 6435.
 Package hyperref Info: Hyper index ON on input line 6438.
@@ -552,9 +696,9 @@ LaTeX Info: Redefining \pageref on input line 6504.
 (/usr/local/texlive/2020/texmf-dist/tex/generic/atbegshi/atbegshi.sty
 Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
 )
-\Hy@abspage=\count279
-\c@Item=\count280
-\c@Hfootnote=\count281
+\Hy@abspage=\count290
+\c@Item=\count291
+\c@Hfootnote=\count292
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
@@ -565,8 +709,8 @@ File: hpdftex.def 2020/01/14 v7.00d Hyperref driver for pdfTeX
 Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
 Package atveryend Info: \enddocument detected (standard20110627).
 )
-\Fld@listcount=\count282
-\c@bookmark@seq@number=\count283
+\Fld@listcount=\count293
+\c@bookmark@seq@number=\count294
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
@@ -598,11 +742,11 @@ Package: biblatex 2019/12/01 v3.14 programmable bibliographies (PK/MW)
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count284
+\etb@tempcnta=\count295
 )
 (/usr/local/texlive/2020/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count285
+\lrq@indent=\count296
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
@@ -610,47 +754,47 @@ File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 (/usr/local/texlive/2020/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-\c@tabx@nest=\count286
-\c@listtotal=\count287
-\c@listcount=\count288
-\c@liststart=\count289
-\c@liststop=\count290
-\c@citecount=\count291
-\c@citetotal=\count292
-\c@multicitecount=\count293
-\c@multicitetotal=\count294
-\c@instcount=\count295
-\c@maxnames=\count296
-\c@minnames=\count297
-\c@maxitems=\count298
-\c@minitems=\count299
-\c@citecounter=\count300
-\c@maxcitecounter=\count301
-\c@savedcitecounter=\count302
-\c@uniquelist=\count303
-\c@uniquename=\count304
-\c@refsection=\count305
-\c@refsegment=\count306
-\c@maxextratitle=\count307
-\c@maxextratitleyear=\count308
-\c@maxextraname=\count309
-\c@maxextradate=\count310
-\c@maxextraalpha=\count311
-\c@abbrvpenalty=\count312
-\c@highnamepenalty=\count313
-\c@lownamepenalty=\count314
-\c@maxparens=\count315
-\c@parenlevel=\count316
-\blx@tempcnta=\count317
-\blx@tempcntb=\count318
-\blx@tempcntc=\count319
-\blx@maxsection=\count320
-\blx@maxsegment@0=\count321
-\blx@notetype=\count322
-\blx@parenlevel@text=\count323
-\blx@parenlevel@foot=\count324
-\blx@sectionciteorder@0=\count325
-\blx@entrysetcounter=\count326
+\c@tabx@nest=\count297
+\c@listtotal=\count298
+\c@listcount=\count299
+\c@liststart=\count300
+\c@liststop=\count301
+\c@citecount=\count302
+\c@citetotal=\count303
+\c@multicitecount=\count304
+\c@multicitetotal=\count305
+\c@instcount=\count306
+\c@maxnames=\count307
+\c@minnames=\count308
+\c@maxitems=\count309
+\c@minitems=\count310
+\c@citecounter=\count311
+\c@maxcitecounter=\count312
+\c@savedcitecounter=\count313
+\c@uniquelist=\count314
+\c@uniquename=\count315
+\c@refsection=\count316
+\c@refsegment=\count317
+\c@maxextratitle=\count318
+\c@maxextratitleyear=\count319
+\c@maxextraname=\count320
+\c@maxextradate=\count321
+\c@maxextraalpha=\count322
+\c@abbrvpenalty=\count323
+\c@highnamepenalty=\count324
+\c@lownamepenalty=\count325
+\c@maxparens=\count326
+\c@parenlevel=\count327
+\blx@tempcnta=\count328
+\blx@tempcntb=\count329
+\blx@tempcntc=\count330
+\blx@maxsection=\count331
+\blx@maxsegment@0=\count332
+\blx@notetype=\count333
+\blx@parenlevel@text=\count334
+\blx@parenlevel@foot=\count335
+\blx@sectionciteorder@0=\count336
+\blx@entrysetcounter=\count337
 \labelnumberwidth=\skip58
 \labelalphawidth=\skip59
 \biblabelsep=\skip60
@@ -659,12 +803,12 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 \bibinitsep=\skip63
 \bibparsep=\skip64
 \bibhang=\skip65
-\blx@bcfin=\read3
-\blx@bcfout=\write4
+\blx@bcfin=\read4
+\blx@bcfout=\write5
 \blx@langwohyphens=\language86
-\c@mincomprange=\count327
-\c@maxcomprange=\count328
-\c@mincompwidth=\count329
+\c@mincomprange=\count338
+\c@maxcomprange=\count339
+\c@mincompwidth=\count340
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -675,74 +819,74 @@ Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'alphabetic.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count330
-\c@savedafterword=\count331
-\c@annotator=\count332
-\c@savedannotator=\count333
-\c@author=\count334
-\c@savedauthor=\count335
-\c@bookauthor=\count336
-\c@savedbookauthor=\count337
-\c@commentator=\count338
-\c@savedcommentator=\count339
-\c@editor=\count340
-\c@savededitor=\count341
-\c@editora=\count342
-\c@savededitora=\count343
-\c@editorb=\count344
-\c@savededitorb=\count345
-\c@editorc=\count346
-\c@savededitorc=\count347
-\c@foreword=\count348
-\c@savedforeword=\count349
-\c@holder=\count350
-\c@savedholder=\count351
-\c@introduction=\count352
-\c@savedintroduction=\count353
-\c@namea=\count354
-\c@savednamea=\count355
-\c@nameb=\count356
-\c@savednameb=\count357
-\c@namec=\count358
-\c@savednamec=\count359
-\c@translator=\count360
-\c@savedtranslator=\count361
-\c@shortauthor=\count362
-\c@savedshortauthor=\count363
-\c@shorteditor=\count364
-\c@savedshorteditor=\count365
-\c@labelname=\count366
-\c@savedlabelname=\count367
-\c@institution=\count368
-\c@savedinstitution=\count369
-\c@lista=\count370
-\c@savedlista=\count371
-\c@listb=\count372
-\c@savedlistb=\count373
-\c@listc=\count374
-\c@savedlistc=\count375
-\c@listd=\count376
-\c@savedlistd=\count377
-\c@liste=\count378
-\c@savedliste=\count379
-\c@listf=\count380
-\c@savedlistf=\count381
-\c@location=\count382
-\c@savedlocation=\count383
-\c@organization=\count384
-\c@savedorganization=\count385
-\c@origlocation=\count386
-\c@savedoriglocation=\count387
-\c@origpublisher=\count388
-\c@savedorigpublisher=\count389
-\c@publisher=\count390
-\c@savedpublisher=\count391
-\c@language=\count392
-\c@savedlanguage=\count393
-\c@origlanguage=\count394
-\c@savedoriglanguage=\count395
-\c@pageref=\count396
-\c@savedpageref=\count397
+\c@afterword=\count341
+\c@savedafterword=\count342
+\c@annotator=\count343
+\c@savedannotator=\count344
+\c@author=\count345
+\c@savedauthor=\count346
+\c@bookauthor=\count347
+\c@savedbookauthor=\count348
+\c@commentator=\count349
+\c@savedcommentator=\count350
+\c@editor=\count351
+\c@savededitor=\count352
+\c@editora=\count353
+\c@savededitora=\count354
+\c@editorb=\count355
+\c@savededitorb=\count356
+\c@editorc=\count357
+\c@savededitorc=\count358
+\c@foreword=\count359
+\c@savedforeword=\count360
+\c@holder=\count361
+\c@savedholder=\count362
+\c@introduction=\count363
+\c@savedintroduction=\count364
+\c@namea=\count365
+\c@savednamea=\count366
+\c@nameb=\count367
+\c@savednameb=\count368
+\c@namec=\count369
+\c@savednamec=\count370
+\c@translator=\count371
+\c@savedtranslator=\count372
+\c@shortauthor=\count373
+\c@savedshortauthor=\count374
+\c@shorteditor=\count375
+\c@savedshorteditor=\count376
+\c@labelname=\count377
+\c@savedlabelname=\count378
+\c@institution=\count379
+\c@savedinstitution=\count380
+\c@lista=\count381
+\c@savedlista=\count382
+\c@listb=\count383
+\c@savedlistb=\count384
+\c@listc=\count385
+\c@savedlistc=\count386
+\c@listd=\count387
+\c@savedlistd=\count388
+\c@liste=\count389
+\c@savedliste=\count390
+\c@listf=\count391
+\c@savedlistf=\count392
+\c@location=\count393
+\c@savedlocation=\count394
+\c@organization=\count395
+\c@savedorganization=\count396
+\c@origlocation=\count397
+\c@savedoriglocation=\count398
+\c@origpublisher=\count399
+\c@savedorigpublisher=\count400
+\c@publisher=\count401
+\c@savedpublisher=\count402
+\c@language=\count403
+\c@savedlanguage=\count404
+\c@origlanguage=\count405
+\c@savedoriglanguage=\count406
+\c@pageref=\count407
+\c@savedpageref=\count408
 \shorthandwidth=\skip66
 \shortjournalwidth=\skip67
 \shortserieswidth=\skip68
@@ -768,19 +912,19 @@ Package biblatex Info: ... file 'biblatex.def' found.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2019/12/01 v3.14 biblatex compatibility (PK/MW)
-\c@textcitecount=\count398
-\c@textcitetotal=\count399
-\c@textcitemaxnames=\count400
-\c@biburlbigbreakpenalty=\count401
-\c@biburlbreakpenalty=\count402
-\c@biburlnumpenalty=\count403
-\c@biburlucpenalty=\count404
-\c@biburllcpenalty=\count405
+\c@textcitecount=\count409
+\c@textcitetotal=\count410
+\c@textcitemaxnames=\count411
+\c@biburlbigbreakpenalty=\count412
+\c@biburlbreakpenalty=\count413
+\c@biburlnumpenalty=\count414
+\c@biburlucpenalty=\count415
+\c@biburllcpenalty=\count416
 \biburlbigskip=\muskip18
 \biburlnumskip=\muskip19
 \biburlucskip=\muskip20
 \biburllcskip=\muskip21
-\c@smartand=\count406
+\c@smartand=\count417
 )
 Package biblatex Info: Trying to load bibliography style 'alphabetic'...
 Package biblatex Info: ... file 'alphabetic.bbx' found.
@@ -792,8 +936,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2019/12/01 v3.14 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count407
-\c@bbx:relatedtotal=\count408
+\c@bbx:relatedcount=\count418
+\c@bbx:relatedtotal=\count419
 ))
 Package biblatex Info: Trying to load citation style 'alphabetic'...
 Package biblatex Info: ... file 'alphabetic.cbx' found.
@@ -817,53 +961,54 @@ Package biblatex Info: ... file 'biblatex.cfg' found.
 (/usr/local/texlive/2020/texmf-dist/tex/latex/biblatex/biblatex.cfg
 File: biblatex.cfg 
 ))
-\c@definition=\count409
-\c@theorem=\count410
-\c@corollary=\count411
-\c@proposition=\count412
-\c@example=\count413
-\c@question=\count414
-\@quotelevel=\count415
-\@quotereset=\count416
+\c@definition=\count420
+\c@theorem=\count421
+\c@corollary=\count422
+\c@lemma=\count423
+\c@proposition=\count424
+\c@example=\count425
+\c@question=\count426
+\@quotelevel=\count427
+\@quotereset=\count428
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count417
-\l__pdf_internal_box=\box60
+\l__kernel_color_stack_int=\count429
+\l__pdf_internal_box=\box65
 )
 (./artac_master.aux)
 \openout1 = `artac_master.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
  ABD: EveryShipout initializing macros
 (/usr/local/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count418
-\scratchdimen=\dimen262
-\scratchbox=\box61
-\nofMPsegments=\count419
-\nofMParguments=\count420
-\everyMPshowfont=\toks40
-\MPscratchCnt=\count421
-\MPscratchDim=\dimen263
-\MPnumerator=\count422
-\makeMPintoPDFobject=\count423
-\everyMPtoPDFconversion=\toks41
+\scratchcounter=\count430
+\scratchdimen=\dimen303
+\scratchbox=\box66
+\nofMPsegments=\count431
+\nofMParguments=\count432
+\everyMPshowfont=\toks47
+\MPscratchCnt=\count433
+\MPscratchDim=\dimen304
+\MPnumerator=\count434
+\makeMPintoPDFobject=\count435
+\everyMPtoPDFconversion=\toks48
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 
@@ -881,8 +1026,21 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\AtBeginShipoutBox=\box62
-Package hyperref Info: Link coloring OFF on input line 44.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 52.
+
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 52.
+
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Package xypdf Info: Line width: 0.39998pt on input line 52.
+\AtBeginShipoutBox=\box67
+Package hyperref Info: Link coloring OFF on input line 52.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -894,14 +1052,14 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count424
+\c@section@level=\count436
 )
-LaTeX Info: Redefining \ref on input line 44.
-LaTeX Info: Redefining \pageref on input line 44.
-LaTeX Info: Redefining \nameref on input line 44.
+LaTeX Info: Redefining \ref on input line 52.
+LaTeX Info: Redefining \pageref on input line 52.
+LaTeX Info: Redefining \nameref on input line 52.
  (./artac_master.out) (./artac_master.out)
-\@outlinefile=\write5
-\openout5 = `artac_master.out'.
+\@outlinefile=\write6
+\openout6 = `artac_master.out'.
 
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
@@ -912,54 +1070,50 @@ File: english.lbx 2019/12/01 v3.14 biblatex localization (PK/MW)
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-\openout4 = `artac_master.bcf'.
+\openout5 = `artac_master.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'artac_master.bbl' found.
 
 (./artac_master.bbl)
-Package biblatex Info: Reference section=0 on input line 44.
-Package biblatex Info: Reference segment=0 on input line 44.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 47.
+Package biblatex Info: Reference section=0 on input line 52.
+Package biblatex Info: Reference segment=0 on input line 52.
+ [1
 
-
-(/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 47.
-
-
-(/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Overfull \hbox (3.46564pt too wide) in paragraph at lines 63--64
+{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (3.46564pt too wide) in paragraph at lines 103--104
 []\OT1/cmr/m/n/10 We de-note by $\OML/cmm/m/it/10 hom[]\OT1/cmr/m/n/10 (\OML/cm
 m/m/it/10 M; N\OT1/cmr/m/n/10 )$ the di-men-sion of the $\OML/cmm/m/it/10 k$\OT
 1/cmr/m/n/10 -vector space $[][](\OML/cmm/m/it/10 M; N\OT1/cmr/m/n/10 )$. 
  []
 
-[1
-
-{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (0.96315pt too wide) in paragraph at lines 101--102
+[2] [3]
+Overfull \hbox (0.96315pt too wide) in paragraph at lines 185--186
 \OT1/cmr/m/n/10 with $\OML/cmm/m/it/10 ^^\$\OT1/cmr/m/n/10 -rigid mod-ules. For
  $\OML/cmm/m/it/10 M$ \OT1/cmr/m/n/10 par-tial tilt-ing, $0 = \OML/cmm/m/it/10 
 Ext[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 M; M\OT1/cmr/m/n/10 ) [] [][](\OML/cmm/m
 /it/10 M; ^^\M\OT1/cmr/m/n/10 )$,
  []
 
-[2]
+[4]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\tau' on input line 104.
-
-[3] [4]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\tau' on input line 207.
+(hyperref)                removing `\tau' on input line 188.
 
 [5] [6]
-Overfull \hbox (30.23935pt too wide) in paragraph at lines 266--267
+Overfull \hbox (2.3602pt too wide) in paragraph at lines 271--272
+[]\OT1/cmr/m/n/10 This al-lows us to com-pute $\OML/cmm/m/it/10 Q\OT1/cmr/m/n/1
+0 (\OML/cmm/m/it/10 s^^\[]\OT1/cmr/m/n/10 ^^C)$ as the Carte-sian prod-uct of $
+\OML/cmm/m/it/10 Q\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 s^^\[]A\OT1/cmr/m/n/10 )$
+ []
+
+[7] [8] [9]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\tau' on input line 365.
+
+[10]
+Overfull \hbox (30.23935pt too wide) in paragraph at lines 424--425
 []\OT1/cmr/m/n/10 Let $\OML/cmm/m/it/10 v \OT1/cmr/m/n/10 = (\OML/cmm/m/it/10 v
 []; v[]; [] ; v[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 D\OT1/cm
 r/m/n/10 (\OML/cmm/m/it/10 M[]\OT1/cmr/m/n/10 )$. We have $\OMS/cmsy/m/n/10 h\O
@@ -969,124 +1123,137 @@ ML/cmm/m/it/10 v; x\OMS/cmsy/m/n/10 i \OT1/cmr/m/n/10 = 0$ and $\OMS/cmsy/m/n/1
 [] ; \OT1/cmr/m/n/10 0)\OMS/cmsy/m/n/10 i ^^T
  []
 
+[11]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 286.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\tau' on input line 286.
+(hyperref)                removing `math shift' on input line 444.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 286.
-
-[7] [8] [9]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\tau' on input line 369.
+(hyperref)                removing `\tau' on input line 444.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\tau' on input line 385.
+(hyperref)                removing `math shift' on input line 444.
 
-[10] [11]
+[12] [13] [14]
+Overfull \hbox (29.31865pt too wide) in paragraph at lines 638--639
+[]\OT1/cmr/m/n/10 Then $\OML/cmm/m/it/10 Q\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 s^^
+\[]A\OT1/cmr/m/n/10 )$ is, as a di-rected graph, the carte-sian prod-uct of $\O
+ML/cmm/m/it/10 Q\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 s^^\[][]\OT1/cmr/m/n/10 (\OML
+/cmm/m/it/10 A[]\OT1/cmr/m/n/10 ))$
+ []
+
+[15] [16] [17]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\tau' on input line 427.
+(hyperref)                removing `\tau' on input line 747.
+
+[18]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\tau' on input line 763.
+
+[19]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\tau' on input line 805.
 
 
-Overfull \hbox (0.30067pt too wide) in paragraph at lines 431--432
+Overfull \hbox (0.30067pt too wide) in paragraph at lines 809--810
 []\OT1/cmr/bx/n/10 Definition 6.3. []\OT1/cmr/m/n/10 Let $\OML/cmm/m/it/10 T \O
 T1/cmr/m/n/10 = (\OML/cmm/m/it/10 T[]; T[]; [] ; T[]\OT1/cmr/m/n/10 )$ be an un
 -signed com-plete $\OML/cmm/m/it/10 ^^\$\OT1/cmr/m/n/10 -exceptional
  []
 
-
-Overfull \hbox (33.644pt too wide) in paragraph at lines 475--476
+[20]
+Overfull \hbox (33.644pt too wide) in paragraph at lines 853--854
 []\OT1/cmr/m/n/10 Clearly, the only right-mutations of $\OML/cmm/m/it/10 ^^\$\O
 T1/cmr/m/n/10 -exceptional se-quences here are $(\OML/cmm/m/it/10 rP\OT1/cmr/m/
 n/10 (1)\OML/cmm/m/it/10 ; S\OT1/cmr/m/n/10 (2)) \OMS/cmsy/m/n/10 !
  []
 
-[12] [13]
-Overfull \hbox (52.7825pt too wide) in paragraph at lines 544--544
+[21] [22]
+Overfull \hbox (52.7825pt too wide) in paragraph at lines 922--922
 \OT1/cmr/m/n/10 dent Texts. Cam-bridge Uni-ver-sity Press, 2006. \OT1/cmr/m/sc/
 10 doi\OT1/cmr/m/n/10 : []$\OT1/cmtt/m/n/10 10 . 1017 / CBO9780511614309$[]\OT1
 /cmr/m/n/10 . 
  []
 
 
-Overfull \hbox (2.4277pt too wide) in paragraph at lines 544--544
+Overfull \hbox (2.4277pt too wide) in paragraph at lines 922--922
 []\OT1/cmr/m/n/10 Aslak Bakke Buan and Bethany Marsh. $\OML/cmm/m/it/10 ^^\$\OT
 1/cmr/m/it/10 -exceptional se-quences\OT1/cmr/m/n/10 . 2020.
  []
 
-[14]
-Overfull \hbox (0.49426pt too wide) in paragraph at lines 544--544
+
+Overfull \hbox (0.49426pt too wide) in paragraph at lines 922--922
 \OT1/cmr/m/n/10 In: \OT1/cmr/m/it/10 In-ter-na-tional Math-e-mat-ics Re-search 
 No-tices \OT1/cmr/m/n/10 2015.16 (Sept. 2014),
  []
 
 
-Overfull \hbox (4.91653pt too wide) in paragraph at lines 544--544
+Overfull \hbox (4.91653pt too wide) in paragraph at lines 922--922
 []\OT1/cmr/m/n/10 Bernhard Keller, Pierre-Guy Pla-m-on-don, and Toshiya Yurikus
 a. \OT1/cmr/m/it/10 Tame
  []
 
 
-Overfull \hbox (8.78801pt too wide) in paragraph at lines 544--544
+Overfull \hbox (8.78801pt too wide) in paragraph at lines 922--922
 \OT1/cmr/m/it/10 al-ge-bras have dense $\OT1/cmr/bx/n/10 g$\OT1/cmr/m/it/10 -ve
 ctor fans\OT1/cmr/m/n/10 . 2020. arXiv: []$\OT1/cmtt/m/n/10 2007 . 04215$ [math
 .RT][]\OT1/cmr/m/n/10 . 
  []
 
-[15]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 545.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 545.
+[23]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 923.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 923.
  (./artac_master.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 545.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 545.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 923.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 923.
 Package rerunfilecheck Info: File `artac_master.out' has not changed.
-(rerunfilecheck)             Checksum: 6AC13930706225BDB3E1FB53C2C9B220;1221.
+(rerunfilecheck)             Checksum: DEFAB2DD22DA7513B7ACB696BAB3D9EF;1567.
 Package logreq Info: Writing requests to 'artac_master.run.xml'.
 \openout1 = `artac_master.run.xml'.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 545.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 923.
  ) 
 Here is how much of TeX's memory you used:
- 26489 strings out of 480608
- 522326 string characters out of 5903631
- 1134974 words of memory out of 5000000
- 41867 multiletter control sequences out of 15000+600000
- 545692 words of font info for 75 fonts, out of 8000000 for 9000
+ 30291 strings out of 480608
+ 585978 string characters out of 5903631
+ 1231049 words of memory out of 5000000
+ 45550 multiletter control sequences out of 15000+600000
+ 547141 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,15n,86p,924b,1369s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 67i,17n,86p,3223b,1369s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 </usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
 /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></u
 sr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></u
 sr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
-r/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr
-/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/
-local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/lo
-cal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/loca
-l/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/
-texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/te
-xlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texl
-ive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive
-/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/20
-20/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/202
-0/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2020/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2020/te
-xmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/202
-0/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on artac_master.pdf (15 pages, 283931 bytes).
+r/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><
+/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></u
+sr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr
+/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/l
+ocal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loc
+al/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local
+/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/t
+exlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texl
+ive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive
+/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/
+2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/20
+20/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2020/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2020/t
+exmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/20
+20/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texliv
+e/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on artac_master.pdf (23 pages, 341333 bytes).
 PDF statistics:
- 378 PDF objects out of 1000 (max. 8388607)
- 337 compressed objects within 4 object streams
- 97 named destinations out of 1000 (max. 500000)
- 149 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 470 PDF objects out of 1000 (max. 8388607)
+ 417 compressed objects within 5 object streams
+ 124 named destinations out of 1000 (max. 500000)
+ 189 words of extra memory for PDF output out of 10000 (max. 10000000)
 

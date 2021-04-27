@@ -1,6 +1,6 @@
 LoadPackage("qpa");
 LoadPackage("yags");
-Q := Quiver(2, [[1,1,"loop"],[1,2,"a"],[2,1,"c"],[2,2,"d"] ] );
+Q := Quiver(3, [[1,2,"a"],[1,2,"b"],[2,1,"c"],[2,1,"d"],[2,3,"e"],[2,3,"f"],[3,2,"g"],[3,2,"h"],[3,1,"i"],[3,1,"j"],[1,3,"k"],[1,3,"l"] ] );
 
 
 Display(Q);
@@ -13,7 +13,7 @@ AssignGeneratorVariables(KQ);
 stop := 1;
 
 rels := [];
-AddNthPowerToRelations(KQ,rels,3);
+AddNthPowerToRelations(KQ,rels,2);
 
 KQ := KQ/rels;
 
@@ -22,11 +22,57 @@ KQ := KQ/rels;
 
 #/[a*b];
 
+LeftMutation := function(x,u)
+    local g, y, test;
+    g := LeftApproximationByAddM(x,u);
+    Display("approximation ok");
+    y := CoKernel(g);
+    Display("Cokernel ok");
+    
+    
+    test := MaximalCommonDirectSummand( u, y );
+    
+    # TODO: resolve this mess!
+    Display(FamilyObj(test));
+    return y;
+    
+    Display("test-module ok");
+   
+    if  not test then
+        Display("returning");
+        return y;
+    fi;
+       
+
+    while Dimension( test[ 1 ] ) <> 0 do
+          test := MaximalCommonDirectSummand( u, test[ 3 ] );
+          Display("get out");
+    od;
+    
+    
+    
+    return test[ 3 ];
+end;
+
+
 
 proj := IndecProjectiveModules(KQ);
 
+LeftMutation_new := function(x,u)
+    local g, y, test;
+    g := LeftApproximationByAddM(x,u);
+    y := CoKernel(g);
+    #test := MaximalCommonDirectSummand( u, y );
+    #while Dimension( test[ 1 ] ) <> 0 do
+    #      test := MaximalCommonDirectSummand( u, test[ 3 ] );
+    #od;
+       
+    return y;
+    #return test[ 3 ];
+end;
 
-LeftMutation := function(x,u)
+
+LeftMutation_old := function(x,u)
     local g,y;
     g := MinimalLeftApproximation(x,u);
     Display("approx OK");
@@ -59,7 +105,7 @@ LeftMutateOnList := function(m,i)
 end;
 
 GetMutation_children := function(mf)    
-    local i,y,allmut,n,j,m;
+    local i,y,allmut,n,j,m,all_mutations;
     
     m := ShallowCopy(mf);
     
@@ -122,13 +168,51 @@ GetMutation_children := function(mf)
     
 end;
 
+GetBoundedMutations := function(tau_tilt,depth,i,nogo)
+    local j,y,mutation_j,all_mutations;
+
+    if i > depth then
+        return [];
+    fi;
+    
+    all_mutations := [];
+    
+    j := 1;
+    while j <= Length(tau_tilt) do
+        
+        if j = nogo then
+            j := j + 1;
+            continue;
+        fi;
+        
+        y := LeftMutateOnList(tau_tilt,j);
+        if not IsTauRigidModule(y) then
+            j := j + 1;
+            continue;
+        fi;
+        
+        mutation_j := ShallowCopy(tau_tilt);
+        mutation_j[j] := y;
+        
+        Add(all_mutations,mutation_j);
+        Append(all_mutations,GetBoundedMutations(mutation_j,depth,i+1,j));
+        
+        Add(all_mutations,mutation_j);
+        # Fix recursion
+        
+        j := j + 1;
+    od;
+    
+    return all_mutations;
+end;
+    
 
 GetMutations := function(mf, depth)    
     local i,y,allmut,n,j,m;
     
     Display(depth);
     
-    if depth > 10 then
+    if depth > 2 then
         return [];
     fi;
     
@@ -146,6 +230,7 @@ GetMutations := function(mf, depth)
     
         Display("computing..");
         y := LeftMutateOnList(m,i);
+        #Display(y);
         Display("ok");
         
         if y = [] then
@@ -160,12 +245,16 @@ GetMutations := function(mf, depth)
             Display("???");
         fi;
         
+        Display("iso-test OK");
+        
         if not IsomorphicModules(y,ZeroModule(KQ)) then
             
             if not IsTauRigidModule(y) then
                 i := i +1;
                 continue;
             fi;
+            
+            Display("tau-rigid test ok");
             #Display(i);
             #Display(m);
             #Display(y);
@@ -184,6 +273,9 @@ GetMutations := function(mf, depth)
                 i := i +1;
                 continue;
             fi;
+            
+            Display("tau-rigid dobbel test ok");
+            
             
             Append(allmut,GetMutations(n,depth+1));
         fi;
@@ -385,8 +477,8 @@ TauRel2 := function(x,y)
 end;
 
 
-
-
+btau := GetBoundedMutations(proj,1,1,-1);
+Display(btau);
 
 tautilting := GetMutations(proj,1);
 
@@ -563,60 +655,8 @@ gvector := function(m)
     p2 := Range(pr^1);
     
     # GET TOP OF MODULE HERE.
-    Display(TopOfModule(p1));
-    
-    l := [];
-    for p in proj do
-        Add(l,0);
-    od;
-    
-    ll := ShallowCopy(l);
-    
-    #require base field to be finite
-    
-    
-    if IsProjectiveModule(m) then
-        while i <= Length(proj) do
-            if IsomorphicModules(proj[i],m) then
-                ll[i] := 1;
-                return ll;
-            fi;
-            
-            i := i +1;
-        od;
-    fi;
-    
-    d_p1 := DecomposeModule(p1);
-    d_p2 := DecomposeModule(p2);
-    
-    
-    
-    g_1 := ShallowCopy(l);
-    g_2 := ShallowCopy(l);
-    
-    for p in d_p1 do
-        i := 1;
-        while i <= Length(proj) do
-            if IsomorphicModules(proj[i],p) then
-                g_1[i] := g_1[i] + 1;
-            fi;
-            
-            i := i +1;
-        od;
-    od;
-        
-    for p in d_p2 do
-        i := 1;
-        while i <= Length(proj) do
-            if IsomorphicModules(proj[i],p) then
-                g_2[i] := g_2[i] + 1;
-            fi;
-            
-            i := i + 1;
-        od;
-    od;
-    
-    return g_1 - g_2;
+
+    return DimensionVector(TopOfModule(p2)) - DimensionVector(TopOfModule(p1));
 end;
 
 left_mutate := function(atseq)
