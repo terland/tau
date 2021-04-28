@@ -1,10 +1,10 @@
 LoadPackage("qpa");
 LoadPackage("yags");
 LoadPackage("Float");
-Q := Quiver(2, [[1,2,"a"],[1,2,"b" ],[2,1,"c"],[2,1,"d"] ]);
+Q := Quiver(2, [[1,2,"a"],[2,2,"c"]]);
 #Q := Quiver(4, [[1,2,"a"],[1,2,"b"],[2,1,"o"],[2,1,"k"],[1,3,"e"],[3,4,"f"],[3,4,"i"],[4,3,"j"],[4,3,"kp"] ] );
 #Q := Quiver(2, [[1,2,"a"],[1,2,"b"],[2,1,"c"],[2,1,"d"]]);
-#Q := Quiver(3,[[2,3,"a"],[2,3,"b"],[3,3,"c"],[3,1,"d"]]);
+#Q := Quiver(4,[[1,3,"a"],[1,4,"b"],[3,4,"c"],[3,2,"d"],[4,2,"e"]]);
 
 
 Display(Q);
@@ -17,9 +17,9 @@ AssignGeneratorVariables(KQ);
 stop := 1;
 
 rels := [];
-AddNthPowerToRelations(KQ,rels,4);
+AddNthPowerToRelations(KQ,rels,3);
 
-KQ := KQ/rels;
+KQ := KQ/[c*c];
 
 #/[x1*x2,x2*x1,y1*y2,y2*y1,x1*y2-y2*x1,x2*y1-y1*x2];
 
@@ -203,6 +203,53 @@ modulei := function(i)
     while(j <= i) do
         Add(p1,proj[1]);
         Add(p2,proj[2]);
+        j := j + 1;
+    od;
+    
+    pp2 := DirectSumOfQPAModules(p2);
+    pp1 := DirectSumOfQPAModules(p1);
+    
+    proj1 := DirectSumProjections(pp1);
+    inc2 := DirectSumInclusions(pp2);
+    
+    g := ZeroMapping(pp1,pp2);
+    
+    j := 1;
+    while(j <= i) do
+        #Display(Range(alpha));
+        #Display(Source(inc2[j]));
+        #Display(Range(alpha) = Source(inc2[j]));
+        #Display(alpha*inc2[j]);
+        
+        g := g + proj1[j]*alpha*inc2[j];
+        g := g + proj1[j]*beta*inc2[j+1];
+        
+        #g := g + proj1[j]*f*alpha*inc2[j];
+        #g := g + proj1[j]*f*beta*inc2[j+1];
+        
+        j := j+1;
+    od;
+    
+    return g;
+    
+end;
+
+moduleOp := function(i)
+    #f := LeftApproximationByAddM(proj[1],proj[2]);
+    #Display(f);
+    #alpha := DirectSumProjections(Range(f))[1];
+    #beta := DirectSumProjections(Range(f))[2];
+    
+    hom := HomOverAlgebra(proj[2],proj[1]);
+    alpha := hom[1];
+    beta := hom[2];
+    
+    p2 := [proj[1]];
+    p1 := [];
+    j := 1;
+    while(j <= i) do
+        Add(p1,proj[2]);
+        Add(p2,proj[1]);
         j := j + 1;
     od;
     

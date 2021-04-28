@@ -706,16 +706,16 @@ we can no longer use the same proof as for\cref{k2-reduction} to compute its mut
 Before proving this theorem, we need some lemmas of independent interest.
 
 \begin{lemma}\label{2term-reduction}
-	Let $A$ be an algebra over some quiver with some ordering of its vertices, such that $\text{Hom}(P(2),P(1))$ is $2$-dimensional.
+	Let $A$ be an admissible quotient over some path algebra with a given ordering of its vertices, such that $\text{Hom}(P(2),P(1))$ is $2$-dimensional as a $k$-vector space.
 	
-	Then there is for any non-negative integer $n$ a rigid complex in $K^b(\text{add} A)$, $\mathbb{P}_A(n)$ on the form \[nP(2) \to (n+1)P(2)\]
+	Then there is for any non-negative integer $n$ a $2$-term presilting complex in $K^b(\text{add} A)$, called $\mathbb{P}_A(n)$, on the form \[nP(2) \to (n+1)P(1)\]
 
 \end{lemma}
 
 \begin{proof}
-	The case where $n = 0$ is trivial, so assume that $n \geq 1$. Let first $K$ be the Kronecker algebra with two arrows. Let now $\mathbb{P}_K $ be the complex \[nP_K(2) \xrightarrow{f} (n+1)P_K(1)\] be a rigid 2-term complex over. Note that $f$ may be viewed as an $n\times(n+1)$ matrix over $\text{Hom}_K(P(2),P(1)$ which is $2$-dimensional. Pick an isomorphism $\phi$ between $\text{Hom}_K(P(2),P(1))$ and $\text{Hom}_A(P(2),P(1))$. Then we may let $\phi$ act entry-wise on $f$. Call this induced map $\phi(f)$. We claim now that the complex $\mathbb{P}_A$ given by  \[nP_A(2) \xrightarrow{\phi(f)} (n+1)P_A(1)\] is rigid.
+	The case where $n = 0$ is trivial, so assume that $n \geq 1$. Let first $K$ be the Kronecker algebra with two arrows. Let now $\mathbb{P}_K $ be the unique indecomposable 2-term pre-silting object on the form \[nP_K(2) \xrightarrow{f} (n+1)P_K(1)\] over $K^b(\text{add} K)$. Note that $f$ may be viewed as an $n\times(n+1)$ matrix over $\text{Hom}_K(P(2),P(1))$ which is $2$-dimensional. Pick an isomorphism $\phi$ between $\text{Hom}_K(P(2),P(1))$ and $\text{Hom}_A(P(2),P(1))$. Then we may let $\phi$ act entry-wise on $f$. Call this induced map $\phi(f)$. We may also consider $\phi^{-1}$, which will have the symmetric property. We claim now that the complex $\mathbb{P}_A$ given by  \[nP_A(2) \xrightarrow{\phi(f)} (n+1)P_A(1)\] is in fact pre-silting, that is, rigid.
 	
-	To check rigidity of $\mathbb{P}_A$, we must show that $\text{Hom}_{K^b(\text{add} A)}(\mathbb{P}_A,\mathbb{P}_A[1]) = 0$, meaning that all maps from $\mathbb{P}_A$ to $\mathbb{P}_A$ shifted should be null-homotopic. Let now $g:nP_A(2) \to (n+1)P_A(1)$ be any map. Certainly, $\phi^{-1}(g)$ is well-defined, as $\phi$ is an isomorphism of vector spaces.
+	To check rigidity of $\mathbb{P}_A$, we must show that $\text{Hom}_{K^b(\text{add} A)}(\mathbb{P}_A,\mathbb{P}_A[1]) = 0$, meaning that all maps from $\mathbb{P}_A$ to $\mathbb{P}_A$ shifted should be null-homotopic. Let now $g:nP_A(2) \to (n+1)P_A(1)$ be any map. Certainly, $\phi^{-1}(g)$ is well-defined.
 	
 	Since \[nP_K(2) \xrightarrow{f} (n+1)P_K(1)\] is rigid, given the map $\phi^{-1}(g)$, there exist maps $h_1:nP_K(2) \to nP_K(2)$ and $h_2:(n+1)P_K(1) \to (n+1)P_K(1)$ such that $h_2\circ f + f \circ h_1 = \phi^{-1}(g)$. Note that $h_1$ and $h_2$ are scalar matrices, and may thus also be considered elements of $\text{End}_A(P_A(2))$ and $\text{End}_A(P_A(1))$ respectively.
 	
@@ -725,23 +725,88 @@ Before proving this theorem, we need some lemmas of independent interest.
 	
 \end{proof}
 
-Using the lemma given above, one may explicitly compute a wide array of \tu-rigid modules by first exhibiting their projective presentation and simply examining the co-kernel. We here show two examples.
+Using the lemma given above, one may explicitly compute a wide array of \tu-rigid modules by first computing their projective presentation and simply examining the co-kernel. This is interesting, because it allows us to study the $\tu$-tilting theory of an algebra by directly computing modules, instead of using mutations or Jasso reductions. We here show two examples.
 
 \begin{example}
+	Consider the algebra $A = kQ/r^3$, where $Q$ is the quiver below.
+	% https://q.uiver.app/?q=WzAsNCxbMCwxLCIxIl0sWzEsMCwiNCJdLFsxLDIsIlxcYnVsbGV0Il0sWzIsMSwiMiJdLFswLDFdLFswLDJdLFsyLDNdLFsxLDNdLFsxLDJdXQ==
+	\[\begin{tikzcd}
+		& 3 \\
+		1 && 2 \\
+		& 4
+		\arrow[from=2-1, to=1-2]
+		\arrow[from=2-1, to=3-2]
+		\arrow[from=3-2, to=2-3]
+		\arrow[from=1-2, to=2-3]
+		\arrow[from=1-2, to=3-2]
+	\end{tikzcd}\]
+
+	Of course, in $kQ$, there are three paths from $1$ to $2$. However, the path of length $3$ is eliminated in the quotient $A$. Since the paths $1 \to 3 \to 2$ and $1 \to 4 \to 2$ are not identified in $A$, we may conclude that $\text{Hom}_A(P(2),P(1))$ is $2$-dimensional. We may now employ GAP to compute $\mathbb{P}_A(1)$. The zeroth homology of this complex gives us a module,say $T_1$, (with dimensions as displayed below). This module must be \tu-rigid from \cref{2term-reduction}, which we may confirm using GAP. In this case, the module is also indecomposable (checked with GAP).
+	\[\begin{tikzcd}
+		& k^2 \\
+		k^2 && k^3 \\
+		& k^4
+		\arrow[from=2-1, to=1-2]
+		\arrow[from=2-1, to=3-2]
+		\arrow[from=3-2, to=2-3]
+		\arrow[from=1-2, to=2-3]
+		\arrow[from=1-2, to=3-2]
+	\end{tikzcd}\]
+
+Now, to show an application of Jasso reduction, we are interested in computing how $U = P(1) \oplus T_1$ show up in the mutation quiver $Q(s\tu\text{-tilt} A)$. To investigate this, Jasso redution is appropriate. Namely, we construct an algebra $C$ such that there is a quiver isomorphism between $Q(s\tu\text{-tilt} B)$ and the vertices of $Q(s\tu\text{-tilt} A)$ containing $P(1) \oplus T_2$ as a summand.
+
+We first need to compute the Bongartz completion $T_U$, as defined in \cite{tau}[Theorem 2.10]. The definition given in this paper rather abstract, but we may directly compute $T_U$ by the following observation. Since there is an order-preserving bijection between functorially finite torsion classes of $A$ and the muation quiver of $A$, the (necessarily unique) largest element in $Q(s\tu\text{-tilt}$ containing $U$ must correspond to $T_U$. Computing $B = \text{End}_A(T_U)$ as a quiver-algebra gives an algebra with quiver as below (the relations are not displayed, as they will in the end not matter for this example). In the drawing below, the red vertices correspond to the idempotents given by the summands of $U$ (who of course appear in $T_U$).
+
+% https://q.uiver.app/?q=WzAsNSxbMSwxLCJcXGNvbG9ye3JlZH00Il0sWzAsMCwiXFxjb2xvcntyZWR9MSJdLFsxLDAsIjIiXSxbMCwxLCIzIl0sWzEsMywiXFxidWxsZXQiXSxbMSwyXSxbMywxXSxbMywwLCIiLDAseyJjdXJ2ZSI6LTF9XSxbMCwzLCIiLDAseyJjdXJ2ZSI6LTF9XSxbMCwxXV0=
+\[\begin{tikzcd}
+	{\color{red}1} & 2 \\
+	3 & {\color{red}4} \\
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=2-1, to=1-1]
+	\arrow[curve={height=-6pt}, from=2-1, to=2-2]
+	\arrow[curve={height=-6pt}, from=2-2, to=2-1]
+	\arrow[from=2-2, to=1-1]
+\end{tikzcd}\]
+
+We may now compute \[C = B/(e_U) \cong k\times k\]
+
+Of course, $C$ has $4$ elements in its mutation quiver, and we may thus conclude that there are exactly four support \tu-tilting objects of $A$ having $P(1) \oplus T_1$ as a summand.
+
+\end{example}
+
+\begin{example}
+	Let $A = kQ/\beta^2$ where $Q$ is the quiver below.
 	
-	put in some examples
+	\[
+	\begin{tikzcd}
+		1 & 2
+		\arrow[from=1-1,to=1-2,"\alpha"]
+		\arrow[loop,from = 1-2,to=1-2,"\beta"',distance=2em]
+	\end{tikzcd}
+	\]
+	
+	This algebra is $\tu$-tilting finite, and $\text{Hom}_A(P(2),P(1))$ is $2$-dimensional. We are however promised an infinite family of $\tu$-tilting objects from \cref{2term-reduction}. The consequence must be that almost all modules coming from this lemma must decompose. Let $T_i = H^0(\mathbb{P}_A(i))$. $T_0 = P(1)$ and is thus clearly indecomposable. In fact we verify using GAP that $T_1$ is indecomposable, but $T_2$ decomposes into $P(1) \oplus T_1$.
 	
 \end{example}
 
+The above example shows that to fully utilize \cref{2term-reduction}, we need a criterion for indecomposability of the modules produced by the lemma. The example also demonstrates that the indecomposability of $\mathbb{P}_A(1)$ is not sufficient as such a criterion. To be precise, we may not conclude that $\mathbb{P}_A(1)$ being indecomposable implies $\mathbb{P}_A(i)$ to be indecomposable for all $i \geq 0$.
+
+In the lemma below, we give an elementary example of such a condition for the case where $A$ has two simple modules. The proof of the below lemma is technical, and it is not clear that all assumptions are needed. We dare hope that there exists a more elegant criterion which may be applied for algebras with more than two simple modules, however for the goals of this section, this tool is sufficient.
+
 \begin{lemma}
-	Let $A$ be as in \cref{2term-reduction}, but require also that $A$ has only two simple modules. Assume $\mathbb{P}_A$ is indecomposable when $n = 1$, with $\mathbb{P}_A$ as in the proof of \cref{2term-reduction}. 
+	Let $A$ be as in \cref{2term-reduction}, where $A$ has two simple modules. Assume $T_k = H^0(\mathbb{P}_A(i))$ is indecomposable when $i \in \{0,1,2\}$, and assume also that $(1,-1)$ is not a $g$-vector of $A$.	
 	
-	Then $\mathbb{P}_A$ is indecomposable for all $n \geq 0$.
+	Then $T(i)$ is indecomposable for all $i \geq 0$.
 \end{lemma}
 
 \begin{proof}
-	We proceed by induction. Let $n = 2$. It is not very difficult to see that one can generalize the proof of \cref{2term-reduction} to show that \[\text{Hom}_{K^b(\text{add } A)}(\mathbb{P}_A(n),\mathbb{P}_A(m)[1]) = 0\] if $m-n \in \{-1,0,1\}$.
-
+	 It is not very difficult to see that one can generalize the proof of \cref{2term-reduction} to show that \[\text{Hom}_{K^b(\text{add } A)}(\mathbb{P}_A(n),\mathbb{P}_A(m)[1]) = 0\] if $m-n \in \{-1,0,1\},m \geq 0, n\geq 0$.
+	 
+	 To seek a contradiction, assume that $k$ is the smallest integer such that $T_k$ decomposes. To finish the proof, recall that the $g$-vector of $T_i$ is $(i+1,-i)$, and that a basic \tu-rigid module over $A$ may have at most two summands.
+	 
+	 Since $T_{k-1} \oplus T_k$ and $T_{k-1} \oplus T_{k-2}$ are both $\tu$-rigid, $T_k$ may decompose as $T_k = X \oplus X$, as $T_k = T_{k-1} \oplus Y$ or as $T_k = T_{k-2} \oplus T_{k-1}$.
+	 
+	 The first case is not possible, because $k$ or $k+1$ must be odd; thus the $g$-vector of $T_k$ cannot be written as $v+v$ for some other $g$-vector $v$. In the second case, $y$ would have $g$-vector $(1,-1)$ by additivity, contradicting our assumptions. In the last case, the right hand side has $g$-vector $(2k-1,3-2k)$. The left hand side has $g$-vector $(k+1,-k)$. As $k \geq 3$, we have $2k-1 > k+1$. This finishes the proof, as wanted.
 \end{proof}
 
 \section{\tu-exceptional sequences}
