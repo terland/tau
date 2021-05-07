@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  19 JAN 2021 19:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  30 APR 2021 11:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -123,10 +123,10 @@ LaTeX Font Info:    ... okay on input line 14.
 {/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] (./
 tautilting.aux) ) 
 Here is how much of TeX's memory you used:
- 1104 strings out of 480608
- 14720 string characters out of 5903631
+ 1105 strings out of 480608
+ 14731 string characters out of 5903631
  254040 words of memory out of 5000000
- 17044 multiletter control sequences out of 15000+600000
+ 17045 multiletter control sequences out of 15000+600000
  539438 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  30i,5n,25p,342b,184s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -143,7 +143,7 @@ b></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 ></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><
 /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></u
 sr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on tautilting.pdf (2 pages, 134305 bytes).
+Output written on tautilting.pdf (2 pages, 134055 bytes).
 PDF statistics:
  63 PDF objects out of 1000 (max. 8388607)
  45 compressed objects within 1 object stream

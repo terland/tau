@@ -1,7 +1,7 @@
 LoadPackage("qpa");
 LoadPackage("yags");
 LoadPackage("Float");
-Q := Quiver(2, [[1,2,"a"],[2,2,"c"]]);
+Q := Quiver(4, [[1,2,"alpha"],[1,2,"beta"],[2,1,"gamma"],[2,1,"delta"],[3,4,"a"],[3,4,"b"],[4,3,"e"],[4,3,"f"],[1,3,"brigde"]]);
 #Q := Quiver(4, [[1,2,"a"],[1,2,"b"],[2,1,"o"],[2,1,"k"],[1,3,"e"],[3,4,"f"],[3,4,"i"],[4,3,"j"],[4,3,"kp"] ] );
 #Q := Quiver(2, [[1,2,"a"],[1,2,"b"],[2,1,"c"],[2,1,"d"]]);
 #Q := Quiver(4,[[1,3,"a"],[1,4,"b"],[3,4,"c"],[3,2,"d"],[4,2,"e"]]);
@@ -17,9 +17,12 @@ AssignGeneratorVariables(KQ);
 stop := 1;
 
 rels := [];
-AddNthPowerToRelations(KQ,rels,3);
+AddNthPowerToRelations(KQ,rels,2);
 
-KQ := KQ/[c*c];
+KQ := KQ/rels;
+
+inj := IndecInjectiveModules(KQ);
+
 
 #/[x1*x2,x2*x1,y1*y2,y2*y1,x1*y2-y2*x1,x2*y1-y1*x2];
 
@@ -35,15 +38,10 @@ LeftMutation := function(x,u)
     
     test := MaximalCommonDirectSummand( u, y );
     
-    # TODO: resolve this mess!
-    Display(FamilyObj(test));
-    
+    # Needed, as the type of test is not known
     if (FamilyObj(test) = FamilyObj(1=1)) then
         return y;
     fi;
-    
-    Display(test);
-       
 
     while Dimension(test[1][1]) <> 0 do
           y:= test[ 3 ];
@@ -52,10 +50,7 @@ LeftMutation := function(x,u)
           if (FamilyObj(test) = FamilyObj(1=1)) then
               return y;
           fi;
-          Display("get out");
     od;
-    
-    
     
     return test[ 3 ];
 end;
@@ -72,8 +67,6 @@ LeftMutateOnList := function(m,i)
         
     while j <= Length(m) do
         if not j = i then
-            #Display(m);
-            #Display(m[j]);
             Add(u,m[j]);
         fi;
         j := j + 1;
@@ -81,9 +74,8 @@ LeftMutateOnList := function(m,i)
     od;
         
     x := m[i];
-    
-    Display("doing-mutation");
     y := LeftMutation(x,DirectSumOfQPAModules(u));
+    
     return y;
 end;
 
@@ -139,8 +131,6 @@ GetBoundedMutations := function(tau_tilt,depth,i,nogo)
         
         
         Append(all_mutations,GetBoundedMutations(mutation_j,depth,i+1,j));
-        
-        # Fix recursion
         
         j := j + 1;
     od;

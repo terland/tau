@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  28 APR 2021 17:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  7 MAY 2021 16:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1080,40 +1080,49 @@ Package biblatex Info: Reference section=0 on input line 52.
 Package biblatex Info: Reference segment=0 on input line 52.
  [1
 
-{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (3.46564pt too wide) in paragraph at lines 103--104
+{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
+
+Overfull \hbox (3.46564pt too wide) in paragraph at lines 113--114
 []\OT1/cmr/m/n/10 We de-note by $\OML/cmm/m/it/10 hom[]\OT1/cmr/m/n/10 (\OML/cm
 m/m/it/10 M; N\OT1/cmr/m/n/10 )$ the di-men-sion of the $\OML/cmm/m/it/10 k$\OT
 1/cmr/m/n/10 -vector space $[][](\OML/cmm/m/it/10 M; N\OT1/cmr/m/n/10 )$. 
  []
 
-[2] [3]
-Overfull \hbox (0.96315pt too wide) in paragraph at lines 185--186
+[4] [5]
+Overfull \hbox (0.96315pt too wide) in paragraph at lines 195--196
 \OT1/cmr/m/n/10 with $\OML/cmm/m/it/10 ^^\$\OT1/cmr/m/n/10 -rigid mod-ules. For
  $\OML/cmm/m/it/10 M$ \OT1/cmr/m/n/10 par-tial tilt-ing, $0 = \OML/cmm/m/it/10 
 Ext[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 M; M\OT1/cmr/m/n/10 ) [] [][](\OML/cmm/m
 /it/10 M; ^^\M\OT1/cmr/m/n/10 )$,
  []
 
-[4]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\tau' on input line 188.
+(hyperref)                removing `\tau' on input line 198.
 
-[5] [6]
-Overfull \hbox (2.3602pt too wide) in paragraph at lines 271--272
+[6] [7]
+Overfull \hbox (2.3602pt too wide) in paragraph at lines 281--282
 []\OT1/cmr/m/n/10 This al-lows us to com-pute $\OML/cmm/m/it/10 Q\OT1/cmr/m/n/1
 0 (\OML/cmm/m/it/10 s^^\[]\OT1/cmr/m/n/10 ^^C)$ as the Carte-sian prod-uct of $
 \OML/cmm/m/it/10 Q\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 s^^\[]A\OT1/cmr/m/n/10 )$
  []
 
-[7] [8] [9]
+[8] [9] [10]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\tau' on input line 365.
+(hyperref)                removing `\tau' on input line 375.
 
-[10]
-Overfull \hbox (30.23935pt too wide) in paragraph at lines 424--425
+
+Overfull \hbox (37.41121pt too wide) in paragraph at lines 385--386
+[]\OT1/cmr/m/n/10 By [[]AR+85[]][Theorem 1.4(a)], we have $\OMS/cmsy/m/n/10 h\O
+ML/cmm/m/it/10 g[]; \OT1/cmr/m/n/10 [\OML/cmm/m/it/10 N\OT1/cmr/m/n/10 ]\OMS/cm
+sy/m/n/10 i \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 hom[]\OT1/cmr/m/n/10 (\OML/cmm/m
+/it/10 M; N\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 hom[]\OT1/cm
+r/m/n/10 (\OML/cmm/m/it/10 N; ^^\M\OT1/cmr/m/n/10 )$.
+ []
+
+[11] [12]
+Overfull \hbox (30.23935pt too wide) in paragraph at lines 437--438
 []\OT1/cmr/m/n/10 Let $\OML/cmm/m/it/10 v \OT1/cmr/m/n/10 = (\OML/cmm/m/it/10 v
 []; v[]; [] ; v[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 D\OT1/cm
 r/m/n/10 (\OML/cmm/m/it/10 M[]\OT1/cmr/m/n/10 )$. We have $\OMS/cmsy/m/n/10 h\O
@@ -1123,115 +1132,104 @@ ML/cmm/m/it/10 v; x\OMS/cmsy/m/n/10 i \OT1/cmr/m/n/10 = 0$ and $\OMS/cmsy/m/n/1
 [] ; \OT1/cmr/m/n/10 0)\OMS/cmsy/m/n/10 i ^^T
  []
 
-[11]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 444.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\tau' on input line 444.
+(hyperref)                removing `math shift' on input line 457.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 444.
+(hyperref)                removing `\tau' on input line 457.
 
-[12] [13] [14]
-Overfull \hbox (29.31865pt too wide) in paragraph at lines 638--639
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 457.
+
+[13] [14]
+Overfull \hbox (10.86983pt too wide) in paragraph at lines 523--524
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 M[]; P[]\OT1/cmr/m/n/10 )$ to $(\OML/cmm/m/it
+/10 M[]; P[]\OT1/cmr/m/n/10 )$ in-duces a $\OMS/cmsy/m/n/10 D$\OT1/cmr/m/n/10 -
+generic path be-tween $\OML/cmm/m/it/10 C[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 M[
+]; P[]\OT1/cmr/m/n/10 )$ and $\OML/cmm/m/it/10 C[]\OT1/cmr/m/n/10 (\OML/cmm/m/i
+t/10 M[]; P[]\OT1/cmr/m/n/10 )$
+ []
+
+[15] [16] [17]
+Overfull \hbox (29.31865pt too wide) in paragraph at lines 684--685
 []\OT1/cmr/m/n/10 Then $\OML/cmm/m/it/10 Q\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 s^^
 \[]A\OT1/cmr/m/n/10 )$ is, as a di-rected graph, the carte-sian prod-uct of $\O
 ML/cmm/m/it/10 Q\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 s^^\[][]\OT1/cmr/m/n/10 (\OML
 /cmm/m/it/10 A[]\OT1/cmr/m/n/10 ))$
  []
 
-[15] [16] [17]
-Overfull \hbox (35.18143pt too wide) in paragraph at lines 758--759
-[]\OT1/cmr/m/n/10 We first need to com-pute the Bon-gartz com-ple-tion $\OML/cm
-m/m/it/10 T[]$\OT1/cmr/m/n/10 , as de-fined in [[]AIR13[]][Theorem
+[18] [19] [20]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[21] [22]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[23] [24]
+Overfull \hbox (12.51103pt too wide) in paragraph at lines 969--970
+[]\OT1/cmr/m/n/10 Then, we pick any iso-mor-phism $\OML/cmm/m/it/10 ^^^$ \OT1/c
+mr/m/n/10 be-tween $[][](\OML/cmm/m/it/10 P\OT1/cmr/m/n/10 (2)\OML/cmm/m/it/10 
+; P\OT1/cmr/m/n/10 (1)$ and $[][](\OML/cmm/m/it/10 Q; P\OT1/cmr/m/n/10 )$,
  []
 
-[18] [19]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\tau' on input line 812.
-
-[20]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\tau' on input line 828.
-
-[21]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\tau' on input line 870.
-
-
-Overfull \hbox (0.30067pt too wide) in paragraph at lines 874--875
-[]\OT1/cmr/bx/n/10 Definition 6.3. []\OT1/cmr/m/n/10 Let $\OML/cmm/m/it/10 T \O
-T1/cmr/m/n/10 = (\OML/cmm/m/it/10 T[]; T[]; [] ; T[]\OT1/cmr/m/n/10 )$ be an un
--signed com-plete $\OML/cmm/m/it/10 ^^\$\OT1/cmr/m/n/10 -exceptional
+[25]
+Overfull \hbox (7.49109pt too wide) in paragraph at lines 1002--1002
+[]\OT1/cmr/m/n/10 Sota Asai. \OT1/cmr/m/it/10 The wall-chamber struc-tures of t
+he real Grothendieck groups\OT1/cmr/m/n/10 .
  []
 
-[22]
-Overfull \hbox (33.644pt too wide) in paragraph at lines 918--919
-[]\OT1/cmr/m/n/10 Clearly, the only right-mutations of $\OML/cmm/m/it/10 ^^\$\O
-T1/cmr/m/n/10 -exceptional se-quences here are $(\OML/cmm/m/it/10 rP\OT1/cmr/m/
-n/10 (1)\OML/cmm/m/it/10 ; S\OT1/cmr/m/n/10 (2)) \OMS/cmsy/m/n/10 !
- []
 
-[23]
-Overfull \hbox (52.7825pt too wide) in paragraph at lines 987--987
+Overfull \hbox (52.7825pt too wide) in paragraph at lines 1002--1002
 \OT1/cmr/m/n/10 dent Texts. Cam-bridge Uni-ver-sity Press, 2006. \OT1/cmr/m/sc/
 10 doi\OT1/cmr/m/n/10 : []$\OT1/cmtt/m/n/10 10 . 1017 / CBO9780511614309$[]\OT1
 /cmr/m/n/10 . 
  []
 
-[24]
-Overfull \hbox (2.4277pt too wide) in paragraph at lines 987--987
-[]\OT1/cmr/m/n/10 Aslak Bakke Buan and Bethany Marsh. $\OML/cmm/m/it/10 ^^\$\OT
-1/cmr/m/it/10 -exceptional se-quences\OT1/cmr/m/n/10 . 2020.
- []
 
-
-Overfull \hbox (0.49426pt too wide) in paragraph at lines 987--987
+Overfull \hbox (0.49426pt too wide) in paragraph at lines 1002--1002
 \OT1/cmr/m/n/10 In: \OT1/cmr/m/it/10 In-ter-na-tional Math-e-mat-ics Re-search 
 No-tices \OT1/cmr/m/n/10 2015.16 (Sept. 2014),
  []
 
 
-Overfull \hbox (4.91653pt too wide) in paragraph at lines 987--987
+Overfull \hbox (4.91653pt too wide) in paragraph at lines 1002--1002
 []\OT1/cmr/m/n/10 Bernhard Keller, Pierre-Guy Pla-m-on-don, and Toshiya Yurikus
 a. \OT1/cmr/m/it/10 Tame
  []
 
 
-Overfull \hbox (8.78801pt too wide) in paragraph at lines 987--987
+Overfull \hbox (8.78801pt too wide) in paragraph at lines 1002--1002
 \OT1/cmr/m/it/10 al-ge-bras have dense $\OT1/cmr/bx/n/10 g$\OT1/cmr/m/it/10 -ve
 ctor fans\OT1/cmr/m/n/10 . 2020. arXiv: []$\OT1/cmtt/m/n/10 2007 . 04215$ [math
 .RT][]\OT1/cmr/m/n/10 . 
  []
 
-[25]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 988.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 988.
+[26]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1003.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1003.
  (./artac_master.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 988.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 988.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1003.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1003.
+
 Package rerunfilecheck Info: File `artac_master.out' has not changed.
-(rerunfilecheck)             Checksum: DEFAB2DD22DA7513B7ACB696BAB3D9EF;1567.
+(rerunfilecheck)             Checksum: 9BA446C9F4D124700F875691FE2FF630;1394.
 Package logreq Info: Writing requests to 'artac_master.run.xml'.
 \openout1 = `artac_master.run.xml'.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 988.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1003.
  ) 
 Here is how much of TeX's memory you used:
- 30472 strings out of 480608
- 590597 string characters out of 5903631
- 1231049 words of memory out of 5000000
- 45728 multiletter control sequences out of 15000+600000
- 547141 words of font info for 84 fonts, out of 8000000 for 9000
+ 30546 strings out of 480608
+ 592284 string characters out of 5903631
+ 1236794 words of memory out of 5000000
+ 45795 multiletter control sequences out of 15000+600000
+ 545894 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,17n,86p,3223b,1369s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 67i,18n,86p,3223b,1371s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 </usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
@@ -1256,10 +1254,10 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2020/t
 exmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/20
 20/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texliv
 e/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on artac_master.pdf (25 pages, 350050 bytes).
+Output written on artac_master.pdf (26 pages, 346604 bytes).
 PDF statistics:
- 484 PDF objects out of 1000 (max. 8388607)
- 429 compressed objects within 5 object streams
- 127 named destinations out of 1000 (max. 500000)
- 189 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 499 PDF objects out of 1000 (max. 8388607)
+ 443 compressed objects within 5 object streams
+ 134 named destinations out of 1000 (max. 500000)
+ 173 words of extra memory for PDF output out of 10000 (max. 10000000)
 

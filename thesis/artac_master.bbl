@@ -174,6 +174,33 @@
       \verb http://www.sciencedirect.com/science/article/pii/0021869381902143
       \endverb
     \endentry
+    \entry{asai2020wallchamber}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=96733ad42d9a9b9dfca1c86c48dd80a1}{%
+           family={Asai},
+           familyi={A\bibinitperiod},
+           given={Sota},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{96733ad42d9a9b9dfca1c86c48dd80a1}
+      \strng{fullhash}{96733ad42d9a9b9dfca1c86c48dd80a1}
+      \strng{bibnamehash}{96733ad42d9a9b9dfca1c86c48dd80a1}
+      \strng{authorbibnamehash}{96733ad42d9a9b9dfca1c86c48dd80a1}
+      \strng{authornamehash}{96733ad42d9a9b9dfca1c86c48dd80a1}
+      \strng{authorfullhash}{96733ad42d9a9b9dfca1c86c48dd80a1}
+      \field{labelalpha}{Asa20}
+      \field{sortinit}{A}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{math.RT}
+      \field{eprinttype}{arXiv}
+      \field{title}{The wall-chamber structures of the real Grothendieck groups}
+      \field{year}{2020}
+      \verb{eprint}
+      \verb 1905.02180
+      \endverb
+    \endentry
     \entry{assem_skowronski_simson_2006}{book}{}
       \name{author}{3}{}{%
         {{hash=f41b388f37389300ba0b3c5218a92f7f}{%
@@ -212,38 +239,6 @@
       \field{year}{2006}
       \verb{doi}
       \verb 10.1017/CBO9780511614309
-      \endverb
-    \endentry
-    \entry{buantau2020}{misc}{}
-      \name{author}{2}{}{%
-        {{hash=843d6af7cc1ef5b498a1c0599eb04f74}{%
-           family={Buan},
-           familyi={B\bibinitperiod},
-           given={Aslak\bibnamedelima Bakke},
-           giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
-        {{hash=ff06146416b8154a7e6fb252f1be8ee6}{%
-           family={Marsh},
-           familyi={M\bibinitperiod},
-           given={Bethany},
-           giveni={B\bibinitperiod}}}%
-      }
-      \strng{namehash}{92fdff32d6b3873da8365751f3f8c4bb}
-      \strng{fullhash}{92fdff32d6b3873da8365751f3f8c4bb}
-      \strng{bibnamehash}{92fdff32d6b3873da8365751f3f8c4bb}
-      \strng{authorbibnamehash}{92fdff32d6b3873da8365751f3f8c4bb}
-      \strng{authornamehash}{92fdff32d6b3873da8365751f3f8c4bb}
-      \strng{authorfullhash}{92fdff32d6b3873da8365751f3f8c4bb}
-      \field{labelalpha}{BM20}
-      \field{sortinit}{B}
-      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{eprintclass}{math.RT}
-      \field{eprinttype}{arXiv}
-      \field{title}{$\tau$-exceptional sequences}
-      \field{year}{2020}
-      \verb{eprint}
-      \verb 1802.01169
       \endverb
     \endentry
     \entry{Br_stle_2019}{article}{}
@@ -295,32 +290,6 @@
       \verb{url}
       \verb http://dx.doi.org/10.1016/j.aim.2019.106746
       \endverb
-    \endentry
-    \entry{cbw92}{article}{}
-      \name{author}{1}{}{%
-        {{hash=ee3c0ecdee75a34a1be977e9970a8e0c}{%
-           family={Crawley-Boevey},
-           familyi={C\bibinithyphendelim B\bibinitperiod},
-           given={William},
-           giveni={W\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Carleton-Ottowa Math. LNS}%
-      }
-      \strng{namehash}{ee3c0ecdee75a34a1be977e9970a8e0c}
-      \strng{fullhash}{ee3c0ecdee75a34a1be977e9970a8e0c}
-      \strng{bibnamehash}{ee3c0ecdee75a34a1be977e9970a8e0c}
-      \strng{authorbibnamehash}{ee3c0ecdee75a34a1be977e9970a8e0c}
-      \strng{authornamehash}{ee3c0ecdee75a34a1be977e9970a8e0c}
-      \strng{authorfullhash}{ee3c0ecdee75a34a1be977e9970a8e0c}
-      \field{labelalpha}{Cra}
-      \field{sortinit}{C}
-      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Proceedings of ICRA IV}
-      \field{title}{Exceptional Sequences of Representations of Quivers}
-      \field{volume}{14}
     \endentry
     \entry{dij17}{article}{}
       \name{author}{3}{}{%
@@ -450,64 +419,6 @@
       \verb{eprint}
       \verb 2007.04215
       \endverb
-    \endentry
-    \entry{mendoza2020stratifying}{misc}{}
-      \name{author}{2}{}{%
-        {{hash=d2f3743a04cad724040785cbe49624cb}{%
-           family={Mendoza},
-           familyi={M\bibinitperiod},
-           given={Octavio},
-           giveni={O\bibinitperiod}}}%
-        {{hash=4171e68c10d9b801cd9ce801783b49df}{%
-           family={Treffinger},
-           familyi={T\bibinitperiod},
-           given={Hipolito},
-           giveni={H\bibinitperiod}}}%
-      }
-      \strng{namehash}{9add8f24d2de8d8dc3bfd82dfa778549}
-      \strng{fullhash}{9add8f24d2de8d8dc3bfd82dfa778549}
-      \strng{bibnamehash}{9add8f24d2de8d8dc3bfd82dfa778549}
-      \strng{authorbibnamehash}{9add8f24d2de8d8dc3bfd82dfa778549}
-      \strng{authornamehash}{9add8f24d2de8d8dc3bfd82dfa778549}
-      \strng{authorfullhash}{9add8f24d2de8d8dc3bfd82dfa778549}
-      \field{labelalpha}{MT20}
-      \field{sortinit}{M}
-      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{eprintclass}{math.RT}
-      \field{eprinttype}{arXiv}
-      \field{title}{Stratifying systems through $\tau$-tilting theory}
-      \field{year}{2020}
-      \verb{eprint}
-      \verb 1904.11903
-      \endverb
-    \endentry
-    \entry{ringel_exceptional}{article}{}
-      \name{author}{1}{}{%
-        {{hash=c5eb50a860e49ed8e3a19fa66a6f7ce1}{%
-           family={Ringel},
-           familyi={R\bibinitperiod},
-           given={Claus\bibnamedelima MIchael},
-           giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-      }
-      \strng{namehash}{c5eb50a860e49ed8e3a19fa66a6f7ce1}
-      \strng{fullhash}{c5eb50a860e49ed8e3a19fa66a6f7ce1}
-      \strng{bibnamehash}{c5eb50a860e49ed8e3a19fa66a6f7ce1}
-      \strng{authorbibnamehash}{c5eb50a860e49ed8e3a19fa66a6f7ce1}
-      \strng{authornamehash}{c5eb50a860e49ed8e3a19fa66a6f7ce1}
-      \strng{authorfullhash}{c5eb50a860e49ed8e3a19fa66a6f7ce1}
-      \field{labelalpha}{Rin93}
-      \field{sortinit}{R}
-      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Abelian group theory and related topics: Conference on Abelian Groups}
-      \field{month}{8}
-      \field{title}{The braid group action on the set of exceptional sequences of a hereditary artin algebra}
-      \field{year}{1993}
-      \field{pages}{339\bibrangedash 352}
-      \range{pages}{14}
     \endentry
     \entry{schroll2020tautilting}{misc}{}
       \name{author}{2}{}{%

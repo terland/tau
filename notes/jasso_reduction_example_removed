@@ -1,0 +1,19 @@
+
+To give an example of Jasso reduction, we investigate how often $T_1$ shows up as a summand of support \tu-tilting objects of $A$. Namely, we construct an algebra $C$ such that there is a quiver isomorphism between $Q(s\tu\text{-tilt} C)$ and the vertices of $Q(s\tu\text{-tilt} A)$ containing $P(1) \oplus T_2$ as a summand. We follow closely the computations made in \cite{jassoreduction}[Example 3.22]
+
+We first need to compute the Bongartz completion $T_U$, as defined in \cite{tau}[Theorem 2.10]. Since there is an order-preserving bijection between functorially finite torsion classes of $A$ and the muation quiver of $A$, the (necessarily unique) largest element in $Q(s\tu\text{-tilt}$ containing $U$ must correspond to $T_U$. Computing $B = \text{End}_A(T_U)$ as a quiver-algebra gives an algebra with quiver as below (the relations are not displayed, as they will in the end not matter for this example). In the drawing below, the red vertices correspond to the idempotents given by the summands of $U$ (who of course appear in $T_U$).
+
+% https://q.uiver.app/?q=WzAsNSxbMSwxLCJcXGNvbG9ye3JlZH00Il0sWzAsMCwiXFxjb2xvcntyZWR9MSJdLFsxLDAsIjIiXSxbMCwxLCIzIl0sWzEsMywiXFxidWxsZXQiXSxbMSwyXSxbMywxXSxbMywwLCIiLDAseyJjdXJ2ZSI6LTF9XSxbMCwzLCIiLDAseyJjdXJ2ZSI6LTF9XSxbMCwxXV0=
+\[\begin{tikzcd}
+	{\color{red}1} & 2 \\
+	3 & {\color{red}4} \\
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=2-1, to=1-1]
+	\arrow[curve={height=-6pt}, from=2-1, to=2-2]
+	\arrow[curve={height=-6pt}, from=2-2, to=2-1]
+	\arrow[from=2-2, to=1-1]
+\end{tikzcd}\]
+
+We may now compute \[C = B/(e_U) \cong k\times k\]
+
+Of course, $C$ has $4$ elements in its mutation quiver, and we may thus conclude that there are exactly four support \tu-tilting objects of $A$ having $T_1$ as a summand.
