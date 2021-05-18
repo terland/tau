@@ -420,6 +420,33 @@
       \verb 2007.04215
       \endverb
     \endentry
+    \entry{qpa}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=62e590de2f64e45138179db5c53fb07d}{%
+           family={QPA-team},
+           familyi={Q\bibinithyphendelim t\bibinitperiod},
+           given={The},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{62e590de2f64e45138179db5c53fb07d}
+      \strng{fullhash}{62e590de2f64e45138179db5c53fb07d}
+      \strng{bibnamehash}{62e590de2f64e45138179db5c53fb07d}
+      \strng{authorbibnamehash}{62e590de2f64e45138179db5c53fb07d}
+      \strng{authornamehash}{62e590de2f64e45138179db5c53fb07d}
+      \strng{authorfullhash}{62e590de2f64e45138179db5c53fb07d}
+      \field{labelalpha}{QPA}
+      \field{sortinit}{Q}
+      \field{sortinithash}{c54e16deb53fc904a621fa8fd8703b5a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{QPA - Quivers, path algebras and representation - a GAP package}
+      \verb{urlraw}
+      \verb https://folk.ntnu.no/oyvinso/QPA/
+      \endverb
+      \verb{url}
+      \verb https://folk.ntnu.no/oyvinso/QPA/
+      \endverb
+    \endentry
     \entry{schroll2020tautilting}{misc}{}
       \name{author}{2}{}{%
         {{hash=2ccd899b0e4233bdc73baab389368830}{%

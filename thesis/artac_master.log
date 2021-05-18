@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  7 MAY 2021 16:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  18 MAY 2021 18:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -979,22 +979,22 @@ File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
 (./artac_master.aux)
 \openout1 = `artac_master.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
  ABD: EveryShipout initializing macros
 (/usr/local/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1026,21 +1026,21 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Trying to load font information for U+msa on input line 52.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 55.
 
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 52.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 55.
 
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Package xypdf Info: Line width: 0.39998pt on input line 52.
+Package xypdf Info: Line width: 0.39998pt on input line 55.
 \AtBeginShipoutBox=\box67
-Package hyperref Info: Link coloring OFF on input line 52.
+Package hyperref Info: Link coloring OFF on input line 55.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -1054,9 +1054,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count436
 )
-LaTeX Info: Redefining \ref on input line 52.
-LaTeX Info: Redefining \pageref on input line 52.
-LaTeX Info: Redefining \nameref on input line 52.
+LaTeX Info: Redefining \ref on input line 55.
+LaTeX Info: Redefining \pageref on input line 55.
+LaTeX Info: Redefining \nameref on input line 55.
  (./artac_master.out) (./artac_master.out)
 \@outlinefile=\write6
 \openout6 = `artac_master.out'.
@@ -1076,160 +1076,143 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'artac_master.bbl' found.
 
 (./artac_master.bbl)
-Package biblatex Info: Reference section=0 on input line 52.
-Package biblatex Info: Reference segment=0 on input line 52.
+Package biblatex Info: Reference section=0 on input line 55.
+Package biblatex Info: Reference segment=0 on input line 55.
  [1
 
 {/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
-
-Overfull \hbox (3.46564pt too wide) in paragraph at lines 113--114
+ [4]
+Overfull \hbox (3.46564pt too wide) in paragraph at lines 130--131
 []\OT1/cmr/m/n/10 We de-note by $\OML/cmm/m/it/10 hom[]\OT1/cmr/m/n/10 (\OML/cm
 m/m/it/10 M; N\OT1/cmr/m/n/10 )$ the di-men-sion of the $\OML/cmm/m/it/10 k$\OT
 1/cmr/m/n/10 -vector space $[][](\OML/cmm/m/it/10 M; N\OT1/cmr/m/n/10 )$. 
  []
 
-[4] [5]
-Overfull \hbox (0.96315pt too wide) in paragraph at lines 195--196
+
+Overfull \hbox (4.97546pt too wide) in paragraph at lines 132--133
+\OT1/cmr/m/n/10 noted $\OMS/cmsy/m/n/10 C[]$ \OT1/cmr/m/n/10 is de-fined as the
+ sub-cat-e-gory of all mod-ules $\OML/cmm/m/it/10 M$ \OT1/cmr/m/n/10 such that 
+$[][](\OML/cmm/m/it/10 C; M\OT1/cmr/m/n/10 ) =
+ []
+
+[5] [6]
+Overfull \hbox (9.5201pt too wide) in paragraph at lines 218--219
 \OT1/cmr/m/n/10 with $\OML/cmm/m/it/10 ^^\$\OT1/cmr/m/n/10 -rigid mod-ules. For
  $\OML/cmm/m/it/10 M$ \OT1/cmr/m/n/10 par-tial tilt-ing, $0 = \OML/cmm/m/it/10 
-Ext[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 M; M\OT1/cmr/m/n/10 ) [] [][](\OML/cmm/m
-/it/10 M; ^^\M\OT1/cmr/m/n/10 )$,
+Ext[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 M; M\OT1/cmr/m/n/10 ) [] \OML/cmm/m/it/1
+0 D[][]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 M; ^^\M\OT1/cmr/m/n/10 )$,
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\tau' on input line 198.
+(hyperref)                removing `\tau' on input line 221.
 
-[6] [7]
-Overfull \hbox (2.3602pt too wide) in paragraph at lines 281--282
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\tau' on input line 241.
+
+[7] [8]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[9]
+Overfull \hbox (2.3602pt too wide) in paragraph at lines 433--434
 []\OT1/cmr/m/n/10 This al-lows us to com-pute $\OML/cmm/m/it/10 Q\OT1/cmr/m/n/1
 0 (\OML/cmm/m/it/10 s^^\[]\OT1/cmr/m/n/10 ^^C)$ as the Carte-sian prod-uct of $
 \OML/cmm/m/it/10 Q\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 s^^\[]A\OT1/cmr/m/n/10 )$
  []
 
-[8] [9] [10]
+[10] [11] [12] [13] [14]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\tau' on input line 375.
-
-
-Overfull \hbox (37.41121pt too wide) in paragraph at lines 385--386
-[]\OT1/cmr/m/n/10 By [[]AR+85[]][Theorem 1.4(a)], we have $\OMS/cmsy/m/n/10 h\O
-ML/cmm/m/it/10 g[]; \OT1/cmr/m/n/10 [\OML/cmm/m/it/10 N\OT1/cmr/m/n/10 ]\OMS/cm
-sy/m/n/10 i \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 hom[]\OT1/cmr/m/n/10 (\OML/cmm/m
-/it/10 M; N\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 hom[]\OT1/cm
-r/m/n/10 (\OML/cmm/m/it/10 N; ^^\M\OT1/cmr/m/n/10 )$.
- []
-
-[11] [12]
-Overfull \hbox (30.23935pt too wide) in paragraph at lines 437--438
-[]\OT1/cmr/m/n/10 Let $\OML/cmm/m/it/10 v \OT1/cmr/m/n/10 = (\OML/cmm/m/it/10 v
-[]; v[]; [] ; v[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 D\OT1/cm
-r/m/n/10 (\OML/cmm/m/it/10 M[]\OT1/cmr/m/n/10 )$. We have $\OMS/cmsy/m/n/10 h\O
-ML/cmm/m/it/10 v; x\OMS/cmsy/m/n/10 i \OT1/cmr/m/n/10 = 0$ and $\OMS/cmsy/m/n/1
-0 h\OML/cmm/m/it/10 v; x \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 (\OML/cmm/m/it/10
- k; k; \OT1/cmr/m/n/10 0\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0\OML/cmm/m/it/10 ; 
-[] ; \OT1/cmr/m/n/10 0)\OMS/cmsy/m/n/10 i ^^T
- []
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 457.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\tau' on input line 457.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 457.
-
-[13] [14]
-Overfull \hbox (10.86983pt too wide) in paragraph at lines 523--524
-\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 M[]; P[]\OT1/cmr/m/n/10 )$ to $(\OML/cmm/m/it
-/10 M[]; P[]\OT1/cmr/m/n/10 )$ in-duces a $\OMS/cmsy/m/n/10 D$\OT1/cmr/m/n/10 -
-generic path be-tween $\OML/cmm/m/it/10 C[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 M[
-]; P[]\OT1/cmr/m/n/10 )$ and $\OML/cmm/m/it/10 C[]\OT1/cmr/m/n/10 (\OML/cmm/m/i
-t/10 M[]; P[]\OT1/cmr/m/n/10 )$
- []
+(hyperref)                removing `\tau' on input line 601.
 
 [15] [16] [17]
-Overfull \hbox (29.31865pt too wide) in paragraph at lines 684--685
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 734.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\tau' on input line 734.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 734.
+
+[18] [19] [20] [21] [22]
+Overfull \hbox (29.31865pt too wide) in paragraph at lines 961--962
 []\OT1/cmr/m/n/10 Then $\OML/cmm/m/it/10 Q\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 s^^
 \[]A\OT1/cmr/m/n/10 )$ is, as a di-rected graph, the carte-sian prod-uct of $\O
 ML/cmm/m/it/10 Q\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 s^^\[][]\OT1/cmr/m/n/10 (\OML
 /cmm/m/it/10 A[]\OT1/cmr/m/n/10 ))$
  []
 
-[18] [19] [20]
+[23] [24] [25] [26] [27] [28]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[21] [22]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[23] [24]
-Overfull \hbox (12.51103pt too wide) in paragraph at lines 969--970
+[29]
+Overfull \hbox (12.51103pt too wide) in paragraph at lines 1287--1288
 []\OT1/cmr/m/n/10 Then, we pick any iso-mor-phism $\OML/cmm/m/it/10 ^^^$ \OT1/c
 mr/m/n/10 be-tween $[][](\OML/cmm/m/it/10 P\OT1/cmr/m/n/10 (2)\OML/cmm/m/it/10 
 ; P\OT1/cmr/m/n/10 (1)$ and $[][](\OML/cmm/m/it/10 Q; P\OT1/cmr/m/n/10 )$,
  []
 
-[25]
-Overfull \hbox (7.49109pt too wide) in paragraph at lines 1002--1002
+[30]
+Overfull \hbox (7.49109pt too wide) in paragraph at lines 1329--1329
 []\OT1/cmr/m/n/10 Sota Asai. \OT1/cmr/m/it/10 The wall-chamber struc-tures of t
 he real Grothendieck groups\OT1/cmr/m/n/10 .
  []
 
-
-Overfull \hbox (52.7825pt too wide) in paragraph at lines 1002--1002
+[31]
+Overfull \hbox (52.7825pt too wide) in paragraph at lines 1329--1329
 \OT1/cmr/m/n/10 dent Texts. Cam-bridge Uni-ver-sity Press, 2006. \OT1/cmr/m/sc/
 10 doi\OT1/cmr/m/n/10 : []$\OT1/cmtt/m/n/10 10 . 1017 / CBO9780511614309$[]\OT1
 /cmr/m/n/10 . 
  []
 
 
-Overfull \hbox (0.49426pt too wide) in paragraph at lines 1002--1002
+Overfull \hbox (0.49426pt too wide) in paragraph at lines 1329--1329
 \OT1/cmr/m/n/10 In: \OT1/cmr/m/it/10 In-ter-na-tional Math-e-mat-ics Re-search 
 No-tices \OT1/cmr/m/n/10 2015.16 (Sept. 2014),
  []
 
 
-Overfull \hbox (4.91653pt too wide) in paragraph at lines 1002--1002
+Overfull \hbox (4.91653pt too wide) in paragraph at lines 1329--1329
 []\OT1/cmr/m/n/10 Bernhard Keller, Pierre-Guy Pla-m-on-don, and Toshiya Yurikus
 a. \OT1/cmr/m/it/10 Tame
  []
 
 
-Overfull \hbox (8.78801pt too wide) in paragraph at lines 1002--1002
+Overfull \hbox (8.78801pt too wide) in paragraph at lines 1329--1329
 \OT1/cmr/m/it/10 al-ge-bras have dense $\OT1/cmr/bx/n/10 g$\OT1/cmr/m/it/10 -ve
 ctor fans\OT1/cmr/m/n/10 . 2020. arXiv: []$\OT1/cmtt/m/n/10 2007 . 04215$ [math
 .RT][]\OT1/cmr/m/n/10 . 
  []
 
-[26]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1003.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1003.
+[32]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1330.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1330.
  (./artac_master.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1003.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1003.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1330.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1330.
 
 Package rerunfilecheck Info: File `artac_master.out' has not changed.
-(rerunfilecheck)             Checksum: 9BA446C9F4D124700F875691FE2FF630;1394.
+(rerunfilecheck)             Checksum: 7A8C37093F44C49519345488147DBB2B;1449.
 Package logreq Info: Writing requests to 'artac_master.run.xml'.
 \openout1 = `artac_master.run.xml'.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1003.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1330.
  ) 
 Here is how much of TeX's memory you used:
- 30546 strings out of 480608
- 592284 string characters out of 5903631
- 1236794 words of memory out of 5000000
- 45795 multiletter control sequences out of 15000+600000
- 545894 words of font info for 79 fonts, out of 8000000 for 9000
+ 30973 strings out of 480608
+ 602251 string characters out of 5903631
+ 1240710 words of memory out of 5000000
+ 46198 multiletter control sequences out of 15000+600000
+ 547140 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,18n,86p,3223b,1371s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 67i,18n,86p,3223b,1415s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 </usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
@@ -1241,23 +1224,25 @@ r/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><
 usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></u
 sr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr
 /local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/l
-ocal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loc
-al/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local
-/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/t
-exlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texl
-ive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive
-/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/
-2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/20
-20/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2020/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2020/t
-exmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/20
-20/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texliv
-e/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on artac_master.pdf (26 pages, 346604 bytes).
+ocal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/loc
+al/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local
+/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/t
+exlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/tex
+live/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texliv
+e/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2
+020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2020
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2020/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2020/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2020/texmf-
+dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2020/te
+xmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/202
+0/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on artac_master.pdf (32 pages, 396374 bytes).
 PDF statistics:
- 499 PDF objects out of 1000 (max. 8388607)
- 443 compressed objects within 5 object streams
- 134 named destinations out of 1000 (max. 500000)
+ 579 PDF objects out of 1000 (max. 8388607)
+ 513 compressed objects within 6 object streams
+ 155 named destinations out of 1000 (max. 500000)
  173 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -5,6 +5,7 @@
 \usepackage{amsthm}
 \usepackage{amssymb}
 \usepackage{tikz-cd}
+\usepackage{tikz}
 \usepackage{quiver}
 \usepackage{array}
 \usepackage[all,cmtip]{xy}
@@ -37,6 +38,8 @@
 \newcommand{\Hom}{\ensuremath{\text{Hom}}}
 \newcommand{\tu}{\ensuremath{\tau}}
 \newcommand{\Fac}{\ensuremath{\text{Fac }}}
+\newcommand{\comment}[1]{}
+
 
 \newcommand{\spmat}[1]{%
 	\begin{bmatrix}#1\end{bmatrix}%
@@ -54,33 +57,38 @@
 \maketitle
 
 \begin{abstract}
+In this thesis, we give a brief introduction to $\tau$-tilting theory which was introduced by Adachi, Iyama and Reiten in \cite{tau}. We have particular focus on applying wall and chamber structures to understand the $\tau$-tilting theory of an algebra as in \cite{Br_stle_2019}.
 
+Using the machinery from \cite{Br_stle_2019} and some combinatorial arguments, we give examples of algebras with more than $2$ components in their mutation quiver of support \tu-tilting objects. We also classify the $\tau$-tilting modules for some specific classes of algebras with two simple modules using a technique inspired by \cite{dij17}.
 \end{abstract}
 
 \newpage
 \section*{Acknowledgments}
-I want to thank my main advisor, Prof. Aslak Buan, for guiding me through the field representation theory, from Auslander-Reiten theory to $\tau$-tilting theory. My co-advisor Prof. Øyvind Solberg has also been of great help. In particular, I am grateful for fruitful conversations on computational aspects of representation theory and for helping me through basic ring theory during my first semester at NTNU. It is no exaggeration that I owe almost all of my intuition on module theory to these meetings with Øyvind and his detailed notes on non-commutative ring theory.
-I also want to thank Dr. Eric Hanson for very constructive feedback during the $\tau$-tilting theory seminars the spring of 2021: No person has ever supplied counterexamples to overambitious claims I've made faster than Eric. I would also like to thank the algebra group at NTNU as a whole, for welcoming me to the institute as a PhD candidate on the integrated PhD program.
+I want to thank my main advisor, Prof. Aslak Bakke Buan, for guiding me through the field of representation theory, from Auslander-Reiten quivers to $\tau$-tilting. My co-advisor Prof. Øyvind Solberg has also been of great help. In particular, I am grateful for fruitful conversations on computational aspects of representation theory and for solid explanations on basic ring theory during my first semester at NTNU. I owe most of my intuition on module theory to meetings with Øyvind during the fall of 2019, and his detailed notes on non-commutative ring theory have been very useful.
+I also want to thank Dr. Eric Hanson for very constructive feedback during the $\tau$-tilting theory seminars the spring of 2021.
 
-Outside the algebra group, I want to thank my friends in Trondheim, especially my friends from Skansegata that I lived with while writing this thesis; Andreas Gjerde, Henrik Midtun, Halvor Veiby, Marius Jünger and Vegard Strand. 
+I would also like to thank the algebra group at NTNU as a whole for welcoming me to the institute as a PhD candidate on the integrated PhD program and The Research Council of Norway for funding  ARTaC, the project on which I am employed.
 
+Outside the university, I want to thank my friends in Skansegata that I lived with while writing this thesis; Andreas, Henrik, Halvor, Marius and Vegard. 
 
+Lastly I want to thank my father Rune and his father Ole for inspiring me to study mathematics, and my mother Kristin and her father Edmund for supporting my pursuit of a career in academia.
 
 \newpage
 \section{Introduction}
-Representation theory of algebras may be understood as understanding the ways a finite set of linear transformations may act together on vector spaces given some constraints. This may formulated using the language of module theory, where systems of linear transformations corresponds to modules over a finite dimensional algebra derived from the class of systems of linear transformations one is studying. To be more precise, this class of systems is given as a quiver, and the constraints are given as an ideal of the path algebra over the quiver.
+Representation theory of algebras may be thought of as understanding the ways a finite set of linear transformations could act together on vector spaces given some constraints. This can be formulated using the language of module theory, where systems of linear transformations corresponds to modules over a finite dimensional algebra depending on the network one studies. 
+%To be more precise, the network is given as a quiver, and the constraints are given as an ideal of the path algebra over the quiver.
 
 
-In these terms, representation theory of algebras then seeks to classify modules over finite dimensional algebras. For special classes of algebras, much progress has been made in this regard. However, the majority of algebras are too complicated for a proper classification of modules to be made.
-
-To give an example, we may consider the quiver below. A representation of this quiver is simply a linear transformation from one finite dimensional vector space to some other finite dimensional vector space.
+In these terms, representation theory of algebras seeks to classify modules over finite dimensional algebras. To give an example, we may consider the quiver $\Gamma$ below, where we work over the field $\mathbb{R}$. A representation of this quiver is simply a linear transformation between two finite dimensional real vector spaces. Such a representation corresponds to a finitely generated module over the algebra $k\Gamma \cong \begin{bmatrix}
+	k & 0 \\ k & k
+\end{bmatrix}$.
 % https://q.uiver.app/?q=WzAsMixbMCwwLCJcXGJ1bGxldCJdLFsxLDAsIlxcYnVsbGV0Il0sWzAsMV1d
 \[\begin{tikzcd}
-	1 & 2
+	\Gamma: 1 & 2
 	\arrow[from=1-1, to=1-2]
 \end{tikzcd}\]
 
-A representation of the above is in other words given by an arbitrary $n \times m$ matrix, over the field one wishes to work over. When dealing with a single linear transformation, classical linear algebra is sufficient, and computing the rank, nullity and corank of the matrix gives you everything we need to understand the transformation (corank for an $n \times m$ matrix is $m$ minus the rank of the matrix). Thus, there is no surprise that there are three indecomposable representations of this quiver, as seen in the figure below. Thus a matrix $M$ corresponds to some number of copies of the representations $M_1,M_2$ and $M_3$. These numbers are exactly the rank, nullity and corank of $M$, respectively.
+A representation of $\Gamma$ is in other words given by an arbitrary $n \times m$ real matrix. When dealing with a single linear transformation, classical linear algebra is sufficient, and computing the rank, nullity and corank of the matrix gives us everything we need to understand the transformation (corank for an $n \times m$ matrix is $m$ minus the rank of the matrix). Thus, there is no surprise that there are three indecomposable representations of this quiver, as seen in \cref{example-a2-figure}. Any representation of $\Gamma$ given as a matrix $M$ can be written uniquely up to isomorphism as the sum $M_1^r \oplus M_2^n \oplus M_2^c$, where $r,n$ and $c$ correspond to rank, nullity and corank of $M$.
 
 % https://q.uiver.app/?q=WzAsNixbMCwyLCJcXGJ1bGxldCJdLFsxLDIsIlxcYnVsbGV0Il0sWzAsMSwiXFxidWxsZXQiXSxbMSwxLCJcXGJ1bGxldCJdLFswLDAsIlxcYnVsbGV0Il0sWzEsMCwiXFxidWxsZXQiXSxbMCwxXSxbMiwzXSxbNCw1XV0=
 \begin{figure}[h]
@@ -93,30 +101,41 @@ A representation of the above is in other words given by an arbitrary $n \times 
 		\arrow[from=1-1, to=1-2,"1"]
 	\end{tikzcd}\]
 \caption{The three indecomposable representations of the quiver with one arrow.}
+\label{example-a2-figure}
 
 \end{figure}
 
+For more complicated algebras, finding all indecomposable modules can be challenging. However, Auslander-Reiten theory offers some useful tools. In particular, for algebras of finite representation type (i.e with only finitely many indecomposable modules up to isomorphism), one can compute all indecomposable modules algorithimcally. Indeed, all modules fit into a so-called AR (Auslander-Reiten) quiver. For algebras of finite representation type, it is well-known that this quiver must be connected. Since we know all projective modules, we can compute all projectives and simply traverse the AR-quiver of our algebra. These steps are of algorithmic nature and are implemented in \cite{qpa}.
 
-In this thesis, we focus not on understanding all modules, but instead focus on computing and classifying \tu-rigid modules over as general algebras as our techniques let us. The reasons for studying \tu-rigid modules come from attempt to generalize tilting theory, in particular from the perspective of mutations. Mutations give a combinatorial tool one can employ to understand \tu-tilting modules, similar to the techniques stemming from using Auslander-Reiten quivers to compute module categories. However, we may understand mutation for algebras where we cannot compute the whole AR-quiver. In this sense, \tu-tilting theory offers a new toolbox in the representation theory of algebras.
+More general algebras can have an infinite amount of indecomposable modules up to isomorphism and also uncountably many components in their AR-quiver. Thus it is no surprise that one in general have trouble describing all indecomposable modules. Other tools such as tilting theory therefore come into play, where the general idea is to use module categories of relatively well-understood algebras to say something about module categories over different algebras. 
 
+The topic of this thesis is to understand support $\tu$-tilting modules, which unify some of the different "tilting-theories" that has been constructed. However, in this thesis we are not interested so much in the "tilting" aspect, but instead seek to classify support $\tu$-tilting modules as they themselves have become objects of independent interest.
+
+Like indecomposable modules in an AR-quiver, maximal $\tu$-rigid modules fit into a combinatorial structure given by a quiver. Like AR-quivers, these objects may be computed. And for algebras with only finitely many $\tu$-rigid objects up to isomorphism, the underlying graph of the quiver must be connected. This gives one example of how algebras with finitely many $\tu$-rigid objects play a similar role in $\tu$-tilting theory as representation finite algebras play in classical representation theory.
+
+In this thesis, our main results concern algebras with infinitely many $\tu$-rigid modules. For such algebras, many of the tools developed for $\tu$-tilting finite algebras fail and therefore new techniques are needed.
 
 
 
 \section{Preliminaries}
-Here we collect some of the necessary prerequisites for reading this thesis, in all majority results and facts not found in \cite{auslander_reiten_smalo_1995} and \cite{assem_skowronski_simson_2006} which we refer two as general references on the representation of finite dimensional algebras.
+We refer the reader to the two books \cite{assem_skowronski_simson_2006} and \cite{auslander_reiten_smalo_1995} for general representation theory of algebras. We here collect some prerequisites for this thesis not found in these two texts. 
 
 \subsection{Notation and setting}
-We closely follow the notation of \cite{assem_skowronski_simson_2006}. An algebra $A$ will always refer to a finite dimensional algebra over a field $k$, which need not be algebraically closed. All algebras encountered in this thesis will be, unless otherwise stated, on the form $k\Gamma/I$ for some finite quiver $\Gamma$ and admissible ideal $I$. The number $n$ is, unless otherwise stated, reserved for the number of indecomposable projective summands of $A$. By $\mo A$ we denote the category of finite dimensional left $A$-modules (in contrast to \cite{assem_skowronski_simson_2006}, who employ right modules). We implicitly identify $A$-modules to representations of its quiver with relations. We denote by $D$ the duality on modules, and by $\text{Tr}$ the transpose. The Auslander-Reiten translate $D\text{Tr}$ is denoted $\tau$.
+We closely follow the notation of \cite{assem_skowronski_simson_2006}. By algebra $A$ we mean a finite dimensional algebra over a field $k$, where $k$ need not be algebraically closed. All algebras encountered in this thesis will be on the form $k\Gamma/I$ for some finite quiver $\Gamma$ and admissible ideal $I$. We denote by $r$ the ideal of $k\Gamma/I$ generated by all paths of length $1$ in $\Gamma$. The number $n$ is, unless otherwise stated, reserved for the number of indecomposable projective summands of $A$. By $\mo A$ we denote the category of finite dimensional left $A$-modules (in contrast to \cite{assem_skowronski_simson_2006}, who employ right modules). We implicitly identify $kQ/I$-modules with its representation over the bound quiver $Q$ with relations $I$. For the algebra $k\Gamma/I$, there is for all vertices $i$ in $\Gamma$ an associated indecomposable projective module $P(i)$ generated by all finite paths starting in that vertex. Similarly, $I(i)$ is the associated injective module for vertex $i$.
 
-A module $M$ is called basic if no two nonzero summands are equal, that is $M \cong A \oplus X \oplus X$ implies $X = 0$. We denote by $|M|$ the number of indecomposable summands of $M$. 
+We denote by $D$ the duality on modules, and by $\text{Tr}$ the transpose. The Auslander-Reiten translate $D\text{Tr}$ is denoted $\tau$.
+
+A module $M$ over $A$ is called basic if no two nonzero summands are isomorphic as $A$-modules, that is $M \cong A \oplus X \oplus X$ implies $X \cong 0$. We denote by $|M|$ the number of indecomposable summands of $M$. 
 
 We denote by $hom_A(M,N)$ the dimension of the $k$-vector space $\text{Hom}_A(M,N)$.
 
+Given a subcategory $\mathcal{C}$ of $\text{mod } A$, the right-perpendicular category of $\mathcal{C}$, denoted $\mathcal{C}^\perp$ is defined as the subcategory of all modules $M$ such that $\text{Hom}_A(C,M) = 0$ for all $C \in \mathcal{C}$. Dually, the left perpendicular of $\mathcal{C}$, denoted $^{\perp}\mathcal{C}$ is defined as the subcategory of all modules $M$ such that $\text{Hom}_A(M,C) = 0$ for all $C \in \mathcal{C}$.
+
 \subsection{Approximations}
-Approximations are used frequently in the representation theory of algebras. In particular, they are very often used in \tu-tilting theory.
+Approximations are very often used in \tu-tilting theory, for example to compute mutations which are central to this thesis.
 
 \begin{definition}
-	Let $\mathcal{C}$ be a subcategory of $\text{mod} A$.  Let $M$ be an $A$-module, and $X \in \mathcal{C}$. A map $f:X \to M$ is called a \textit{right $\mathcal{C}$-approximation} of $M$ if it is the case that for any $Y \in \mathcal{C}$ and map $g:Y \to M$, there is a map $h:Y \to X$ such that $g = f \circ h$. 
+	Let $\mathcal{C}$ be a subcategory of $\text{mod}  A$.  Let $M$ be an $A$-module, and $X \in \mathcal{C}$. A map $f:X \to M$ is called a \textit{right $\mathcal{C}$-approximation} of $M$ if it is the case that for any $Y \in \mathcal{C}$ and map $g:Y \to M$, there is a map $h:Y \to X$ such that $g = f \circ h$. 
 	
 	Let $M$ be an $A$-module, and $X \in \mathcal{C}$. A map $f:M \to X$ is called a \textit{left $\mathcal{C}$-approximation} of $M$ if it is the case that for any $Y \in \mathcal{C}$ and map $g:M \to Y$, there is a map $h:X \to Y$ such that $g = h \circ f$. 
 	
@@ -126,7 +145,7 @@ Approximations are used frequently in the representation theory of algebras. In 
 \end{definition}
 
 
-We say that such a subcategory $\mathcal{C}$ is \textit{contravariantly finite} (resp. \textit{covariantly finite}) if every $A$-module $M$ has a right (resp. left) $\mathcal{C}$-approximation. If $\mathcal{C}$ is both contravariantly and covariantly finite, we call it \textit{functorially finite}.
+We say that a subcategory $\mathcal{C}$ of $\text{mod }A$ is \textit{contravariantly finite} (resp. \textit{covariantly finite}) if every $A$-module $M$ has a right (resp. left) $\mathcal{C}$-approximation. If $\mathcal{C}$ is both contravariantly and covariantly finite, we call it \textit{functorially finite}.
 
 
 \begin{example}
@@ -161,14 +180,12 @@ We now give an example of a non-trivial, non-minimal left approximation.
 	
 	Using the construction in the above example, the map $f = \begin{bmatrix} \beta \\ \beta\alpha\beta \end{bmatrix}$ is a left $P(2)$-approximation of $P(1)$. It is not left minimal, however. To see this, consider the endomorphism on $P(2) \oplus P(2)$ given by \[\phi = \begin{bmatrix} 1 & 0 \\ \alpha\beta & 0\end{bmatrix}\]
 	
-	Then $\phi \circ f = f$, but $\phi$ is not an isomorphism. 
-	
-	$f_1$ alone, however, is a minimal left approximation.
+	Then $\phi \circ f = f$, but $\phi$ is not an isomorphism. In fact, $f_1$ is a minimal left approximation.
 \end{example}
 
 
 \section{Tau-tilting theory}
-$\tau$-tilting theory was introduced in \cite{tau} as a possible generalization of tilting theory, which has had tremendous impact on the field of representation theory of finite dimensional algebras as a whole. Although first introduced in \cite{tau}, some of the main results of $\tau$-tilting theory stem from (cite smalø). We here recall some important definitions and results from $\tau$-tilting theory. Also, we note that there are other approaches to defining \tu-rigid pairs which are fruitful in other contexts. To make these introductory sections both concise and self-contained, we will not dwell on these alternative approaches to the theory here.  When we need different but equivalent definitions in later sections, references to the literature will be made.
+$\tau$-tilting theory was introduced in \cite{tau} as a possible generalization of tilting theory, which itself has had tremendous impact on the field of representation theory of finite dimensional algebras. Although first introduced in \cite{tau}, some of the main results of $\tau$-tilting theory stem from work by Auslander and Smalø in the 80's, for example \cite{auslandersmalo81}. In this section, we recall some important definitions and results from $\tau$-tilting theory. 
 
 We start by discussing $\tau$-rigid modules, which may be considered the building blocks of $\tau$-tilting theory. 
 
@@ -183,51 +200,94 @@ First note that the Auslander-Reiten formula gives that \tu-rigid objects must b
 	A pair $(M,P)$ where $M$ is basic $\tau$-rigid and $P$ basic projective such that $\Hom_A(P,M) = 0$ is called a  $\tau$-rigid pair.
 \end{definition}
 
-Along with this definition follows many conventions. For a  $\tau$-tilting module $T = (M,P)$, $P$ will be denote the projective part of $T$ and $M$ the module part. $T$ is called support \tu-tilting if $|M| + |P| = n$, and almost complete support \tu-tilting if $|M| + |P| = n - 1$. A support \tu-tilting pair with no non-zero projective part may also be denoted a \tu-tilting module. 
+Along with this definition follows many conventions. For a  $\tau$-tilting module $T = (M,P)$, $P$ will be denote the projective part of $T$ and $M$ the module part. $T$ is called support \tu-tilting if $|M| + |P| = n$, and almost complete support \tu-tilting if $|M| + |P| = n - 1$. A support \tu-tilting pair with no non-zero projective part may also be denoted a \tu-tilting module. Support $\tu$-tilting modules really are maximal.
+
 
 For $T_1,T_2$ both \tu-rigid pairs, we consider $T_1$ a summand of $T_2$ is both the module part and the projective part of $T_1$ is a summand of the module part and the projective part of $T_2$ respectively.
+
+
+\begin{proposition}\cite[Proposition 1.2, Proposition 2.3]{tau}
+	A basic $\tu$-rigid pair over $A$ has at most $|A|$ summands.
+\end{proposition}
 
 \begin{example}
 	Since $\tu P = 0$ for any projective module $P$, any projective module is \tu-rigid. As a consequence, $A = \oplus_{i = 1}^n P(i)$ is a \tu-tilting module.	
 \end{example}
 
 \begin{example}
-	For an hereditary algebra $A$, partial tillting modules coincide with \tu-rigid modules. For $M$ partial tilting, $0 = Ext^1_A(M,M) \cong \Hom_A(M,\tu M)$, where the first equality follows from the definition of tilting-modules and the second equality follows from the Auslander-Reiten formula in the hereditary case.
+	For an hereditary algebra $A$, partial tilting modules coincide with \tu-rigid modules. For $M$ partial tilting, $0 = Ext^1_A(M,M) \cong D\Hom_A(M,\tu M)$, where the first equality is part of the definition of tilting-modules and the second equality follows from the Auslander-Reiten formula in the hereditary case.
 \end{example}
 
-\subsection{Torsion classes induced by support \tu-modules}
-Given a support \tu-tilting pair $(M,P)$, we may consider the modules generated by $M$, $\Fac M$. As in classical tilting theory, this is a torsion class, and we have the following very important result.
+\subsection{Torsion pairs induced by support \tu-tilting modules}
 
-\begin{theorem}\cite[Theorem 2.7]{tau}\cite{auslandersmalo81}
+Given a support \tu-tilting pair $(M,P)$, we consider the modules generated by $M$, $\Fac M$. As in classical tilting theory, this is a torsion class.
+
+\begin{definition}
+	A pair $(\mathcal{T},\mathcal{F})$ of full subcategories of $\text{mod } A$ for an algebra $A$ is called a torsion pair if $\mathcal{T} = ^\perp\mathcal{F}$ and $\mathcal{F} = \mathcal{T}^\perp$. 
+	
+	A torsion class is then the left part of a torsion pair, as $\mathcal{T}$ above. A torsion-free class is the right part of a torsion pair, as $\mathcal{F}$ above.
+\end{definition}
+
+Torsion pairs appear in classical tilting theory. Using the more general setting of $\tu$-tilting theory we can classify all functorially finite torsion pairs, i.e torsion pairs where both the torsion and torsion-free parts are functorially finite.
+
+\begin{theorem}\cite[Theorem 2.7]{tau}
 	There is a bijection between the set of functorially finite torsion pairs, denoted $\text{f-tors} A$ and support \tu-tilting modules, denoted $\text{s}\tu\text{-tilt} A$, given by sending a support \tu-tilting pair $(M,P)$ to $(\Fac M,M^\perp)$.
 \end{theorem}
 
-We order the objects in $\text{f-tors} A$ by inclusion on the torsion classes. Thus $(X_1,Y_1) > (X_2,Y_2)$ if $X_2 \subseteq X_1$. This induces an ordering on $\text{s}\tu A$. We denote by $Q(\text{f-tors} A)$ the Hasse-quiver of the above defined ordering on $\text{f-tors} A$.
+We order the objects in $\text{f-tors} A$ by inclusion on the torsion classes. Thus $(X_1,Y_1) < (X_2,Y_2)$ if $X_1 \subseteq X_2$. This induces an ordering on the set of support \tu-tilting modules, where $(M_1,P_1) < (M_2,P_2)$ if $\text{Fac}(M_1) \subset \text{Fac}(M_2)$.
 
-\subsection{Mutation}
-An essential property of support \tu-tilting modules is that one can \textit{mutate} at each summand. More precisely, one has the following.
+ We denote by $Q(\text{f-tors} A)$ the Hasse-quiver of the above defined ordering on $\text{f-tors} A$.
+
+\subsection{Mutation of support \tu-tilting modules}
+An essential property of support \tu-tilting modules is that one can \textit{mutate} at each summand. More precisely, we have the following.
 
 \begin{theorem}
-	For a almost complete support $\tau$-tilting pair $(M,P)$, there exists exactly two distinct support \tu-tilting pairs $(M_0,P_0)$ and $(M_1,P_1)$.
+	For a almost complete support $\tau$-tilting pair $(M,P)$, there exists exactly two distinct support \tu-tilting pairs $(M_0,P_0)$ and $(M_1,P_1)$ containing $(M,P)$ as a summand.
 \end{theorem}
 
 In the above theorem, $(M_0,P_0)$ and $(M_1,P_1)$ are said to be mutations of each other, and we may write $M_1 = \mu_X(M_0)$ where $X$ is the indecomposable summand of $M_0$ that we must replace to get $M_1$; formally, we require $M_0 = X \oplus M$ or $P_0 = X \oplus P$. In this case, we \textit{mutate} at $X$.
 
 \begin{proposition}\cite[Definition-Proposition 2.28]{tau}
-	Let $T_1$ and $T_2$ be support \tu-tilting modules which are mutations of each other. Then either $T_1 < T_2$ or $T_ 2 < T_1$. In the first case, we consider $T_2$ a right-mutation of $T_1$ and in the second case we consider $T_2$ a left-mutation of $T_1$. Note that if $T_2$ is a left-mutation of $T_1$, $T_1$ is a right-mutation of $T_2$ and vice versa.
+	Let $T_1$ and $T_2$ be support \tu-tilting modules which are mutations of each other. Then either $T_1 < T_2$ or $T_ 2 < T_1$. In the first case, we consider $T_2$ a right-mutation of $T_1$ and in the second case we consider $T_2$ a left-mutation of $T_1$. Note that if $T_2$ is a left-mutation of $T_1$ if and only if $T_1$ is a right-mutation of $T_2$.
 \end{proposition}
 
-\subsection{Mutation quivers}
-We use mutation of support \tu-tilting modules to define a quiver storing information about these objects.
+Left-mutations may be computed using approximations.
 
-\begin{definition}
-	The support $\tau$-tilting quiver $Q(\text{s\tu-tilt} A)$ has a vertex for each support \tu-tilting module and an arrow $T_1 \to T_2$ if $T_2$ is a left mutation of $T_1$. 
+\begin{proposition}\cite[Theorem 2.30]{tau}
+	Let $T = X \oplus U$ be $\tau$-tilting and $X$ indecomposable such that $T$ is the Bongartz completion of $U$. Let \[X \xrightarrow[]{f} U' \to Y \to 0\] be exact, where $f$ is a minimal left 
+	$\text{add } U$-approximation. 
+	\begin{enumerate}
+		\item  If $Y = 0$, then $U$ is the module part of some support \tu-tilting object.
+		\item If $Y \neq 0$, then $Y$ decomposes as $Y = \bigoplus_{i = 1}^k Y'^i$ for some indecomposable, $\tu$-rigid $Y'$. Then $U \oplus Y'$ is $\tu$-tilting.
+	\end{enumerate}
+
+\end{proposition}
+
+The following observation is practical for computational reasons as it demonstrates that we need not compute Bongartz completions before mutating; it is sufficient to check that the resulting $Y$ defines a new \tu-tilting object. 
+
+\begin{proposition}
+Let $T = X \oplus U$ be $\tau$-tilting. Let \[X \xrightarrow[]{f} U' \to Y \to 0\] be exact, where $f$ is a minimal left $\text{add } U$-approximation. 
+
+If $Y \neq 0$, and $U \oplus Y$ is $\tu$-rigid, $Y$ must decompose as $Y = \bigoplus_{i = 1}^k Y'^i$. Then $U \oplus Y'$ is $\tu$-tilting.
+
+\end{proposition}
+
+\begin{proof}
+	If $U \oplus Y$ is \tu-rigid with at least $n$ summands, then since $U$ is basic with $n-1$ summands, $Y$ must decompose as $Y = \oplus_{i = 1}^k Y'$ for some $k \geq 1$. $U \oplus Y'$ must then $\tu$-tilting and a mutation of $U \oplus X$, since they differ on exactly one summand.
+\end{proof}
+
+\subsection{Mutation quivers}
+Mutation of support \tu-tilting modules naturally induce a quiver structure on the set of these modules.
+
+\begin{definition}\cite[Definition 2.29]{tau}
+	Fix an algebra $A$. The support $\tau$-tilting quiver $Q(\text{s\tu-tilt} A)$ has a vertex for each support \tu-tilting module and arrows on the form $T_1 \to T_2$, where $T_2$ is a left mutation of $T_1$. 
 \end{definition}
 
-In the rest of this subsection, we give examples of mutation quivers and discuss some elementary facts about them.
+In the remaining of this subsection, we give examples of mutation quivers and discuss some elementary facts about them.
 
 
-It turns out that mutation of support \tu-tilting module is compatible with the ordering induced by the set of functorially finite torsion classes.
+\comment{
+Mutation of support \tu-tilting module is compatible with the ordering induced by the set of functorially finite torsion classes.
 \begin{proposition}
 	$Q(\text{s\tu-tilt} A)$ is isomorphic to $Q(\text{f-tors} A)$.
 \end{proposition}
@@ -240,9 +300,11 @@ It turns out that mutation of support \tu-tilting module is compatible with the 
 	By \cite[Theorem 2.33]{tau}, a symmetrical argument proves the other direction.	
 \end{proof}
 
+
 \begin{example}
-	As $\Fac A=\text{mod } A$, the support \tu-tilting module $(A,0)$ is the largest element in $Q(\text{f-tors} A)$, and any mutation $\mu_X(A)$ must be a left-mutation.
+	For any algebra $A$, $\Fac A=\text{mod } A$, the support \tu-tilting module $(A,0)$ is the largest element in $Q(\text{f-tors} A)$, and any mutation $\mu_X(A)$ must be a left-mutation.
 \end{example}
+}
 
 \begin{example}
 	Let $A$ be the path algebra of the disconnected quiver with two points.
@@ -266,6 +328,96 @@ Then $Q(s\tau\text{-tilt} A)$ may easily be computed to be
 \end{tikzcd}\]
 \end{example}
 
+A crucial example which is needed for many of the main results in this thesis is the \tu-tilting theory of the Kronecker algebra $K$. The mutation quiver of $K$ is given in for example \cite{jassoreduction} and is considered to be well-known. For completeness, we include here a brief explanation of its $\tu$-tilting theory. For rigorous proofs that the modules we exhibit in fact are $\tu$-rigid (exceptional is sufficient in the hereditary case) we refer the reader to \cite[Chapter 9.2]{assem_skowronski_simson_2006}.
+\begin{example}
+Consider the Kronecker algebra $K$, which has quiver as drawn below.
+% https://q.uiver.app/?q=WzAsMixbMCwwLCIxIl0sWzEsMCwiMiJdLFswLDEsIiIsMCx7Im9mZnNldCI6LTF9XSxbMCwxLCIiLDIseyJvZmZzZXQiOjF9XV0=
+\[\begin{tikzcd}
+	1 & 2
+	\arrow[shift left=1, from=1-1, to=1-2]
+	\arrow[shift right=1, from=1-1, to=1-2]
+\end{tikzcd}\]
+
+We will compute the mutation quiver $Q(s\tau\text{-tilt } K)$. $(K,0)$ and $(0,K)$ are support \tu-tilting modules.
+
+Since $\text{Hom}_K(P(1),P(2)) = 0$, $(P(2),P(1))$ is a support \tu-tilting module which is a left mutation of $(K,0)$ and a right mutation of $(0,K)$.
+
+The postprojective modules are $\tu$-rigid, and in fact \begin{align*}
+	T^1_i = \tau^{-i}P(1) \oplus \tau^{-(i+1)}P(2) && T^2_i = \tau^{-i}P(1) \oplus \tau^{-i}P(2)
+\end{align*}
+define two classes of $\tau$-tilting modules, where we let $i \in \mathbb{N}$. See \cref{preprojective-K} for an illustration of the pre-projective component.
+
+
+\begin{figure}[h]
+	% https://q.uiver.app/?q=WzAsNyxbMCwxLCJQKDIpIl0sWzEsMCwiUCgxKSJdLFsyLDEsIlxcdGF1XnstMX1QKDIpIl0sWzMsMCwiXFx0YXVeey0xfVAoMSkiXSxbNCwxLCJcXHRhdV57LTJ9UCgyKSJdLFs1LDAsIlxcdGF1XnstMn1QKDEpIl0sWzYsMSwiLi4uIl0sWzAsMSwiIiwwLHsib2Zmc2V0IjotMX1dLFswLDEsIiIsMix7Im9mZnNldCI6MX1dLFsxLDIsIiIsMCx7Im9mZnNldCI6LTF9XSxbMSwyLCIiLDAseyJvZmZzZXQiOjF9XSxbMiwzLCIiLDAseyJvZmZzZXQiOi0xfV0sWzIsMywiIiwwLHsib2Zmc2V0IjoxfV0sWzMsNCwiIiwwLHsib2Zmc2V0IjotMX1dLFszLDQsIiIsMCx7Im9mZnNldCI6MX1dLFs0LDUsIiIsMCx7Im9mZnNldCI6MX1dLFs0LDUsIiIsMCx7Im9mZnNldCI6LTF9XSxbNSw2LCIiLDAseyJvZmZzZXQiOi0xfV0sWzUsNiwiIiwwLHsib2Zmc2V0IjoxfV0sWzMsMSwiIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzIsMCwiIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzQsMiwiIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzUsMywiIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzYsNCwiIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV1d
+	\[\begin{tikzcd}[sep=small]
+		& {P(1)} && {\tau^{-1}P(1)} && {\tau^{-2}P(1)} \\
+		{P(2)} && {\tau^{-1}P(2)} && {\tau^{-2}P(2)} && {...}
+		\arrow[shift left=1, from=2-1, to=1-2]
+		\arrow[shift right=1, from=2-1, to=1-2]
+		\arrow[shift left=1, from=1-2, to=2-3]
+		\arrow[shift right=1, from=1-2, to=2-3]
+		\arrow[shift left=1, from=2-3, to=1-4]
+		\arrow[shift right=1, from=2-3, to=1-4]
+		\arrow[shift left=1, from=1-4, to=2-5]
+		\arrow[shift right=1, from=1-4, to=2-5]
+		\arrow[shift right=1, from=2-5, to=1-6]
+		\arrow[shift left=1, from=2-5, to=1-6]
+		\arrow[shift left=1, from=1-6, to=2-7]
+		\arrow[shift right=1, from=1-6, to=2-7]
+		\arrow[dashed, from=1-4, to=1-2]
+		\arrow[dashed, from=2-3, to=2-1]
+		\arrow[dashed, from=2-5, to=2-3]
+		\arrow[dashed, from=1-6, to=1-4]
+		\arrow[dashed, from=2-7, to=2-5]
+	\end{tikzcd}\]
+	\caption{The postprojective component of the Auslander-Reiten quiver of $K$. The action of the Auslander-Reiten translate is indicated by dashed arrows.}
+	\label{preprojective-K}
+\end{figure}
+
+Dually, the preinjectives also define $\tu$-rigid modules.
+
+Since $\text{Hom}_A(P(2),I(1)) = 0$, $(I(1),P(2))$ is a support \tu-tilting object. Also, we get two classes of $\tu$-tilting objects, 
+\begin{align*}
+U^1_i = \tau^{i} I(1) \oplus \tau^i I(2) && U^2_i = \tau^{i+1} I(1) \oplus \tau^i I(2)
+\end{align*}
+
+Note that even without computing left or right mutations, there is no difficulties finding the direction of the arrows. Clearly all mutations from $(K,0)$ must be left-mutations and all mutations from $(0,K)$ must be right mutations. Also, any other object must have exactly one left mutation and exactly one right mutation; thus we can by induction build the mutation quiver $Q(s\tau\text{-tilt } K)$, as shown in \cref{k2-mutation-quiver}.  By our argument in \cref{k2-walls} and \cref{all_chambers_found}, all support $\tu$-rigid objects must lie in this quiver.
+
+\begin{figure}
+% https://q.uiver.app/?q=WzAsMTQsWzEsMCwiKFAoMSlcXG9wbHVzIFAoMiksMCkiXSxbMCwxXSxbMiwzLCIoXFx0YXVeey0yfVAoMSkgXFxvcGx1cyBcXHRhdV57LTF9UCgyKSwwKSJdLFsxLDExLCIoMCxQKDEpXFxvcGx1cyBQKDIpKSJdLFsyLDgsIihcXHRhdSBJKDEpXFxvcGx1cyBJKDIpLDApIl0sWzIsNywiKFxcdGF1IEkoMSlcXG9wbHVzIFxcdGF1IEkoMiksMCkiXSxbMCw1LCIoUCgyKSxQKDEpKSJdLFsyLDYsIihcXHRhdV4yIEkoMSlcXG9wbHVzIFxcdGF1IEkoMiksMCkiXSxbMiw1LCJcXHZkb3RzIl0sWzIsMTAsIihQKDIpLFAoMSkpIl0sWzIsOSwiKEkoMSlcXG9wbHVzIEkoMiksMCkiXSxbMiwxLCIoXFx0YXVeey0xfVAoMSlcXG9wbHVzIFAoMiksMCkiXSxbMiwyLCIoXFx0YXVeey0xfVAoMSkgXFxvcGx1cyBcXHRhdV57LTF9UCgyKSwwKSJdLFsyLDQsIihcXHRhdV57LTJ9UCgxKSBcXG9wbHVzIFxcdGF1XnstMn1QKDIpLDApIl0sWzAsMTFdLFsxMSwxMl0sWzEyLDJdLFsyLDEzXSxbMCw2XSxbNiwzXSxbMTMsOF0sWzgsN10sWzcsNV0sWzUsNF0sWzQsMTBdLFsxMCw5XSxbOSwzXV0=
+\[\begin{tikzcd}
+	& {(P(1)\oplus P(2),0)} \\
+	{} && {(\tau^{-1}P(1)\oplus P(2),0)} \\
+	&& {(\tau^{-1}P(1) \oplus \tau^{-1}P(2),0)} \\
+	&& {(\tau^{-2}P(1) \oplus \tau^{-1}P(2),0)} \\
+	&& {(\tau^{-2}P(1) \oplus \tau^{-2}P(2),0)} \\
+	{(P(2),P(1))} && \vdots \\
+	&& {(\tau^2 I(1)\oplus \tau I(2),0)} \\
+	&& {(\tau I(1)\oplus \tau I(2),0)} \\
+	&& {(\tau I(1)\oplus I(2),0)} \\
+	&& {(I(1)\oplus I(2),0)} \\
+	&& {(P(2),P(1))} \\
+	& {(0,P(1)\oplus P(2))}
+	\arrow[from=1-2, to=2-3]
+	\arrow[from=2-3, to=3-3]
+	\arrow[from=3-3, to=4-3]
+	\arrow[from=4-3, to=5-3]
+	\arrow[from=1-2, to=6-1]
+	\arrow[from=6-1, to=12-2]
+	\arrow[from=5-3, to=6-3]
+	\arrow[from=6-3, to=7-3]
+	\arrow[from=7-3, to=8-3]
+	\arrow[from=8-3, to=9-3]
+	\arrow[from=9-3, to=10-3]
+	\arrow[from=10-3, to=11-3]
+	\arrow[from=11-3, to=12-2]	
+\end{tikzcd}\]
+\caption{A finite part of the mutation quiver of the Kronecker algebra}\label{k2-mutation-quiver}
+\end{figure}
+\end{example}
+%todo add kronecker example
+
 We now show how the \tu-tilting theory of a disconnected algebra is determined by its components.
 
 \begin{definition}
@@ -278,31 +430,36 @@ We now show how the \tu-tilting theory of a disconnected algebra is determined b
 \begin{proof}
 $(M,P) = (M_A \oplus M_B,P_A \oplus P_B)$ is support \tu-tilting over $\Lambda$ if and only if $(M_A,P_A)$ is support \tu-tilting over $A$ and $(M_B,P_B)$ is support \tu-tilting over $B$. This follows from the general fact that the module category of $\Lambda$ is the product of the module category of $A$ and the module category of $B$. More concretely, one can see that computing the Auslander-Reiten translate of $M_A$ in $A$ is essentially exactly the same operation as computing it in $\Lambda$, and this is the only nontrivial observation needed.
 	
-This allows us to compute $Q(s\tu\text{-tilt} \Lambda)$ as the Cartesian product of $Q(s\tu\text{-tilt} A)$ and $Q(s\tu\text{-tilt} B)$. To see this, let $(X,Y)$ be a point in $Q(s\tu\text{-tilt} A) \mathbin{\Box} Q(s\tu\text{-tilt} B)$ Then $X \oplus Y$ is clearly a point int $Q(s\tu\text{-tilt} \Lambda) $ and vice versa. Thus we have a natural bijection between the graphs, we need to investigate the edges. Let $(X_1,Y) \to (X_2,Y)$ be an edge in $Q(s\tu\text{-tilt} A) \mathbin{\Box} Q(s\tu\text{-tilt} B)$.  Then $(X_1 \oplus Y) \to (X_2 \oplus Y)$ is a valid mutation as only one summand has changed, thus corresponding to an edge in $Q(s\tu\text{-tilt} \Lambda)$, and similarly for edges on the form $(X,Y_1) \to (X,Y_2)$. Since all edges in $Q(s\tu\text{-tilt} A)\mathbin{\Box}Q(s\tu\text{-tilt} B)$ are on one of these forms, and clearly all edges in $Q(s\tu\text{-tilt} \Lambda)$ come from these edges, we have a quiver isomorphism.
+This allows us to compute $Q(s\tu\text{-tilt} \Lambda)$ as the Cartesian product of $Q(s\tu\text{-tilt} A)$ and $Q(s\tu\text{-tilt} B)$. To see this, let $(X,Y)$ be a point in $Q(s\tu\text{-tilt} A) \mathbin{\Box} Q(s\tu\text{-tilt} B)$ Then $X \oplus Y$ is clearly a point in $Q(s\tu\text{-tilt} \Lambda) $ and vice versa. Thus we have a natural bijection between the graphs, we need to investigate the edges. Let $(X_1,Y) \to (X_2,Y)$ be an edge in $Q(s\tu\text{-tilt} A) \mathbin{\Box} Q(s\tu\text{-tilt} B)$.  Then $(X_1 \oplus Y) \to (X_2 \oplus Y)$ is a valid mutation as only one summand has changed, thus corresponding to an edge in $Q(s\tu\text{-tilt} \Lambda)$, and similarly for edges on the form $(X,Y_1) \to (X,Y_2)$. Since all edges in $Q(s\tu\text{-tilt} A)\mathbin{\Box}Q(s\tu\text{-tilt} B)$ are on one of these forms, and clearly all edges in $Q(s\tu\text{-tilt} \Lambda)$ come from these edges, we have a quiver isomorphism.
  	
 \end{proof}
 
-One may also consider the graph-theoretical properties of $Q(\text{s\tu-tilt} A)$ by forgetting the orientation of the edges. From the properties of mutation, it follows at once that the mutation graph is $(n-1)$-regular. It may be finite or infinite. In the finite case the graph is connected\cite[Corollary 3.10]{tau}.
+One may also consider the graph-theoretical properties of $Q(\text{s\tu-tilt} A)$ by forgetting the orientation of the edges. From the properties of mutation, it follows at once that the mutation graph is $n$-regular. It may be finite or infinite. In the finite case the graph is connected\cite[Corollary 3.10]{tau}, which allows one to algorithimcally find all support $\tu$-tilting objects by recursively mutating from $(A,0)$.
 
 \subsection{g-vectors}
-For an indecomposable module $M$, let $P_1 \to P_2 \to M \to 0$ be a minimal projective presentation of $M$, where $P_1 \cong \bigoplus_{i = 1}^n P(i)^{v_i}$ and $P_2 \cong \bigoplus_{i = 1}^n P(i)^{u_i}$. We may consider $(v_1,v_2,\dots,v_n)$ and $(u_1,u_2,\dots,u_n)$ to be vectors describing the building blocks of $P_1$ and $P_2$ respectively. Then we define $g^M$ to be $u - v$. 
+Looking at vectors coming from projective presentations of $\tu$-rigid modules gives a combinatorial tool which is used frequently in the literature on \tu-tilting, for example in \cite{schroll2020tautilting} and \cite{dij17}. We here define $g$-vectors and $G$-matrices.
 
 \begin{definition}
-	For a $\tau$-rigid pair $(M,P)$, its $g$-vector is defined as $g^M - g^P$. 
+For a module $M$, let $P_1 \to P_2 \to M \to 0$ be a minimal projective presentation of $M$, where $P_1 \cong \bigoplus_{i = 1}^n P(i)^{v_i}$ and $P_2 \cong \bigoplus_{i = 1}^n P(i)^{u_i}$. The vectors $(v_1,v_2,\dots,v_n)$ and $(u_1,u_2,\dots,u_n)$ then describe $P_1$ and $P_2$ respectively. We define $g^M$ to be $u - v$. 
 \end{definition}
 
-Further, we follow \cite{schroll2020tautilting} and define $G$-matrices as follows.
+For this thesis, $g$-vectors appear as in the following two definitions.
+\begin{definition}
+	For a $\tau$-rigid pair $(M,P)$, its $g$-vector is defined as $g^M - g^P$. A \tu-rigid module $M$ can be considered a $\tu$-rigid pair $(M,0)$ and has $g$-vector $g^M$.
+\end{definition}
+
+
 
 \begin{definition}\cite[Definition 2.4]{schroll2020tautilting}
 	For a support \tu-tilting pair $(M,P) = (M_1 \oplus \dots \oplus M_i,P_1 \oplus \dots \oplus P_j)$, we define its G-matrix $G_{(M,P)}$ to be the $n \times n$ matrix $(g^{M_1},g^{M_2},\dots,g^{M_i},-g^{P_1},\dots,-g^{P_j})$, where we consider the $g$-vectors to be column vectors.
 	
 \end{definition} 
 
-An important property of $g$-vectors is that they uniquely identify $\tau$-rigid pairs\cite[Theorem 5.5]{tau}. This immediately gives a combinatorial proof that the set of indecomposable \tu-rigid objects must be countable (a fact known more generally for the set of exceptional objects up to isomorphism), as there are only countably many integer vectors of dimension $n$. 
+An important property of $g$-vectors is that they uniquely identify $\tau$-rigid pairs\cite[Theorem 5.5]{tau}. This immediately gives a combinatorial proof that the set of indecomposable \tu-rigid objects must be countable, as there are only countably many integer vectors of dimension $n$. 
 
 Further, $G$-matrices of support \tu-tilting pairs are invertible. This follows immediately from \cite[Theorem 5.1]{tau}.
 
-Another often-used fact is the following result.
+The following result is often used.
 
 \begin{theorem}\cite{auslander1985modules}[Theorem 1.4(a)]
 	Let $M,N$ be modules. We have \[\langle g^M,[N]\rangle = hom_A(M,N) - hom_A(N,\tau M))\]
@@ -310,8 +467,71 @@ Another often-used fact is the following result.
 
 
 \subsection{Duality}
-There is a duality between the \tu-tilting of $A$ and the \tu-tilting of $A^\text{op}$.
+There is a duality between the \tu-tilting of $A$ and the \tu-tilting of $A^\text{op}$, described in \cite{tau}.
 
+\begin{definition}
+	Given a \tu-rigid object $(M,P)$, let $M = M_{pr} \oplus M_{np}$ be the decomposition of $M$ into its projective and non-projective parts. We define the pair
+	\[(M,P)^\dagger = (\text{Tr } M_{np} \oplus P^*,M_{pr}^*)\]
+	
+	of $A^\text{op}$-modules as the dual of $(M,P)$.
+\end{definition}
+
+\begin{proposition}\cite[Theorem 2.14]{tau}
+	Given $(M,P)$ as above, $(M,P)^\dagger$ is a $\tu$-rigid object over $A^\text{op}$. The map \[(-)^\dagger: \tu\text{-rigid pairs of }A \to \tu\text{-rigid pairs of } A^\text{op}\]
+	is a bijection and in fact an involution.
+\end{proposition}
+
+This duality induces by\cite[Proposition 2.27 b)]{tau} an order-reversing bijection between the mutation quivers $Q(s\tau\text{-tilt} A))$ and $Q(s\tau\text{-tilt } A^\text{op})$. This gives us a way of finding right mutations. Namely, instead of explicitly computing them, we may pass to the opposite ring, do a left mutation, and go back to the original ring. The duality also gives a natural map on $g$-vectors. 
+
+\begin{proposition}
+	Let $(M,P)$ a $\tu$-rigid object. Given the canonical isomorphism between $K_0(A)$ and $K_0(A^\text{op})$, we get the equality \[g^{(M,P)^\dagger} = -g^{(M,P)}\]
+\end{proposition}
+
+\begin{proof}
+	It is enough to prove this statement for indecomposable $\tu$-rigid objects.
+	
+	\begin{enumerate}
+		\item Consider the \tu-rigid pair $(0,P)$. Then $(0,P)^\dagger = (P^*,0)$. As a $A^\text{op}$-module, $P^*$ is projective with $g^{P^*} = g^P$. Thus $g^{(P^*,0)} = -g^{(0,P)}$ as wanted.
+		\item Consider the \tu-rigid pair $(M,0)$, where $M$ is projective indecomposable.
+		
+		Then $\text{Tr} M = 0$, and $(M,0)^\dagger = (0,M^*)$, and thus $g^(M,0) = -g^{(M,0)^\dagger}$ follows from the discussion above.
+		
+		\item Let $(M,0)$ be a \tu-rigid pair with $M$ non-projective indecomposable, and with minimal projective presentation \[P_2 \to P_1 \to M\] 
+		
+		$\text{Tr} M$ will have a projective presentation.
+		
+		\[P_1^* \to P_2^* \to \text{Tr} M\]
+		
+		By \cite[Chapter 6.2, proposition 2.1]{assem_skowronski_simson_2006}, this presentation is in fact minimal. Then $g^{(M,0)^\dagger} = g^{(\text{Tr} M,0)} = -g^{(M,0)}$ as wanted.
+	\end{enumerate}
+
+\end{proof}
+
+
+
+\subsection{2-term silting objects}
+Fix an algebra $A$. An object $P$ in $K^b(\text{add } A)$ is called $2$-term if $P^i = 0$ for all $i \notin\{0,-1\}$. 
+
+\begin{definition}
+	 A $2$-term object $P$ is called presilting if \[\text{Hom}_{K^b(\text{add } A)}(P,P[1]) = 0\]
+	
+	Further, a presilting object $P$ is called silting if it generates $K^b(\text{add } A)$ as a triangulated category, in the sense that $K^b(\text{add } A) = \text{thick } P$.	
+\end{definition} 
+
+The following proposition means that we can translate easily between $2$-term silting objects and support $\tu$-tilting objects, and thus need not worry too much about the homological definition of the silting property.
+
+\begin{proposition}\cite[Proposition 3.7]{tau}
+	Let $P_1 \xrightarrow{d_1} P_0 \xrightarrow{d_0} M$ be a projective presentation of a $\tu$-rigid module $M$. Then we have
+	
+	\begin{enumerate}
+		\item $P_1 \xrightarrow{d_1} P_0$ is a pre-silting complex.
+		\item If $(M,Q)$ is a \tu-rigid pair, then $P_1 \oplus Q \xrightarrow{\begin{bmatrix}d_0 & 0\end{bmatrix}} P_0$ is a 2-term presilting complex which is silting if and only if $(M,Q)$ is support \tu-tilting.
+	\end{enumerate}
+\end{proposition}
+
+
+
+\comment{
 \section{Jasso reduction}
 Using techniques from classical tilting theory, Gustavo Jasso\cite{jassoreduction} introduced reduction techniques, now often called Jasso reduction, for partial support \tu-tilting modules, and showed that one can relate the \tu-tilting theory of $A$ to the \tu-tilting theory of these reduced algebras.
 
@@ -336,28 +556,34 @@ The above theorem shows that we can understand the \tu-tilting theory of module 
 
 \begin{proof}
 	Since we may embed the mutation quiver $Q = Q(s\tu\text{-tilt} B)$ in the finite quiver $Q(s\tu\text{-tilt} A)$, $Q$ itself must be finite.
+
 \end{proof}
 
+}
 
 \section{The wall and chamber structure of finite dimensional algebras}
-We here introduce the wall and chamber structure of a finite dimensional algebra $A$, and recall how it may be used to study the \tu-tilting theory of $A$. We closely follow the theory as developed in \cite{Br_stle_2019} and \cite{dij17}.
+We now introduce the wall and chamber structure of a finite dimensional algebra $A$, and recall how it can be used to study the \tu-tilting theory of $A$. We closely follow the theory as developed in \cite{Br_stle_2019} and \cite{dij17}.
 
 \subsection{Stability conditions}
+Let $\langle -,-\rangle$ be the standard inner product on $\mathbb{R}^n$, i.e \[\langle (v_1,v_2,\dots,v_n),(w_1,w_2,\dots,w_n) = \sum_{i = 1}^{n}v_iw_i\]
 
-We let $\langle -,-\rangle$ be the standard inner product on $\mathbb{R}^n$, i.e \[\langle (v_1,v_2,\dots,v_n),(w_1,w_2,\dots,w_n) = \sum_{i = 1}^{n}v_iw_i\]
-
-\begin{definition}\cite{Br_stle_2019}[Definition 3.1]
-	For $v \in \mathbb{R}^n$, a nonzero module $M \in \text{mod} A$ is called \textit{$v$-stable} if $\langle v,[M]\rangle = 0$ and $\langle v,[N]\rangle < 0$ for all proper submodules $N$. $M$ is called \textit{$v$-semistable} if $\langle v, [M]\rangle = 0$ and $\langle v, [N]\rangle \leq 0$ for every submodule $N$.
+\begin{definition}\cite[Definition 3.1]{Br_stle_2019}
+	For $v \in \mathbb{R}^n$, a nonzero module $M \in \text{mod } A$ is called \textit{$v$-stable} if $\langle v,[M]\rangle = 0$ and $\langle v,[N]\rangle < 0$ for all proper submodules $N$. $M$ is called \textit{$v$-semistable} if $\langle v, [M]\rangle = 0$ and $\langle v, [N]\rangle \leq 0$ for every submodule $N$.
 \end{definition}
 
-We denote by $\mathcal{D}(M)$ the set of vectors $v \in \mathbb{R}^n$ such that $M$ is $v$-semistable. We call $\mathcal{D}(M)$ the stability space of $M$.
+We denote by $\mathcal{D}(M)$ the set of vectors $v \in \mathbb{R}^n$ such that $M$ is $v$-semistable. We call $\mathcal{D}(M)$ the stability space of $M$. Stability spaces need not be linear spaces. However, they are always closed under positive scaling and induce linear spaces as their span. 
+
+We now define the wall and chamber structure of an algebra.
+
+\begin{definition}\cite{Br_stle_2019}
+	The walls in the and chamber structure of $A$ are all stability spaces $\mathcal{D}(M) \subseteq \mathbb{R}^n$ such that $\text{span}(\mathcal{D}(M))$ has dimension $n-1$.
+	
+	Let $X^c$ denote the compliment of a set $X$ in a topological space, and $\overline{X}$ its closure. Let $\mathcal{R}$ be the complement of the closure of the union of all stability spaces, \[\mathcal{R} = (\overline{(\cup_{M \in \text{mod} A} \mathcal{D}(M))})^c\] \textit{chamber} in the wall and chamber structure of $A$ is then a connected component of $\mathcal{R}$.
+	
+\end{definition}
 
 
-Stability spaces need not be linear spaces. However, they are always closed under positive scaling and induce linear spaces as their span. The \textit{walls} of the wall and chamber structure of A are defined as the stability spaces which induce linear spaces of codimension 1. We now describe the chambers.
-
-Let $X^c$ denote the compliment of a set $X$ in a topological space, and $\overline{X}$ its closure. Let \[\mathcal{R} = (\overline{(\cup_{M \in \text{mod} A} \mathcal{D}(M))})^c\] \textit{chamber} in the wall and chamber structure of $A$ is defined to be a connected component of $\mathcal{R}$.
-
-We now show that all walls are given by stability spaces of indecomposable modules, before demonstrating some examples.
+We now show that all walls are given by stability spaces of indecomposable modules.
 
 \begin{proposition}
 	$\mathcal{D}(M)$ be a wall. Then there is an indecomposable module $X$ such that $\mathcal{D}(M) = \mathcal{D}(X)$.
@@ -368,7 +594,7 @@ We now show that all walls are given by stability spaces of indecomposable modul
 \end{proof}
 
 \begin{example}
-	Let $A = A_2$. We compute its wall and chamber structure. We have three indecomposable $A$-modules, $S(1),S(2)$ and $P(1)$. Clearly $\mathcal{D}(S(1)) = \{(0,y): y \in \mathbb{R}\}$ and $\mathcal{D}(S(2)) = \{(x,0): x \in \mathbb{R}\}$. We now compute $\mathcal{D}(P(1))$. Let $(x,y) = v \in \mathcal{D}(P(1))$. We then require $\langle v,(1,1)\rangle = 0$ and $\langle v,(0,1)\rangle \leq 0$. The second condition implies that $y \leq 0$. The first condition implies that $x = -y$, and these two conditions are sufficient for $v$ to be in the stability space of $P(1)$. Thus the stability space of $P(2)$ is the ray $\{\alpha(1,-1) :  \alpha \in \mathbb{R}, \alpha \geq 0\}$. 
+	Let $A = k\overrightarrow{A_2}$. We compute its walls. We have three indecomposable $A$-modules, $S(1),S(2)$ and $P(1)$. Clearly $\mathcal{D}(S(1)) = \{(0,y): y \in \mathbb{R}\}$ and $\mathcal{D}(S(2)) = \{(x,0): x \in \mathbb{R}\}$. We now compute $\mathcal{D}(P(1))$. Let $(x,y) = v \in \mathcal{D}(P(1))$. We then require $\langle v,(1,1)\rangle = 0$ and $\langle v,(0,1)\rangle \leq 0$. The second condition implies that $y \leq 0$. The first condition implies that $x = -y$, and these two conditions are sufficient for $v$ to be in the stability space of $P(1)$. Thus the stability space of $P(2)$ is the ray $\{\alpha(1,-1) :  \alpha \in \mathbb{R}, \alpha \geq 0\}$. 
 \end{example}
 
 
@@ -376,23 +602,24 @@ We now show that all walls are given by stability spaces of indecomposable modul
 We now aim to recover information about the \tu-tilting theory of an algebra from its wall and chamber structure.
 
 An important ingredient in this section is the following formula.
-\begin{proposition}\cite{Br_stle_2019}[Corollary 3.10]
+\begin{proposition}[Corollary 3.10]\cite{Br_stle_2019}
 	Let $(M,P)$ be a \tu-rigid pair. Then
  \[\langle g^{(M,P)},[N]\rangle = hom_A(M,N) - hom_A(N,\tau M) - hom_A(P,N)\]
 \end{proposition}
 
 \begin{proof}
-	By \cite{auslander1985modules}[Theorem 1.4(a)], we have $\langle g^M,[N]\rangle = hom_A(M,N) - hom_A(N,\tau M)$. Since $g^{(M,P)} = g^M - g^P$, we get
+	By \cite[Theorem 1.4(a)]{auslander1985modules}, we have $\langle g^M,[N]\rangle = hom_A(M,N) - hom_A(N,\tau M)$. Since $g^{(M,P)} = g^M - g^P$, we get
 	\begin{align}
 	&\langle g^{(M,P)},[N]\rangle \\
-	&=\langle g^M,[N]\rangle - \langle g^P,[N]\rangle \\
-	&=hom_A(M,N) - hom_A(N,\tau M) - hom_A(P,N) + hom_A(N,\tau P) \\
-	&=hom_A(M,N) - hom_A(N,\tau M) - hom_A(P,N) + hom_A(N,0)\\
-	&=hom_A(M,N) - hom_A(N,\tau M) -hom_A(P,N)
+	=&\langle g^M,[N]\rangle - \langle g^P,[N]\rangle \\
+	=&hom_A(M,N) - hom_A(N,\tau M) - hom_A(P,N) + hom_A(N,\tau P) \\
+	=&hom_A(M,N) - hom_A(N,\tau M) - hom_A(P,N) + hom_A(N,0)\\
+	=&hom_A(M,N) - hom_A(N,\tau M) -hom_A(P,N)
 	\end{align}
 \end{proof}
 
-Note that the above formula implies that a diension vector $[X]$ with $X$ in $J(M,P) = J(M_1\oplus\dots\oplus M_i,P_1\oplus\dots\oplus P_j)$ will be orthogonal to $g^{(M,P)}$. Also, by additivity, $[X]$ will be orthogonal to any linear combination of the vectors $\{g^{M_1},\dots,g^{M_i},-g^{P_1},\dots,-g^{P_j}\}$. We now aim to prove a partial converse to this statement.
+\comment{
+Note that the above formula implies that a dimension vector $[X]$ with $X$ in a Jasso perpendicular $J(M,P) = J(M_1\oplus\dots\oplus M_i,P_1\oplus\dots\oplus P_j)$ will be orthogonal to $g^{(M,P)}$. Also, by additivity, $[X]$ will be orthogonal to any linear combination of the vectors $\{g^{M_1},\dots,g^{M_i},-g^{P_1},\dots,-g^{P_j}\}$. We now aim to prove a partial converse to this statement.}
 \begin{definition}
 	Let $T = (M,P)$ be a \tu-rigid pair. Following \cite{dij17}, we define the \textit{cone} spanned by $T$, as \[C(T) = \{\sum_{i = 1}^{j} \alpha_ig^{M_i} - \sum_{i = 1}^{k}\beta_ig^{P_i} : \alpha_i,\beta_i \geq 0 \text{ for all } i\}\]
 	
@@ -401,11 +628,14 @@ Note that the above formula implies that a diension vector $[X]$ with $X$ in $J(
 
 Given a vector $\alpha = (\alpha_1,\alpha_2,\dots,\alpha_n)$ with $\alpha_i \geq 0$ for all $i$, we let $\alpha(M,P)$ denote the vector $G^{(M,P)} \times \alpha$.
 
+\comment{
+
 \begin{proposition}\cite{Br_stle_2019}[Proposition 3.13]
 	For $\alpha(M,P) \in C^\circ(M,P)$, a module $N$ is $\alpha(M,P)$-semistable if and only if $N \in J(M,P)$.
 \end{proposition}
 
 Note that the simple objects in $J(M,P)$ are, by the proposition above, exactly the $\alpha(M,P)$-stable modules.
+}
 
 The cones $C(T)$ for support \tu-tilting modules and almost complete support \tu-tilting modules play an important role in the wall and chamber structure of an algebra. We summarize some of the most important results below.
 
@@ -418,39 +648,86 @@ The cones $C(T)$ for support \tu-tilting modules and almost complete support \tu
 	\end{enumerate}
 \end{proposition}
 
+The Kronecker algebra $K$, sometimes denoted $K_2$ in this thesis, supplies our most important example of wall and chamber structures. 
 
-\begin{example}
-	Consider the Kronecker algebra $K_2$. Let $M$ be an indecomposable module with dimension vector $(1,1)$. Then $\mathcal{D}(M) = \{(-1,1)\}$. However, there is no \tu-rigid module with $g$-vector $(-1,1)$, as $\text{Hom}_A(P(1),P(2)) = 0$.
+\begin{example}\label{limit-wall}
+	Consider the Kronecker algebra $K$. Let $M$ be an indecomposable module with dimension vector $(1,1)$. Then $\mathcal{D}(M) = \{(x,-x):x \geq 0\}$. However, there is no \tu-rigid module with $g$-vector $(i,-i)$ for any $i \in \mathbb{N}$. This shows that not all walls come from (unions of) cones of almost complete support \tu-tilting objects .
 \end{example}
 
+We mow compute the wall and chamber structure of $K$, which will be references frequently in this thesis.
+
+\begin{example}\label{k2-walls}
+	Let $K$ be the Kronecker algebra. We wish to compute $g$-vectors of indecomposable $\tu$-rigid objects over $K$. Since $K$ has $2$ simple modules, these modules (together with $(0,P(1))$ and $(0,P(2))$) give the almost complete partial support $\tu$-tilting objects of $K$. 
+	
+	
+	 $K$ has Cartan and Coxeter matrices given by \begin{align}
+		C = \begin{bmatrix}
+			1 & 0 \\ 2 & 1
+		\end{bmatrix} && \Phi = \begin{bmatrix} -1 & 2 \\ -2 & 3\end{bmatrix}
+	\end{align}
+	
+	It follows from \cite[Chapter 4, corollary 2.9)]{assem_skowronski_simson_2006} and \cite[Chapter 4, corollary 2.7)]{assem_skowronski_simson_2006} that the dimension vector of $\tau^{-i}P(i)$ is $\Phi^i\times \text{dim}(P(i))$ and that the dimension vector of $\tau^{i}I(i)$ is $\Phi^{-i}\times \text{dim}(I(i))$.
+	
+	Also, observe the minimal projective presentation of a module depends only on its dimension vector. A module over $K$ with dimension vector $d$ has $g$-vector $C^{-1}d$.
+	
+	Then any object in the postprojective component on the form $\tau^{-i}P(1)$ will have $g$-vector $(1+2i,-2i)$ and those on the form $\tau^{-i}P(2)$ will have $g$-vector $(2i,1-2i)$. Thus for all $j \in \mathbb{N}$ there is a postprojective module with $g$-vector on the form $(j+1,-j)$.
+	
+	Dually, the preinjective modules have $g$-vectors that are on the form $(j,-(j+1))$. The positive span of these $g$-vectors gives us subsets of walls in the wall and chamber structure of $K$, as guaranteed by \cref*{tau-wall-chamber-result}. For example, the $g$-vectors of $(P(1),0)$ and $(0,P(1))$ both lie in the wall $\mathcal{D}(S(2))$. 
+	
+	We claim that for any wall $W$, $W$ is given as a union of rays in \cref{k2-wall-and-chamber}. To see this, observe that cones of the support $\tu$-tilting objects hit $\mathbb{R}^2$ minus the ray given by the positive span of $(1,-1)$. Since this ray in fact corresponds to a wall (the "limit wall"), any ray not drawn in the picture, which is also part of a wall must intersect a chamber, which is impossible.
+	
+	\begin{figure}[h]
+		\begin{center}
+			\begin{tikzpicture}[>=stealth,scale=1,line cap=round,
+				bullet/.style={circle,inner sep=1.5pt,fill}]
+				%\draw[->] (-5,0) -- (5,0) node[right]{$x$};
+				%\draw[thick,->] (0,0) -- (1,-1) node[above][$L$]
+				\draw[thick,->] (0,0) -- (1,-1) node[above]{$$};
+				%\draw foreach \X in {3,6}
+				%{(\X,0.1) -- ++ (0,-0.2) node[below]{$\X$}};
+				%\draw foreach \Y in {2,4}
+				%{(0.1,\Y) -- ++ (-0.2,0) node[left]{$\Y$}};
+				\foreach \X [count=\Y] in {(1,0),(0,1),(2,-1),(3,-2),(1,-2),(2,-3),(-1,0),(0,-1),(-1,1)} 
+				{\path  \X node(n\Y)[label=right:{$$}]{};
+					\draw[dashed,->,opacity = 0.5]  (0,0) -- (n\Y);}
+				
+				%\foreach \X [count=\Y] in {(-1,0),(0,-1),(-2,1),(1,-3)} 
+				%{\path  \X node(n\Y)[label=left:{$\X$}]{};
+				%	\draw[dashed,->,opacity = 0.5]  (0,0) -- (n\Y);}
+			\end{tikzpicture}
+		\end{center}
+		\caption{A finite portion of the walls of $K$, where the bold vector indicates the wall discussed in \cref{limit-wall}, appropriately called a limit wall.}
+		\label{k2-wall-and-chamber}
+	\end{figure}
+	
+
+\end{example}
+
+The following reduction technique is very useful.
+
+\begin{proposition}\cite[Lemma 4.13]{Br_stle_2019}\label{wall-reduction-quotient}
+	Let $A$ be a finite dimensional algebra. Let $B = A/I$ be a quotient, where $I \subseteq r$. In particular, I  does not contain any non-trivial idempotents. There is then a canonical isomorphism between $K_0(A)$ and $K_0(B)$. Using this isomorphism, walls in the wall and chamber structure of $B$ are taken to walls in the wall and chamber structure of $A$.
+\end{proposition}
+
+\begin{proof}
+	We have a canonical map $f:A \to A/I$. A module $M$ over $B$ may be considered an $A$-module, under the action $\alpha x = f(\alpha)x$. The important observation is now that the submodules of $M$ considered as an $A$-module coincide with the submodules of $M$ considered as a $B$-module.
+	
+	We prove one direction of this. Let $N \subset M$ be a $A$-submodule of $M$. We need to put a $B$-module structure on $N$. We attempt to define $f(\alpha)x = \alpha x$ for $\alpha \in A$ and prove that this is well-defined: $f(\alpha) = f(\beta)$ for some $\beta \in A$. Then $f(\alpha - \beta)x = 0$, so $\alpha-\beta \in I$. Thus $(\alpha-\beta)x = 0$, as $x \in M$. So the action is well-defined. The other direction is trivial.
+	
+	The rest of the proof now follows from the definition of a wall. See also the proof given in \cite{Br_stle_2019}.
+\end{proof}
 
 Using the third point of \cref{tau-wall-chamber-result}, we may conclude that an algebra with infinitely many walls in its wall and chamber structure will be \tu-tilting infinite. It is well known that algebras whose quivers have a double arrow are representation infinite. Here we show that they are \tu-tilting infinite as well.
+
+
 \begin{proposition}
 	Any algebra $A = k\Gamma/I$ where $\Gamma$ has a double arrow is \tu-tilting infinite.
 \end{proposition}
 
 \begin{proof}
-	We remark that there exists shorter proofs than the one given here. We choose to give this particular proof, because it gives an elementary example of working with the walls of an algebra.
+	Choose a pair of double arrows. Let $J$ be the ideal generated by all arrows except the chosen pair of double arrows. Then $A/J$ decomposes as an algebra to $A/J = K_2 \times k \times k \times \dots \times k$. Since $K_2$ is $\tau$-tilting infinite, $A/J$ is also $\tau$-tilting infinite and must then have infinitely many walls.
 	
-	We note that the proof is very much inspired by the proof of \cite[Theorem 4.14]{Br_stle_2019}. Label the vertices of $\Gamma$ such that the double arrows are from $1 \to 2$. Then any module over $K_2$ may be canonically embedded as a module of $A$, and in particular we have for any $n \geq 2$ a module $M_n$ with dimension vector $x = (n,n+1,0,\dots,0)$, such that its proper submodules have dimension vectors $(n-k,n+1-k,0,\dots,0)$ for $1 \leq k \leq n$. We investigate $D(M_n)$.
-	
-	Let $v = (v_1,v_2,\dots,v_n) \in D(M_n)$. We have $\langle v,x \rangle = 0$ and $\langle v,x - (k,k,0,0,\dots,0)\rangle \leq 0$ for all integers $1 \leq k \leq n$. Thus for $i > 2$, $v_i$ may be chosen freely. Also, letting $k = n$ in the second condition, we see that $v_2 \leq 0$. The first condition implies $v_1 = \frac{-(n+1)}{n}v_2$.
-	
-	Assume now that $y = (y_1,y_2,\dots,y_n)$ such that the two above properties hold, namely $y_2 \leq 0$ and $y_1 = \frac{-(n+1)}{n}y_2$. We then clearly have $\langle y,[M]\rangle = 0$. We now check that for all $N \subseteq M$, we have $\langle y,[N]\rangle \leq 0$. 
-	
-	\begin{align}
-	&\langle (\frac{-(n+1)}{n}y_2,y_2), (n-k,n+1-k)\rangle \\
-	=&\langle (\frac{-(n+1)}{n}y_2,y_2), (j,j+1)\rangle \\
-	=& y_2((-nj-j)/n + (j+1)) \\
-	=& y_2((-nj - j + nj + n)/n) \\
-	=& y_2((n-j)/n)) \\
-	\leq& 0\text{, since } j \leq n
-	\end{align}
-	
-	Thus $y$ is in $D(M_n)$. Since we may chose $y_i$ for $i > 2$ freely, and any non-positive $y_2$, $D(M_n)$ generates a linear space of codimension $1$, and is thus a wall in the wall and chamber structure of $A$.
-	
-	Further, letting $m,n \geq 1$, it is easy to see that $D(M_n) = D(M_m)$ implies $m = n$. Thus we have identified an infinite number of walls in the wall and chamber structure of $A$, meaning that $A$ is \tu-tilting infinite.
-	
+	Thus by \cref{wall-reduction-quotient}, $A$ has infinitely many walls and is thus $\tau$-tilting infinite.
 \end{proof}
 
 
@@ -476,9 +753,9 @@ This result gives a tool for classifying all support \tu-tilting objects. We col
 \end{proposition}
 
 \begin{proof}
-	The \tu-tilting finite case is well-known. We note that the second point also holds in this case, but is not needed as connectivity of the mutation graph is sufficient to to compute all support \tu-tilting modules.
+	The \tu-tilting finite case is well-known.
 	
-	Let $T = (M,P)$ be a support \tu-tilting object. Consider a point $x \in C(T)$ in the interior of $C(T)$. Since $\cup_{T \in X} C(T)$ is dense in $\mathbb{R}^n$, there is a $T_2$ in $X$ such that $C(T_2) \cap C(T)$ contains $x$. But $C(T_2)\cap C(T) = C(Y)$ for some partial suport \tu-tilting object $Y$. Since $T \neq T_2$, there is a summand $Z$ in $T = (M,P)$ not in $Y$. Writing $x$ as an element of $C(T)$, we get
+	Let $T = (M,P)$ be a support \tu-tilting object. Consider a point $x \in C(T)$ in the interior of $C(T)$. Since $\cup_{T \in X} C(T)$ is dense in $\mathbb{R}^n$, there is a $T_2$ in $X$ such that $C(T_2) \cap C(T)$ contains $x$. But $C(T_2)\cap C(T) = C(Y)$ for some partial support \tu-tilting object $Y$. Since $T \neq T_2$, there is a summand $Z$ in $T = (M,P)$ not in $Y$. Writing $x$ as an element of $C(T)$, we get
 	
 	\[x = \sum_{i = 1}^{j} \alpha_ig^{M_i} - \sum_{i = 1}^{k}\beta_ig^{P_i}\]
 
@@ -490,23 +767,23 @@ It is interesting to note that for tame algebras, the converse of the above theo
 
 in \cite{dij17}, the authors use the above demonstrated criteria to classify the support \tu-tilting objects of two specific symmetric algebras. We may however easily refine the criterion using ideas from\cite{Br_stle_2019}. We collect this refined technique as a theorem, which will be used frequently in this thesis.
 
-\begin{theorem}
+\begin{theorem}\label{all_chambers_found}
 	Let $A$ be an algebra. Let $W$ be the set of walls in the wall and chamber structure of $A$, and let $\overline{W}$ be its closure.
 	
 	Let $X$ be a set of support \tu-tilting modules whose cones hit all chambers of $A$, i.e such that \[(\cup_{T \in X} C(T))  \cup \overline{W} = \mathbb{R}^n\]  then $X$ contains all support \tu-tilting modules over $A$.
 \end{theorem}
 
 \begin{proof}
-	The set of chambers $C$ in the wall and chamber structure of $A$ is defined as the connected components of $\mathbb{R}^n - \overline{W}$. If $(\cup_{T \in X} C(T))  \cup \overline{W} = \mathbb{R}^n$, then $\mathbb{R}^n - \overline{W} \subseteq (\cup_{T \in X} C(T))$. Thus every chamber $c \in C$ lies entirely inside $(\cup_{T \in X} C(T))$. Since now chambers of different support \tu-tilting objects may only intersect on their boundary, we may conclude that $c \in X$. This finishes the proof.
+	The set of chambers $C$ in the wall and chamber structure of $A$ is defined as the connected components of $\mathbb{R}^n - \overline{W}$. If $(\cup_{T \in X} C(T))  \cup \overline{W} = \mathbb{R}^n$, then $\mathbb{R}^n - \overline{W} \subseteq (\cup_{T \in X} C(T))$. Thus every chamber $c \in C$ lies entirely inside $(\cup_{T \in X} C(T))$. Since chambers of different support \tu-tilting objects only intersect on their boundary if they intersect at all, we may conclude that $c = C(T)$ for some $T \in X$. This finishes the proof.
 \end{proof}
 
 
 \subsection{Wall crossing and green sequences}
-We may also use the wall and chamber structure to detect the non-existence of maximal green sequences. A maximal green sequence in $Q(s\tu\text{-tilt} A)$ is a path from $(A,0)$ to $(0,A)$ using only left mutations, i.e respecting the orientation of the edges in the mutation quiver.
+We can employ the wall and chamber structure to detect the non-existence of maximal green sequences. A maximal green sequence in $Q(s\tu\text{-tilt} A)$ is a path from $(A,0)$ to $(0,A)$ using only left mutations or equivalently respecting the orientation of the edges.
 
 We will see that mutations in $Q(s\tu\text{-tilt} A)$ are closely linked to certain paths in the wall and chamber structure of $A$.
 
-\begin{definition}%add citation
+\begin{definition}\cite[Definition 4.1]{Br_stle_2019}%add citation
 	A smooth path $\gamma:[0,1] \to \mathbb{R}^n$ is called a $\mathcal{D}$-generic path if:
 	
 	\begin{enumerate}
@@ -520,7 +797,7 @@ We will see that mutations in $Q(s\tu\text{-tilt} A)$ are closely linked to cert
 
 In \cite[Lemma 4.2]{Br_stle_2019}, the authors construct explicitly a $\mathcal{D}$-generic path moving from the chamber of some support \tu-tilting pair $(M,P)$ to the chamber induced by a mutation of $(M,P)$, passing exactly one wall.
 
-Inductively, they show that a sequence of left and right mutations from $(M_1,P_1)$ to $(M_2,P_2)$ induces a $\mathcal{D}$-generic path between $C^\circ(M_1,P_1)$ and $C^\circ(M_2,P_2)$ passing one wall for each mutation. The following corollary will be used later.
+Inductively, they show in \cite[Theorem 4.3]{Br_stle_2019} that a sequence of left and right mutations from $(M_1,P_1)$ to $(M_2,P_2)$ induces a $\mathcal{D}$-generic path between $C^\circ(M_1,P_1)$ and $C^\circ(M_2,P_2)$ passing one wall for each mutation. The following corollary will be used later.
 
 \begin{corollary}\label{corollary-dgeneric}
 	Let $T = (M_1,P_1)$ and $T = (M_2,P_2)$ be support \tu-tilting objects over $A$.
@@ -529,7 +806,7 @@ Inductively, they show that a sequence of left and right mutations from $(M_1,P_
 \end{corollary}
 
 \begin{proof}
-	This is the contra-positive of [Theorem 4.3]\cite{Br_stle_2019}.
+	This is the contra-positive of the result discussed above; \cite[Theorem 4.3]{Br_stle_2019}.
 \end{proof}
 
 \section{Main results}
@@ -650,7 +927,7 @@ The $g$-vectors of right mutations from $(0,P(1)\oplus P(2))$ may be computed in
 
 Note that a wall $v$ in $K_i$  gives a wall $v$ in $A_{i,j}$. Also, a wall $w_1 = (x,y)$ in $K_j$ gives a wall $w_2 = (y,x)$ in $A_{i,j}$ because we need to swap the arrows in $K_j$ to view it as a quotient of $A_{i,j}$.
 
-The closure cones of the identified support \tu-tilting objects now span $\mathbb{R}^2 - C(W)$, were $C(W)$ is the closure of all walls. Thus by (......), these are all support \tu-tilting objects.
+The closure cones of the identified support \tu-tilting objects now span $\mathbb{R}^2 - C(W)$, were $C(W)$ is the closure of all walls. Thus by \cref{all_chambers_found}, these are all support \tu-tilting objects.
 
 
 \end{proof}
@@ -708,10 +985,46 @@ There are also connected algebras with more than two components in its \tu-tilti
 	\arrow[from=1-1, to=1-3]
 	\end{tikzcd}\]
 	
-	Then $Q(s\tau\text{-tilt} A)$ has at least $3$ connected components.
+	Then $Q(s\tau\text{-tilt} A)$ has at least $4$ connected components.
 \end{corollary}
 
 
+\begin{proof}
+	
+	 Note that $\text{Hom}_A(P(1)\oplus P(2),P(3)\oplus P(4)) = 0$ as there are no paths from vertices $3,4$ to vertices $1,2$. Thus \[T_1 = (P(3) \oplus P(4), P(1) \oplus P(2))\] is a support \tu-tilting object. We intend now to show that it may not lie within a finite number of right or left mutations from $(A,0)$ and $(0,A)$. This means that $T_1$ must lie in a third component of $Q(s\tu\text{-tilt} A)$, as wanted.
+	
+	From \cite{Br_stle_2019}[Lemma 4.13], we see that a wall in the wall and chamber structure of the algebra presented in \cref{4components} gives a wall in the wall and chamber structure of $A$. Let $B$ be the algebra in \cref{4components}.
+	
+	Consider $T_{B,1} = ((P_B(3) \oplus P_B(4), P_B(1) \oplus P_B(2)))$. Then $T_B$ and $T_1$ will have equal $G$-matrices.
+	
+	\[G^{T_1} = \begin{bmatrix}
+		0 & 0 & -1 & 0 \\ 0 & 0 & 0 & -1 \\ 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0
+	\end{bmatrix} = G^{T_{B,1}}\]
+	
+	This means in particular that $g^{T_1}$ lies in the cone of $T_{B,1}$. Assume now, that there is a $\mathcal{D}$-generic path $\gamma$ from $g^{T_1}$ to $g^{(A,0)} = (1,1,1,1)$ in $Q(s\tu\text{-tilt } A)$. In the wall and chamber structure of $B$, this path is also $\mathcal{D}$-generic and must cross infinitely may walls since $(B,0)$ and $T_{B,1}$ lie in different components of $Q(s\tau\text{-tilt} B)$. Now, since walls in $B$ induce walls in $A$, $\gamma$ must pass infinitely many walls also in $A$. 
+	
+	Then by \cref{corollary-dgeneric}, $T_1$ does not lie in the same component as $(A,0)$. A similar argument shows that it may not lie in the same component as $(0,A)$.
+	
+	To identify a fourth component, observe first that $(P(1)\oplus P(2),P(3)\oplus P(4))$ is not support \tu-tilting, as there is a nonzero map $P(3) \to P(1)$ induced by the path of length $1$ from $1$ to $3$. We consider instead the mutation $\mu_{P(1)}(P(1)\oplus P(2)\oplus P(3)\oplus P(4))$.
+	
+	Since $\text{Hom}(P(1),P(4)) = 0 = \text{Hom}_A(P(1),P(3))$, the mutation may be computed as a co-kernel of $P(2) \oplus P(2)$ exactly as in \cref{k2-reduction}.
+	
+	Let then \[X \oplus P(2) \oplus P(3) \oplus P(4) = \mu_{P(1)}(P(1)\oplus P(2) \oplus P(3)\oplus P(4))\]  $X$ can easily be computed to be a module with dimension vector $(3,2,0,0)$ and $g$-vector $(-1,2,0,0)$. 
+	
+	Since $\text{Hom}_A(P(3)\oplus P(4),X\oplus P(2)) = 0$ we get that \[T_2 = (X \oplus P(2), P(3) \oplus P(4))\] is a support \tu-tilting object. Consider $T_{B,2} = \mu_{P_B(1)}((P_B(1) \oplus P_B(2), P_B(3) \oplus P_B(4)))$. Then $T_{B,2}$ and $T_2$ will have equal $G$-matrices.
+	
+	\[G^{T_2} = \begin{bmatrix}
+		-1 & 0 & 0 & 0 \\ 2 & 1 & 0 & 0 \\ 0 & 0 & -1 & 0 \\ 0 & 0 & 0 & -1
+	\end{bmatrix} = G^{T_{B,2}}\]
+	
+	This means in particular that $g^{T_2}$ lies in the cone of $T_{B,2}$. Again then we conclude that $T_2$ can not lie in the component containing $(A,0)$ or the component containing $(0,A)$. 
+	
+	Lastly, $T_2$ and $T_1$ themselves must also lie in two distinct components of $Q(s\tau\text{-tilt } A)$, because their $g$-vectors lie in cones corresponding to support $\tu$-tilting objects of $B$ lying in distinct components.
+	
+	This concludes our proof.
+\end{proof}
+
+\comment{
 \begin{proof}
 	Consider the mutation $\mu_{P(1)}(P(1)\oplus P(2)\oplus P(3)\oplus P(4))$.
 	
@@ -734,6 +1047,7 @@ There are also connected algebras with more than two components in its \tu-tilti
 	Then by \cref{corollary-dgeneric}, $T$ does not lie in the same component as $(A,0)$. A similar argument shows that it may not lie in the same component as $(0,A)$.
 	
 \end{proof}
+}
 
 \subsection{Further reductions}
 We will here further generalize \cref{k2-reduction}. Note that if we wish to study the algebra $A = kQ/r^3$ with $Q$ being the quiver
@@ -755,7 +1069,7 @@ we can no longer use the same proof as for \cref{k2-reduction} to compute its mu
 	Let $A$ be an admissible quotient over some path algebra with a given ordering of its vertices, such that $\text{Hom}(P(2),P(1))$ is $2$-dimensional as a $k$-vector space. 
 	
 	\begin{enumerate}
-		\item For any non-negative integer $n$ a $2$-term presilting complex in $K^b(\text{add} A)$, called $\mathbb{P}_A(n)$, on the form \[P(2)^n \to P(1)^{n+1}\]
+		\item For any non-negative integer $n$ there is a $2$-term presilting complex in $K^b(\text{add} A)$, called $\mathbb{P}_A(n)$, on the form \[P(2)^n \to P(1)^{n+1}\]
 		\item $\mathbb{P}_A(n) \oplus \mathbb{P}_A(n+1)$ will also be $2$-term presilting.
 	\end{enumerate}
 
@@ -764,32 +1078,36 @@ we can no longer use the same proof as for \cref{k2-reduction} to compute its mu
 \end{lemma}
 
 \begin{proof}
-	(1.) The case where $n = 0$ is trivial, so assume that $n \geq 1$. Let first $K$ be the Kronecker algebra with two arrows. Let now $\mathbb{P}_K(n) $ be the unique indecomposable 2-term pre-silting object on the form \[P_K(2)^n \xrightarrow{f} P_K(1)^{n+1}\] over $K^b(\text{add} K)$. Note that $f$ may be viewed as an $n\times(n+1)$ matrix over $\text{Hom}_K(P(2),P(1))$ which is $2$-dimensional. Pick an isomorphism $\phi$ between $\text{Hom}_K(P(2),P(1))$ and $\text{Hom}_A(P(2),P(1))$. Then we may let $\phi$ act entry-wise on $f$. Call this induced map $\phi(f)$. We may also consider $\phi^{-1}$, which will have the symmetric property. We claim now that the complex $\mathbb{P}_A$ given by  \[P_A(2)^n \xrightarrow{\phi(f)} P_A(1)^{n+1}\] is rigid.
+	(1.) The case where $n = 0$ is trivial, so assume that $n \geq 1$. Let first $K$ be the Kronecker algebra with two arrows. Let now $\mathbb{P}_K(n) $ be the unique indecomposable 2-term presilting object on the form \[P_K(2)^n \xrightarrow{f} P_K(1)^{n+1}\] over $K^b(\text{add} K)$. Note that $f$ may be viewed as an $n\times(n+1)$ matrix over $\text{Hom}_K(P(2),P(1))$ which is $2$-dimensional. Pick an isomorphism $\phi$ between $\text{Hom}_K(P(2),P(1))$ and $\text{Hom}_A(P(2),P(1))$. Then we may let $\phi$ act entry-wise on $f$. Call this induced map $\phi(f)$. We may also consider $\phi^{-1}$, which will have the symmetric property. We claim now that the complex $\mathbb{P}_A$ given by  \[P_A(2)^n \xrightarrow{\phi(f)} P_A(1)^{n+1}\] is rigid.
 	
 	% https://q.uiver.app/?q=WzAsNCxbMSwwLCJcXGJ1bGxldCJdLFsyLDAsIlxcYnVsbGV0Il0sWzAsMSwiXFxidWxsZXQiXSxbMSwxLCJcXGJ1bGxldCJdLFswLDFdLFsyLDNdLFswLDNdLFswLDJdLFsxLDNdXQ==
 
 	To check rigidity of $\mathbb{P}_A$, we must show that $\text{Hom}_{K^b(\text{add} A)}(\mathbb{P}_A,\mathbb{P}_A[1]) = 0$, meaning that all maps from $\mathbb{P}_A$ to $\mathbb{P}_A$ shifted should be null-homotopic. Thus, we seek for any $g:P_A(2)^n \to P_A(1)^{n+1}$ two maps $h^A_1$ and $h^A_2$, such that $\phi(f)\circ h^A_1 + h^A_2 \circ \phi(f) = g$. This setup is drawn below.
 	
-		\[\begin{tikzcd}
-		& P_A(2)^n & P_A(1)^{n+1} \\
-		P_A(2)^n & P_A(1)^{n+1}
-		\arrow[from=1-2, to=1-3,"\phi(f)"]
-		\arrow[from=2-1, to=2-2,"\phi(f)"]
-		\arrow[from=1-2, to=2-2,"g"]
-		\arrow["h^A_1",from=1-2, to=2-1,dotted]
-		\arrow[from=1-3, to=2-2,"h^A_2",dotted]
-	\end{tikzcd}\]
+	% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZARgBoAGAXVJADcBDAGwFcYkQAFAfQEEAKAEwBKAHqEAvqXSZc+QigEVqdJq3bd+xUcDABqYuJCTp2PASLlSxZQxZtEnXoNESpIDKblEy1mrbUOGnxaIjr6huLKMFAA5vBEoABmAE4QALZIliA4EEgAzH6q9iAxRm4p6Zk0OUhkKnbsADqNaAAWWHyJQmVJqRmIitm5iAX1ASDNbR1dPSAV-Vk1AzSMWGDFUBA4ONEghQ0OrVzEIjx7IIz0AEYwjBwyZvIgyVgxrTiz87XVw6Or6+xNttdvtxkcBKcjJRxEA
+	\[\begin{tikzcd}
+		& P_A(2)^n \arrow[d, "g"] \arrow[r, "\phi(f)"] \arrow[ld, "h_1^A"', dotted] & P_A(1)^{n+1} \arrow[ld, "h_2^A", dotted] \\
+		P_A(2)^n \arrow[r, "\phi(f)"] & P_A(1)^{n+1}                                                              &                                         
+	\end{tikzcd}
+	\]
 	
+	 Certainly, $\phi^{-1}(g)$ is well-defined. Since \[P_K(2)^n \xrightarrow{f} P_K(1)^{n+1}\] is rigid, given the map $\phi^{-1}(g)$, there exist maps $h_1:P_K(2)^n \to P_K(2)^n$ and $h_2:P_K(1)^{n+1} \to P_K(1)^{n+1}$ such that $h_2\circ f + f \circ h_1 = \phi^{-1}(g)$. This setup is drawn below.
+	 
+	\[
+	% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZARgBoAGAXVJADcBDAGwFcYkQAFAfQGkAKAEwBKAHqEAvqXSZc+QigEVqdJq3bd+xUcDABqYuJCTp2PASLlSxZQxZtEnXoNESpIDKblEy1mrbUOGnxaIjr6huLKMFAA5vBEoABmAE4QALZIliA4EEgAzH6q9iAAOiVoABZYoQC0BnwxQkZuKemZNDlIZCp27InNSakZiIrZuYgFPQGl5VV8iU3GIK3DWZ0jNIxYYMVQEDg40SCFvQ4VXMTHIIz0AEYwjBwyZvIgyVgxFTgDy0NdHeNJlsduw9gcjidpucBEZKOIgA
+	\begin{tikzcd}
+		& P_K(2)^n \arrow[d, "\phi^{-1}(g)"] \arrow[r, "f"] \arrow[ld, "h_1"', dotted] & P_K(1)^{n+1} \arrow[ld, "h_2", dotted] \\
+		P_K(2)^n \arrow[r, "\phi(f)"] & P_K(1)^{n+1}                                                                 &                                       
+	\end{tikzcd}
+	\] 
 	
-	 Certainly, $\phi^{-1}(g)$ is well-defined. Since \[P_K(2)^n \xrightarrow{f} P_K(1)^{n+1}\] is rigid, given the map $\phi^{-1}(g)$, there exist maps $h_1:P_K(2)^n \to P_K(2)^n$ and $h_2:P_K(1)^{n+1} \to P_K(1)^{n+1}$ such that $h_2\circ f + f \circ h_1 = \phi^{-1}(g)$. Note that $h_1$ and $h_2$ are scalar matrices, and may thus also be considered elements of $\text{End}_A(P_A(2))$ and $\text{End}_A(P_A(1))$ respectively.
+	 Note that $h_1$ and $h_2$ are scalar matrices, and may thus also be considered elements of $\text{End}_A(P_A(2))$ and $\text{End}_A(P_A(1))$ respectively. We may conclude that $\phi(h_2\circ f + f \circ h_1) = g$. The left hand side might be computed to be $h_2 \circ \phi(f) + \phi(f) \circ h_1$. We then have the equality $h_2 \circ \phi(f) + \phi(f) \circ h_1 = g$ as wanted. Letting $h^A_1 = h_1$ and $h^A_2 = h_2$, we conclude the proof.
 	
-	We may conclude that $\phi(h_2\circ f + f \circ h_1) = g$. The left hand side might be computed to be $h_2 \circ \phi(f) + \phi(f) \circ h_1$. We then have the equality $h_2 \circ \phi(f) + \phi(f) \circ h_1 = g$ as wanted. Letting $h^A_1 = h_1$ and $h^A_2 = h_2$, we conclude the proof.
-	
-	2. Let $\mathbb{T}_K = \mathbb{P}_K(n) \oplus \mathbb{P}_K(n+1)$. Then $\mathbb{T}_K$ is $2$-term silting. We may then apply essentially the same proof as for (1.) to see that the corresponding $\mathbb{T}_A = \mathbb{P}_A(n) \oplus \mathbb{P}_A(n+1)$ must be rigid.
+	2. Let $\mathbb{T}_K = \mathbb{P}_K(n) \oplus \mathbb{P}_K(n+1)$. Then $\mathbb{T}_K$ is $2$-term pre-silting. We may then apply essentially the same proof as for (1.) to see that the corresponding $\mathbb{T}_A = \mathbb{P}_A(n) \oplus \mathbb{P}_A(n+1)$ must be rigid.
 	
 \end{proof}
 
-We give an example utilizing this lemma below.
+We give two examples utilizing this lemma.
 
 \begin{example}
 	Consider the algebra $A = kQ/r^3$, where $Q$ is the quiver below.
@@ -805,7 +1123,7 @@ We give an example utilizing this lemma below.
 		\arrow[from=1-2, to=3-2]
 	\end{tikzcd}\]
 
-	Of course, in $kQ$, there are three paths from $1$ to $2$. However, the path of length $3$ is eliminated in the quotient $A$. Since the paths $1 \to 3 \to 2$ and $1 \to 4 \to 2$ are not identified in $A$, we may conclude that $\text{Hom}_A(P(2),P(1))$ is $2$-dimensional. We may now employ GAP to compute $\mathbb{P}_A(1)$. The zeroth homology of this complex gives us a module,say $T_1$, (with dimensions as displayed below). This module must be \tu-rigid from \cref{2term-reduction}, which we may confirm using GAP. In this case, the module is also indecomposable.
+	Of course, in $kQ$, there are three paths from $1$ to $2$. However, the path of length $3$ is eliminated in the quotient $A$. Since the paths $1 \to 3 \to 2$ and $1 \to 4 \to 2$ are not identified in $A$, we may conclude that $\text{Hom}_A(P(2),P(1))$ is $2$-dimensional. We may now employ GAP to compute $\mathbb{P}_A(1)$. The zeroth homology of this complex gives us a module,say $T_1$, (with dimensions as displayed below). This module must be \tu-rigid from \cref{2term-reduction}, which we may be confirmed using GAP. In this case, the module is also indecomposable.
 	\[\begin{tikzcd}
 		& k^2 \\
 		k^2 && k^3 \\
@@ -831,7 +1149,7 @@ We give an example utilizing this lemma below.
 	\end{tikzcd}
 	\]
 	
-	This algebra is $\tu$-tilting finite, and $\text{Hom}_A(P(2),P(1))$ is $2$-dimensional. We are however promised an infinite family of $\tu$-tilting objects from \cref{2term-reduction}, where we let $T_i = H^0(\mathbb{P}_A(i))$.The consequence must be that almost all modules coming from this lemma must decompose. To investigate this, we first compute $Q(s\tau\text{-tilt} A)$. The mutation quiver is displayed in \cref{mutation-quiver-example-decomposing-modules}, where the vertices are written as support \tu-tilting objects.
+	This algebra is $\tu$-tilting finite, and $\text{Hom}_A(P(2),P(1))$ is $2$-dimensional. We are still promised an infinite family of $\tu$-tilting objects from \cref{2term-reduction}, where we let $T_i = H^0(\mathbb{P}_A(i))$. The consequence must be that almost all modules coming from this lemma must decompose. To investigate this, we first compute $Q(s\tau\text{-tilt} A)$. The mutation quiver is displayed in \cref{mutation-quiver-example-decomposing-modules}, where the vertices are written as support \tu-tilting objects.
 	
 	% https://q.uiver.app/?q=WzAsNixbMSwwLCIoUCgxKVxcb3BsdXMgUCgyKSwwKSJdLFswLDEsIihQKDIpLFAoMSkpIl0sWzIsMSwiKFAoMSkgXFxvcGx1cyBUKDEpKSwwKSJdLFsyLDIsIihTKDEpXFxvcGx1cyBUKDEpLDApIl0sWzIsMywiKFMoMSksUCgyKSkiXSxbMSw0LCIoMCxQKDEpXFxvcGx1cyBQKDIpKSJdLFswLDFdLFswLDJdLFsyLDNdLFszLDRdLFs0LDVdLFsxLDVdXQ==
 	\begin{figure}[h]
@@ -861,7 +1179,7 @@ We give an example utilizing this lemma below.
 
 The above example shows that to fully utilize \cref{2term-reduction}, we need a criterion for indecomposability of the modules produced by the lemma. 
 
-In the lemma below, we give an elementary example of such a condition for the case where $A$ has two simple modules. We dare hope that there exists a similar criterion which may be applied for algebras with more than two simple modules, but for our purposes the following tool will be sufficient.
+In the next lemma, we give an elementary example of such a condition for the case where $A$ has two simple modules. We dare hope that there exists a similar criterion which may be applied for algebras with more than two simple modules, but for our purposes the following tool will be sufficient.
 
 \begin{lemma}\label{2-simple-criterion-T_i}
 	Let $A$ be as in \cref{2term-reduction}, where $A$ has two simple modules. Assume that $(1,-1)$ is not a $g$-vector of $A$.	
@@ -934,7 +1252,7 @@ We may now work with a class of algebras including the one mentioned in the intr
 					\draw[dashed,->,opacity = 0.3]  (0,0) -- (n\Y);}
 			\end{tikzpicture}
 		\end{center}
-		\caption{Some of the walls coming from embedding $K_2$ in two different ways into $A$. The bold arrows are contained in the closure of these walls, and point in directions $(1,-1)$ and $(-1,1)$.}
+		\caption{Some of the walls inherited from $K_2$ in two different ways into $A$. The bold arrows are contained in the closure of these walls, and point in directions $(1,-1)$ and $(-1,1)$.}
 		\label{walls-k2-k2}
 	\end{figure}
 	
@@ -942,9 +1260,9 @@ We may now work with a class of algebras including the one mentioned in the intr
 \end{proof}
 
 \subsection{Applying homotopy equivalence}
-The main idea needed to prove \cref{kq/r3} is that the $2$-term silting objects of $K_2$ can say something about $2$-term silting objects over more complicated module categories. However, the proof above also requires some non-trivial technicalities because the category of $2$-term objects of projective $K_2$-modules are not equivalent to the category of $2$-term objects of projective modules in the more complicated category.
+The main idea needed to prove \cref{kq/r3} is that the $2$-term silting objects of $K_2$ can say something about $2$-term silting objects over richer module categories. However, the proof above also requires some non-trivial technicalities because the category of $2$-term objects of projective $K_2$-modules are not equivalent to the category of $2$-term objects of projective modules in the more complicated category.
 
-In the setting where we require this to hold, we can more easily state a reduction theorem specifically exploiting the same ideas.
+In the setting where we require this to hold, stronger reduction results hold.
 
 \begin{proposition}\label{silting-equivalence}
 	Let $A$ be an algebra with $P = \bigoplus_{i \in I} P(k)$ be some direct sum of projective indecomposable modules. Let $B$ be an algebra such that $\text{add } B \cong \text{add } P$ holds. Then
@@ -958,7 +1276,7 @@ In the setting where we require this to hold, we can more easily state a reducti
 \end{proof}
 
 \begin{proposition}
-	Let $Q$ be an acyclic quiver, and let $A = kQ/I$ with $I$ an admissible ideal. If there exists indecomposable projective modules $P,Q$ such that $\text{Hom}(Q,P)$ is $i$-dimensional as a $k$-vector space for $i \geq 2$, then $A$ is $\tu$-tilting infinite.
+	Let $Q$ be an acyclic quiver, and let $A = kQ/I$ with $I$ an admissible ideal. If there exists indecomposable projective modules $P$ and $Q$ such that $\text{Hom}_A(Q,P)$ is $i$-dimensional as a $k$-vector space for $i \geq 2$, then $A$ is $\tu$-tilting infinite.
 \end{proposition}
 
 \begin{proof}
@@ -980,23 +1298,32 @@ The following corollary follows immediately.
 	The proof follows directly from the above discussion.
 \end{proof}
 
-We remark that this criterion does not classify $\tu$-tilting finite algebras, as the algebra with quiver drawn in \cref{counterexample-acyclic} is $\tu$-tilting infinite. To see that this particular algebra is $\tu$-tilting infinite, observe that we can do APR-tilts on for example vertex $3$ to get an algebra which by \cref{acyclic-tau-tilting-finite-critetion} must be \tu-tilting infinite. (todo: conclusion to argument here)
-\begin{figure}[h]
-% https://q.uiver.app/?q=WzAsNCxbMSwwLCJcXGJ1bGxldCJdLFswLDEsIlxcYnVsbGV0Il0sWzIsMSwiXFxidWxsZXQiXSxbMSwyLCJcXGJ1bGxldCJdLFsyLDNdLFsyLDBdLFsxLDBdLFsxLDNdXQ==
-\[\begin{tikzcd}
-	& 3 \\
-	1 && 2 \\
-	& 4
-	\arrow[from=2-3, to=3-2]
-	\arrow[from=2-3, to=1-2]
-	\arrow[from=2-1, to=1-2]
-	\arrow[from=2-1, to=3-2]
-\end{tikzcd}\]
-\caption{An acylic quiver inducing a \tu-tilting infinite algebra satisfying $\text{Hom}(P(i),P(j) \leq 1$ for all points $i,j \in Q_0$.}
-\label{counterexample-acyclic}
+We remark that this criterion does not classify $\tu$-tilting finite algebras, as for example the algebra $\mathbb{C}Q$ with $Q$ drawn in \cref{counterexample-acyclic} is $\tu$-tilting infinite.  \begin{figure}[h]
+	% https://q.uiver.app/?q=WzAsNCxbMSwwLCJcXGJ1bGxldCJdLFswLDEsIlxcYnVsbGV0Il0sWzIsMSwiXFxidWxsZXQiXSxbMSwyLCJcXGJ1bGxldCJdLFsyLDNdLFsyLDBdLFsxLDBdLFsxLDNdXQ==
+	\[\begin{tikzcd}
+		& 3 \\
+		1 && 2 \\
+		& 4
+		\arrow[from=2-3, to=3-2]
+		\arrow[from=2-3, to=1-2]
+		\arrow[from=2-1, to=1-2]
+		\arrow[from=2-1, to=3-2]
+	\end{tikzcd}\]
+	\caption{An acylic quiver inducing a \tu-tilting infinite algebra satisfying $\text{Hom}(P(i),P(j) \leq 1$ for all points $i,j \in Q_0$.}
+	\label{counterexample-acyclic}
 \end{figure}
 
+To see that this particular algebra is $\tu$-tilting infinite, observe that letting $\lambda \in \mathbb{C}$ vary, we get an infinite family of pairwise non-isomorphic bricks, with representations drawn below. \[\begin{tikzcd}
+	& k \\
+	k && k \\
+	& k
+	\arrow[from=2-3, to=3-2,"1"]
+	\arrow[from=2-3, to=1-2,"1"]
+	\arrow[from=2-1, to=1-2,"\lambda"]
+	\arrow[from=2-1, to=3-2,"1"]
+\end{tikzcd}\]
 
+By \cite[Theorem 1.4]{dij17} this shows that the algebra is \tu-tilting infinite.
 
 \printbibliography
 
