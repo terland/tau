@@ -1,19 +1,19 @@
 [0] Config.pm:304> INFO - This is Biber 2.14
 [0] Config.pm:307> INFO - Logfile is 'artac_master.blg'
-[82] biber-darwin:322> INFO - === Thu May 13, 2021, 18:40:43
-[98] Biber.pm:415> INFO - Reading 'artac_master.bcf'
-[202] Biber.pm:943> INFO - Found 12 citekeys in bib section 0
-[216] Biber.pm:4256> INFO - Processing section 0
-[217] Utils.pm:75> INFO - Globbing data source 'ref.bib'
-[217] Utils.pm:91> INFO - Globbed data source 'ref.bib' to ref.bib
-[227] Biber.pm:4455> INFO - Looking for bibtex format file 'ref.bib' for section 0
-[228] bibtex.pm:1653> INFO - LaTeX decoding ...
-[250] bibtex.pm:1471> INFO - Found BibTeX data source 'ref.bib'
-[276] Utils.pm:304> WARN - month field 'Oct' in entry 'Br_stle_2019' is not an integer - this will probably not sort properly.
-[341] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[342] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[342] Biber.pm:4084> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
-[342] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
-[359] bbl.pm:652> INFO - Writing 'artac_master.bbl' with encoding 'UTF-8'
-[365] bbl.pm:755> INFO - Output to artac_master.bbl
-[365] Biber.pm:128> INFO - WARNINGS: 1
+[86] biber-darwin:322> INFO - === Sat May 22, 2021, 14:09:13
+[104] Biber.pm:415> INFO - Reading 'artac_master.bcf'
+[210] Biber.pm:943> INFO - Found 13 citekeys in bib section 0
+[227] Biber.pm:4256> INFO - Processing section 0
+[227] Utils.pm:75> INFO - Globbing data source 'ref.bib'
+[227] Utils.pm:91> INFO - Globbed data source 'ref.bib' to ref.bib
+[238] Biber.pm:4455> INFO - Looking for bibtex format file 'ref.bib' for section 0
+[240] bibtex.pm:1653> INFO - LaTeX decoding ...
+[264] bibtex.pm:1471> INFO - Found BibTeX data source 'ref.bib'
+[291] Utils.pm:304> WARN - month field 'Oct' in entry 'Br_stle_2019' is not an integer - this will probably not sort properly.
+[360] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[360] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[360] Biber.pm:4084> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
+[360] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
+[382] bbl.pm:652> INFO - Writing 'artac_master.bbl' with encoding 'UTF-8'
+[390] bbl.pm:755> INFO - Output to artac_master.bbl
+[390] Biber.pm:128> INFO - WARNINGS: 1

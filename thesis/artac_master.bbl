@@ -479,6 +479,33 @@
       \verb 2004.14221
       \endverb
     \endentry
+    \entry{zhang2016mutation}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=7b6f505141daa7b6d93a7267897f0f59}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Yingying},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{7b6f505141daa7b6d93a7267897f0f59}
+      \strng{fullhash}{7b6f505141daa7b6d93a7267897f0f59}
+      \strng{bibnamehash}{7b6f505141daa7b6d93a7267897f0f59}
+      \strng{authorbibnamehash}{7b6f505141daa7b6d93a7267897f0f59}
+      \strng{authornamehash}{7b6f505141daa7b6d93a7267897f0f59}
+      \strng{authorfullhash}{7b6f505141daa7b6d93a7267897f0f59}
+      \field{labelalpha}{Zha16}
+      \field{sortinit}{Z}
+      \field{sortinithash}{8f7b480688e809b50b6f6577b16f3db5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{math.RT}
+      \field{eprinttype}{arXiv}
+      \field{title}{On mutation of $\tau$-tilting modules}
+      \field{year}{2016}
+      \verb{eprint}
+      \verb 1604.00127
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
